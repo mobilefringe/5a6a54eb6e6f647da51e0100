@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--<transition name="fade">-->
-        	<div class="row page_container" v-if="dataLoaded" v-cloak>
+        	<div class="row page_content" v-if="dataLoaded" v-cloak>
         	    <div class="custom_popup" v-if="show_popup">
                     <div class="popup_form_div">
                         <h2 class="pop_up_header p_name">Join Our eClub</h2>
@@ -53,6 +53,18 @@
                     </div>
                     <span class="close_popup" @click="closePopup">CLOSE</span>
                 </div>
+                <div class="page_content">
+    <div class="flexslider">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li class="position_relative">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img class="banner_img" alt="banner" src="{{image_url}}" />
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
         		<div class="banner_div">
         			<div class="main_banner col-sm-9">
         				<div  class="prev"></div>
