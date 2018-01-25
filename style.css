@@ -4,102 +4,51 @@
 hr{
   max-width: 100%;
 }
-
 @font-face {
-    font-family: museosans100;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848492654/MuseoSans_100.ttf);  
-}
-@font-face {
-    font-family: avenir light;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848685067/avenir-light-webfont.ttf);  
+    font-family: 'ProximaNova-Regular';
+    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497295898000/proximanova-regular-webfont.woff2') format('woff2'),
+         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497295898000/proximanova-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: avenir heavy;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848703981/Avenir-Black-webfont.ttf);  
+    font-family: 'ProximaNova-Light';
+    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497278296000/proximanova-light-webfont.woff2') format('woff2'),
+         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497278296000/proximanova-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: museo100;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848723347/Museo100-Regular.ttf);  
+    font-family: 'ProximaNova-Bold';
+    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497278682000/proximanova-semibold-webfont.woff2') format('woff2'),
+         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497278682000/proximanova-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: museo300_italic;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848736939/MuseoSans-300Italic.ttf);  
+    font-family: 'LeagueGothic-Regular';
+    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1330081700000/League-Gothic.ttf.woff') format('woff'),
+        url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/svg+xml/1330081700000/League-Gothic.ttf.svg#League-Gothic') format('svg'),
+        url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1330081700000/League-Gothic.ttf.eot');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face {
-    font-family: helvetica;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848754507/Helvetica.ttf);  
-}
+/* COLOUR VARIABLES */
+$primary: #004d71;
+$secondary: #FF4800;
+$social: #007CBA;
+$link: #1CCFC9;
 
-@font-face {
-    font-family: helvetica;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848651583/Helvetica-Bold.ttf);
-    font-weight:bold;
-}
-
-@font-face {
-    font-family: helvetica;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848563927/Helvetica-Light.ttf);  
-    font-weight: lighter;
-}
-
-@font-face {
-    font-family: museo300sans;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848778243/MuseoSans-300.ttf);  
-}
-
-@font-face {
-    font-family: museo300_regular;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848794303/Museo300-Regular.ttf);  
-}
-
-@font-face {
-    font-family: museo500_regular;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848809550/Museo500-Regular.ttf);  
-}
-
-@font-face {
-    font-family: archer_bold;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848828974/Archer_Bold.ttf);
-}
-
-@font-face {
-    font-family: archer_semibold;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848841793/archer-semibold.ttf);
-}
-
-@font-face {
-    font-family: avenir_black;
-    src: url(//mallmaverick.com/system/site_images/photos/000/003/988/original/Avenir.ttf?1410890986);
-}
-
-@font-face {
-    font-family: avenir_book;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848894986/AvenirLTStd-Roman.ttf);
-}
-
-@font-face {
-    font-family: trade_gothic;
-    src: url(//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1516848909271/TradeGothic-LT-Bold-CondensedNo20.ttf);
-}
-$theme_color : #ed2227;
-$font_family : helvetica;
-$main_font_color : #000;
-#SearchTerms:focus{
-    border-color: #e9322d;
-    -webkit-box-shadow: 0 0 6px #f8b9b7;
-    -moz-box-shadow: 0 0 6px #f8b9b7;
-    box-shadow: 0 0 6px #f8b9b7;
-}
-
-
-body{
-    font-family: Helvetica, sans-serif;
-    font-size: 12pt;
-    color: $main_font_color;//#636363;
+body {
+    color:#777;
+    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    overflow-x: hidden;
 }
 
 .main_content_container {
@@ -223,55 +172,6 @@ a{
     transform: translate3d(4px, 0, 0);
   }
 }
-
-
-@font-face {
-    font-family: 'ProximaNova-Regular';
-    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497295898000/proximanova-regular-webfont.woff2') format('woff2'),
-         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497295898000/proximanova-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ProximaNova-Light';
-    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497278296000/proximanova-light-webfont.woff2') format('woff2'),
-         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497278296000/proximanova-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ProximaNova-Bold';
-    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1497278682000/proximanova-semibold-webfont.woff2') format('woff2'),
-         url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1497278682000/proximanova-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'LeagueGothic-Regular';
-    src: url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/application/font-woff/1330081700000/League-Gothic.ttf.woff') format('woff'),
-        url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/svg+xml/1330081700000/League-Gothic.ttf.svg#League-Gothic') format('svg'),
-        url('//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100//1330081700000/League-Gothic.ttf.eot');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* COLOUR VARIABLES */
-$primary: #004d71;
-$secondary: #FF4800;
-$social: #007CBA;
-$link: #1CCFC9;
-
-body {
-    color:#777;
-    font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial', sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    overflow-x: hidden;
-}
-
 
 a {
     color: inherit;
