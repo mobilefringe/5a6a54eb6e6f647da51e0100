@@ -77,7 +77,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 menu_items: [
                     {
                         name: "Shopping",
-                        // id: "stores_link",
                         href: "/stores",
                     },
                     {
