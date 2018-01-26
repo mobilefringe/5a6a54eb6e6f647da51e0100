@@ -81,19 +81,16 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     },
                     {
                         name: "Events",
-                        id: "events_link",
                         href: "/events",
                         show_sub_menu: false
                     },
                     {
                         name: "Promotions",
-                        id: "sales_link",
                         href: "/promotions",
                         show_sub_menu: false
                     },
                     {
                         name: "Leasing",
-                        id: "leasing_link",
                         href: "",
                         show_sub_menu: false,
                         sub_menu: [{
