@@ -35,7 +35,8 @@ require.config({
         'smooth-zoom' : 'https://codecloud.cdn.speedyrails.net/sites/59035a6c6e6f645a5b420000/application/x-javascript/1503602727000/smoothZoomA24',
         'png-map' : 'https://preview-mmvue.codecloudapp.com/png-map.vue?noext',
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
-        'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload'
+        'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
+        'masonry' : 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min'
         
     }
 });
@@ -103,7 +104,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     },
                     {
                         name: "Events",
-                        href: "/promotions",
+                        href: "/events",
                     },
                     {
                         name: "Promotions",
