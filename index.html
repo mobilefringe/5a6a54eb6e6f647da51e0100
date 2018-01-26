@@ -255,38 +255,69 @@
 				<transition name="custom-classes-transition" enter-active-class="fadeIn">
 					<router-view class="content"></router-view>
 				</transition>
-				<div class="footer-div hidden-phone" id="footer-div">
-					<div class="footer-top page_container">
-						<div class="row" style="margin:auto">
-							<div class="col-sm-6 text-left">
-								<p class="footer_sitemap"> <span class="pointer" @click="toggle_sitemap = !toggle_sitemap;">Sitemap</span> | <a href="/pages/eastgate-privacy-policy">Privacy Policy</a> | <a href="/contact_us">Contact Us</a> | <br class="show_phone"> <a href="http://www.mallmaverick.com" target="_blank">Powered by Mall Maverick</a>  </p>
-								<p class="" v-if="property"> {{property.address1}} {{property.city}}{{property.province}} {{property.postal_code}} - {{property.contact_phone}}</p>
-							</div>
-							<div class="col-sm-6 text-right">
-								<p class="footer_copyright">&copy; Copyright {{copyright_year}} {{property.name}} <br/>
-								</p>
-								<p class="">
-									<a href="//www.bentallkennedy.com" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516397300054/bentallblacklogo-01.png" class="" style="height:35px" alt=""></a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<transition  name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-						<div class="footer-bottom hidden-phone " v-if="toggle_sitemap">
-							<div class="footer-bottom-title-div ">
-								<div class="page_container">
-									<div v-for="item in menu_items" :id="item.parent_id" class="footer_menu_title col-sm-2">
-										<router-link :to="item.href" :id="item.id" exact>{{item.name}} </router-link>
-										<div v-for="sub_menu in item.sub_menu">
-											<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>
-										</div>
-									</div>
-									&nbsp;
-								</div>
-							</div>
-						</div>
-					</transition>
-				</div>
+				<div class="site_container">
+                    <div class="site_logo visible_phone">
+                        <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
+                    </div>
+                    <div class="footer_content visible_phone">
+                        <p class="footer_address">In the heart of downtown Salt Lake City</p>
+                        <p class="footer_phone bold">801-456-0000</p>
+                    </div>
+                    <div class="footer_content hidden_phone">
+                        <p class="fooeter_address">The Gateway is located in the heart of downtown Salt Lake City, Utah,</p>
+                        <p class="fooeter_address">along 400 West, between 200 South and South Temple.</p>
+                        <p class="footer_phone bold">801-456-0000</p>
+                    </div>
+                    <div class="footer_social">
+                        <a href="https://www.facebook.com/shopthegateway/" target="_blank"><div class="social_facebook"></div></a>
+                        <a href="https://www.instagram.com/shopthegateway/" target="_blank"><div class="social_insta"></div></a>
+                        <a href="" target="_blank"><div class="social_snapchat"></div></a>
+                        <a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
+                        <!--<a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="footer_social_icon" alt="Facebook Icon"></a>-->
+                        <!--<a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="footer_social_icon" alt="Instagram Icon"></a>-->
+                        <!--<a href="" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="footer_social_icon" alt="SnapChat Icon"></a>-->
+                        <!--<a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816067000/spotify_icon.png" class="footer_social_icon" alt="Spotify Icon"></a>-->
+                    </div>
+                    <div class="footer_conduct">
+                        <a href="/pages/thegateway-code-of-conduct"><p class="bold line">Code Of Conduct</p></a>
+                    </div>
+                    <div class="footer_terms">
+                        <p>&copy; 2017 THE GATEWAY All Rights Reserved | <a href="/pages/thegateway-privacy-policy">Privacy Policy</a> | <a href="/pages/thegateway-terms-conditions" class="line">Terms & Conditions</a></p>
+                        <p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>
+                    </div>
+                </div>
+				<!--<div class="footer-div hidden-phone" id="footer-div">-->
+				<!--	<div class="footer-top page_container">-->
+				<!--		<div class="row" style="margin:auto">-->
+				<!--			<div class="col-sm-6 text-left">-->
+				<!--				<p class="footer_sitemap"> <span class="pointer" @click="toggle_sitemap = !toggle_sitemap;">Sitemap</span> | <a href="/pages/eastgate-privacy-policy">Privacy Policy</a> | <a href="/contact_us">Contact Us</a> | <br class="show_phone"> <a href="http://www.mallmaverick.com" target="_blank">Powered by Mall Maverick</a>  </p>-->
+				<!--				<p class="" v-if="property"> {{property.address1}} {{property.city}}{{property.province}} {{property.postal_code}} - {{property.contact_phone}}</p>-->
+				<!--			</div>-->
+				<!--			<div class="col-sm-6 text-right">-->
+				<!--				<p class="footer_copyright">&copy; Copyright {{copyright_year}} {{property.name}} <br/>-->
+				<!--				</p>-->
+				<!--				<p class="">-->
+				<!--					<a href="//www.bentallkennedy.com" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516397300054/bentallblacklogo-01.png" class="" style="height:35px" alt=""></a>-->
+				<!--				</p>-->
+				<!--			</div>-->
+				<!--		</div>-->
+				<!--	</div>-->
+				<!--	<transition  name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">-->
+				<!--		<div class="footer-bottom hidden-phone " v-if="toggle_sitemap">-->
+				<!--			<div class="footer-bottom-title-div ">-->
+				<!--				<div class="page_container">-->
+				<!--					<div v-for="item in menu_items" :id="item.parent_id" class="footer_menu_title col-sm-2">-->
+				<!--						<router-link :to="item.href" :id="item.id" exact>{{item.name}} </router-link>-->
+				<!--						<div v-for="sub_menu in item.sub_menu">-->
+				<!--							<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>-->
+				<!--						</div>-->
+				<!--					</div>-->
+				<!--					&nbsp;-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--		</div>-->
+				<!--	</transition>-->
+				<!--</div>-->
 			</div>
 		</div>
 		<div class='modal-backdrop custom_backdrop hidden_now' id="popup_backdrop"></div>
