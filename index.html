@@ -168,23 +168,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="menu-container hidden-phone ">
-					<div class="menu-div page_container">
-						<div v-for="item in menu_items" :class="item.parent_class_list" style="display: inline-block;padding: 0 20px;">
-							<router-link :to="item.href" class="all_caps menu_link"  :id="item.name.id" exact v-if="item.sub_menu == undefined">
-								{{item.name}}
-							</router-link>
-							<div v-else class="all_caps dropdown">
-								<div class="menu_link" :id="item.name.id" @click="toggleSubMenu(item.id); item.show_sub_menu = !item.show_sub_menu">{{item.name}} </div>
-								<transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-									<div class="dropdown-menu" v-if="item.sub_menu" v-show="item.show_sub_menu">
-										<router-link tag="li" class="dropdown-item" v-for="sub_menu in item.sub_menu" :to="sub_menu.href">{{sub_menu.name}}</router-link>
-									</div>
-								</transition>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!--<div class="menu-container hidden-phone ">-->
+				<!--	<div class="menu-div page_container">-->
+				<!--		<div v-for="item in menu_items" :class="item.parent_class_list" style="display: inline-block;padding: 0 20px;">-->
+				<!--			<router-link :to="item.href" class="all_caps menu_link"  :id="item.name.id" exact v-if="item.sub_menu == undefined">-->
+				<!--				{{item.name}}-->
+				<!--			</router-link>-->
+				<!--			<div v-else class="all_caps dropdown">-->
+				<!--				<div class="menu_link" :id="item.name.id" @click="toggleSubMenu(item.id); item.show_sub_menu = !item.show_sub_menu">{{item.name}} </div>-->
+				<!--				<transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">-->
+				<!--					<div class="dropdown-menu" v-if="item.sub_menu" v-show="item.show_sub_menu">-->
+				<!--						<router-link tag="li" class="dropdown-item" v-for="sub_menu in item.sub_menu" :to="sub_menu.href">{{sub_menu.name}}</router-link>-->
+				<!--					</div>-->
+				<!--				</transition>-->
+				<!--			</div>-->
+				<!--		</div>-->
+				<!--	</div>-->
+				<!--</div>-->
 				<transition name="custom-classes-transition" enter-active-class="fadeIn">
 					<router-view class="content"></router-view>
 				</transition>
