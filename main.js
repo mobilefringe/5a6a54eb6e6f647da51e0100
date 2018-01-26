@@ -79,8 +79,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "Shopping",
                         href: "/stores",
                         sub_menu: [{
-                                name: "Leasing ",
-                                href: "/pages/eastgate-leasing"
+                                name: "Directory ",
+                                href: "/stores"
                             },
                             {
                                 name: "Speciality Leasing",
