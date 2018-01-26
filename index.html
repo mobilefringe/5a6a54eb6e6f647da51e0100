@@ -51,7 +51,7 @@
                         <div class="col-md-3">
                             <div id="weather" class="pull-right hidden_phone"></div>
                             <div id="home_hours_container" class="pull-right">
-                                    <p class="open_now"><span v-if=""></span><span v-else>Closed</span></p> 
+                                    <p class="open_now"><span v-if="todays_hours"></span><span v-else>Closed</span></p> 
                                     <p class="todays_hours">{{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}</p>
                             </div> 
                         </div> 
