@@ -95,17 +95,14 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         show_sub_menu: false,
                         sub_menu: [{
                                 name: "Leasing ",
-                                id: "stores_link",
                                 href: "/pages/eastgate-leasing"
                             },
                             {
                                 name: "Speciality Leasing",
-                                id: "stores_link",
                                 href: "/pages/eastgate-speciality-leasing-inquiries"
                             },
                             {
                                 name: "Photos",
-                                id: "stores_link",
                                 href: "/photos"
                             }
                         ]
