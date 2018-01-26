@@ -91,17 +91,13 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     {
                         name: "Dining",
                         href: "/dine",
-                        sub_menu: [{
-                                name: "Leasing ",
-                                href: "/pages/eastgate-leasing"
+                         sub_menu: [{
+                                name: "Directory ",
+                                href: "/stores"
                             },
                             {
-                                name: "Speciality Leasing",
-                                href: "/pages/eastgate-speciality-leasing-inquiries"
-                            },
-                            {
-                                name: "Photos",
-                                href: "/photos"
+                                name: "Center Map",
+                                href: "/map"
                             }
                         ]
                     },
