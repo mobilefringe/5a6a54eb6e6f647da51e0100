@@ -32,6 +32,21 @@
 				<div class="top_bar">
 					<div class="site_container">
 						<div class="row top_bar_wrapper">
+							<div class="col-md-3">
+								<div id="weather" class="pull-right hidden_phone"></div>
+								<div id="home_hours_container" class="pull-right">
+									<p class="open_now"><span v-if="!todays_hours.is_closed || todays_hours.is_closed == null">Open Today</span><span v-else>Closed Today</span></p>
+									<p class="todays_hours">{{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="marquee">
+									<div class="news-ticker">
+										<ul class="bulletin" id="bulletin"></ul>
+									</div>
+								</div>
+							</div>
+							
 							<div class="col-md-3 hidden_phone">
 								<div class="header_social">
 									<a href="https://www.facebook.com/" target="_blank">
@@ -44,20 +59,6 @@
 									<!--<a href=" https://open.spotify.com/user/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>-->
 								</div>
 								<a id="signup" href="#sign_up">Sign Up</a>
-							</div>
-							<div class="col-md-6">
-								<div class="marquee">
-									<div class="news-ticker">
-										<ul class="bulletin" id="bulletin"></ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div id="weather" class="pull-right hidden_phone"></div>
-								<div id="home_hours_container" class="pull-right">
-									<p class="open_now"><span v-if="!todays_hours.is_closed || todays_hours.is_closed == null">Open Today</span><span v-else>Closed Today</span></p>
-									<p class="todays_hours">{{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}</p>
-								</div>
 							</div>
 							<div id="menu-icon">
 								<span></span>
