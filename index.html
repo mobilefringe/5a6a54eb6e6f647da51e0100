@@ -29,84 +29,169 @@
 		<div id="app" v-cloak>
 			<loader v-if="!dataLoaded"></loader>
 			<div class="main_content_container" v-if="dataLoaded">
-				<div class="header-container hidden-phone " id="top" >
-					<div class="header page_container">
-						<div class="col-sm-6 text_left no_padding">
-							<router-link to="/" exact>
-								<img class="site-logo" src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652184126/ES_logo_red.png">
-							</router-link>
-							<span class="pull-right show_phone">
-								<router-link style="background-color:transparent;" to="/newsletter" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png" class="mobile_newsletter_btn"></router-link>
-								<img src="//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1455905827000/icon_menu.png" class="open_menu show_phone" alt="Menu"  id="open_menu"  @click="show_mobile_menu = !show_mobile_menu">
-							</span>
-						</div>
-						<div class="col-sm-6 hidden_phone">
-							<div class="social-div social_icons">
-								<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#999999;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>
-								<a href="http://www.facebook.com/eastgatesquaremall" target="_blank" class="social_link_icon social_fb"></a>
-								<a href="http://www.twitter.com/EastgateSquare" target="_blank" class="social_link_icon social_twitter"></a>
-							</div>
-							<div class="newsletter-div">
-								<div class="newsletter_box" style="margin-bottom:5px">
+			<div class="top_bar">
+                <div class="site_container">
+                    <div class="row top_bar_wrapper">
+                        <div class="col-md-3 hidden_phone">
+                            <div class="header_social">
+                                <a href="https://www.facebook.com/shopthegateway/" target="_blank"><div class="social_facebook"></div></a>
+                                <a href="https://www.instagram.com/shopthegateway/" target="_blank"><div class="social_insta"></div></a>
+                                <a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>
+                                <a href=" https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>
+                            </div> 
+                            <a id="signup" href="#sign_up">Sign Up</a>
+                        </div> 
+                        <div class="col-md-6">
+                            <div class="marquee">
+                                <div class="news-ticker">
+                                    <ul class="bulletin" id="bulletin"></ul>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-3">
+                            <div id="weather" class="pull-right hidden_phone"></div>
+                            <div id="home_hours_container" class="pull-right">
+                                <script id="home_hours_template" type="x-tmpl-mustache/text">
+                                    <p class="open_now">{% raw %}{{open}}{% endraw %}</p> 
+                                    <p class="todays_hours">{% raw %}{{hours}}{% endraw %}</p>
+                                </script>
+                            </div> 
+                        </div> 
+                        <div id="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="mobile_nav_container visible_phone">
+                            
+                            <nav id="mobile_nav">
+                                <ul>
+                                    <div class="mobile_site_logo">
+                                        <a href="/"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496434456000/TheGatewayLogo500px.png" alt="Property Logo"/></a>
+                                    </div>
+                                    <li class="menu_item"><a href="#">Shopping</a>
+                                        <ul>
+                                            <li class="dropdown_item"><a href="/stores">Directory</a></li>
+                                            <li class="dropdown_item"><a href="/map">Center Map</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu_item"><a href="#">Dining</a>
+                                        <ul>
+                                            <li class="dropdown_item"><a href="/dine">Directory</a></li>
+                                            <li class="dropdown_item"><a href="/map">Center Map</a></li>
+                                        </ul>    
+                                    </li>
+                                    <li class="menu_item"><a href="/showtimes">Showtimes</a></li>
+                                    <li class="menu_item"><a href="/events">Calendar</a></li>
+                                    <li class="menu_item"><a href="#">Explore</a>
+                                        <ul>
+                                            <li class="dropdown_item"><a href="/hours">Hours</a></li>
+                                            <li class="dropdown_item"><a href="/getting_here">Getting Here</a></li>
+                                            <li class="dropdown_item"><a href="/parking">Parking</a></li>
+                                            <!--<li class="dropdown_item"><a href="/tourism">Tourism</a></li>-->
+                                        </ul>
+                                    </li>
+                                    <li class="menu_item"><a href="#">About</a>
+                                        <ul>
+                                            <li class="dropdown_item"><a href="/gateway">The Gateway</a></li>
+                                            <li class="dropdown_item"><a href="/grand_hall">The Grand Hall</a></li>
+                                            <li class="dropdown_item"><a href="/posts">Press</a></li>
+                                            <li class="dropdown_item"><a href="/leasing">Leasing</a></li>
+                                            <li class="dropdown_item"><a href="/station_41">Station 41</a></li>
+                                            <li class="dropdown_item"><a href="/contact_us">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="header_social">
+                                    <a href="https://www.facebook.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816064000/facebook_icon.png" class="header_social_icon" alt="Facebook Icon"></a>
+                                    <a href="https://www.instagram.com/shopthegateway/" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495817456000/insta_icon.png" class="header_social_icon" alt="Instagram Icon"></a>
+                                    <a href="#" data-toggle="modal" data-target="#snap_modal"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816065000/snapchat_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>
+                                    <a href="https://open.spotify.com/user/shopthegateway/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1495816067000/spotify_icon.png" class="header_social_icon" alt="SnapChat Icon"></a>
+                                </div> 
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+				<!--<div class="header-container hidden-phone " id="top" >-->
+				<!--	<div class="header page_container">-->
+				<!--		<div class="col-sm-6 text_left no_padding">-->
+				<!--			<router-link to="/" exact>-->
+				<!--				<img class="site-logo" src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652184126/ES_logo_red.png">-->
+				<!--			</router-link>-->
+				<!--			<span class="pull-right show_phone">-->
+				<!--				<router-link style="background-color:transparent;" to="/newsletter" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png" class="mobile_newsletter_btn"></router-link>-->
+				<!--				<img src="//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1455905827000/icon_menu.png" class="open_menu show_phone" alt="Menu"  id="open_menu"  @click="show_mobile_menu = !show_mobile_menu">-->
+				<!--			</span>-->
+				<!--		</div>-->
+				<!--		<div class="col-sm-6 hidden_phone">-->
+				<!--			<div class="social-div social_icons">-->
+				<!--				<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#999999;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>-->
+				<!--				<a href="http://www.facebook.com/eastgatesquaremall" target="_blank" class="social_link_icon social_fb"></a>-->
+				<!--				<a href="http://www.twitter.com/EastgateSquare" target="_blank" class="social_link_icon social_twitter"></a>-->
+				<!--			</div>-->
+				<!--			<div class="newsletter-div">-->
+				<!--				<div class="newsletter_box" style="margin-bottom:5px">-->
 									<!--<form style="margin:0" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post">-->
-									<div class="input_box">
-										<input class="sub_input_text" id="fieldEmail" name="cm-irudui-irudui" type="email" v-model="newsletter_email" required placeholder="ENTER YOUR EMAIL TO SUBSCRIBE" />
-										<router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png"></router-link>
-									</div>
+				<!--					<div class="input_box">-->
+				<!--						<input class="sub_input_text" id="fieldEmail" name="cm-irudui-irudui" type="email" v-model="newsletter_email" required placeholder="ENTER YOUR EMAIL TO SUBSCRIBE" />-->
+				<!--						<router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png"></router-link>-->
+				<!--					</div>-->
 									<!--</form>-->
-								</div>
-								<div id="search-form" class="search-form">
-									<div class="input_box">
-										<search-component :list="allStores" placeholder="SEARCH" :suggestion-attribute="suggestionAttribute" v-model="search_result" @select="onOptionSelect" class="text-left">
-											<template slot="item" scope="option" class="manual">
-												<article class="media">
-													<p>
-														<strong>{{ option.data.name }}</strong>
-													</p>
-												</article>
-											</template>
-										</search-component>
-										<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1514998294110/search_icon.png" id="search_icon"> 
-									</div>
-									<div class="input submit"></div>
-								</div>
-							</div>
-						</div>
-						<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
-							<div class="mobile_menu_container" v-show="show_mobile_menu">
-								<div class="opened_mobile_menu" >
-									<div class="text-left" style="padding-bottom: 20px;border-bottom: 1px solid #fff;">
-										<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1513713349903/ES_logo_2.png"  alt="">
-										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1513274154350/close_menu_icon.png" class="pull-right" alt="" style="margin-top: 10px;" id="close_menu" @click="show_mobile_menu = !show_mobile_menu">
-									</div>
-									<ul>
-										<li v-for="item in menu_items">
-											<router-link :to="item.href" :id="item.id" class="all_caps">{{item.name}} </router-link>
-											<div v-for="sub_menu in item.sub_menu" class="sub_menu_item">
-												<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>
-											</div>
-										</li>
-									</ul>
-									<div class="tel_num" v-if="property">
-										<a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>
-									</div>
-									<div class="m_menu_today_hour" v-if="todays_hours">
-										Open Today: {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}
-									</div>
-									<div class="social_icons_menu show_phone text-center">
+				<!--				</div>-->
+				<!--				<div id="search-form" class="search-form">-->
+				<!--					<div class="input_box">-->
+				<!--						<search-component :list="allStores" placeholder="SEARCH" :suggestion-attribute="suggestionAttribute" v-model="search_result" @select="onOptionSelect" class="text-left">-->
+				<!--							<template slot="item" scope="option" class="manual">-->
+				<!--								<article class="media">-->
+				<!--									<p>-->
+				<!--										<strong>{{ option.data.name }}</strong>-->
+				<!--									</p>-->
+				<!--								</article>-->
+				<!--							</template>-->
+				<!--						</search-component>-->
+				<!--						<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1514998294110/search_icon.png" id="search_icon"> -->
+				<!--					</div>-->
+				<!--					<div class="input submit"></div>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--		</div>-->
+				<!--		<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">-->
+				<!--			<div class="mobile_menu_container" v-show="show_mobile_menu">-->
+				<!--				<div class="opened_mobile_menu" >-->
+				<!--					<div class="text-left" style="padding-bottom: 20px;border-bottom: 1px solid #fff;">-->
+				<!--						<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1513713349903/ES_logo_2.png"  alt="">-->
+				<!--						<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1513274154350/close_menu_icon.png" class="pull-right" alt="" style="margin-top: 10px;" id="close_menu" @click="show_mobile_menu = !show_mobile_menu">-->
+				<!--					</div>-->
+				<!--					<ul>-->
+				<!--						<li v-for="item in menu_items">-->
+				<!--							<router-link :to="item.href" :id="item.id" class="all_caps">{{item.name}} </router-link>-->
+				<!--							<div v-for="sub_menu in item.sub_menu" class="sub_menu_item">-->
+				<!--								<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>-->
+				<!--							</div>-->
+				<!--						</li>-->
+				<!--					</ul>-->
+				<!--					<div class="tel_num" v-if="property">-->
+				<!--						<a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>-->
+				<!--					</div>-->
+				<!--					<div class="m_menu_today_hour" v-if="todays_hours">-->
+				<!--						Open Today: {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}-->
+				<!--					</div>-->
+				<!--					<div class="social_icons_menu show_phone text-center">-->
 										<!--<p>Follow us on</p>-->
-										<a href="https://www.facebook.com/eastgatesquaremall/" target="_blank">
-										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/fb.png" class="" alt="">
-										</a>
-										<a href="https://twitter.com/EastgateSquare" target="_blank">
-										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/twt.png" class="" alt="">
-										</a>
-									</div>
-								</div>
-							</div>
-						</transition>
-					</div>
-				</div>
+				<!--						<a href="https://www.facebook.com/eastgatesquaremall/" target="_blank">-->
+				<!--						<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/fb.png" class="" alt="">-->
+				<!--						</a>-->
+				<!--						<a href="https://twitter.com/EastgateSquare" target="_blank">-->
+				<!--						<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/twt.png" class="" alt="">-->
+				<!--						</a>-->
+				<!--					</div>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--		</transition>-->
+				<!--	</div>-->
+				<!--</div>-->
 				<div class="menu-container hidden-phone ">
 					<div class="menu-div page_container">
 						<div v-for="item in menu_items" :class="item.parent_class_list" style="display: inline-block;padding: 0 20px;">
