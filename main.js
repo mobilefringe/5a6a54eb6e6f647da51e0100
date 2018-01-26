@@ -78,7 +78,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     {
                         name: "Shopping",
                         href: "/stores",
-                        show_sub_menu: false,
                         sub_menu: [{
                                 name: "Leasing ",
                                 href: "/pages/eastgate-leasing"
@@ -96,7 +95,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     {
                         name: "Events",
                         href: "/events",
-                        show_sub_menu: false,
                         sub_menu: [{
                                 name: "Leasing ",
                                 href: "/pages/eastgate-leasing"
@@ -114,12 +112,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     {
                         name: "Promotions",
                         href: "/promotions",
-                        show_sub_menu: false
                     },
                     {
                         name: "Leasing",
                         href: "",
-                        show_sub_menu: false,
                         sub_menu: [{
                                 name: "Leasing ",
                                 href: "/pages/eastgate-leasing"
