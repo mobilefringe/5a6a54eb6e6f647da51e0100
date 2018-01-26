@@ -85,10 +85,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             {
                                 name: "Center Map",
                                 href: "/map"
-                            },
-                            {
-                                name: "Photos",
-                                href: "/photos"
                             }
                         ]
                     },
