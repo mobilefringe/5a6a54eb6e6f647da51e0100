@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-vue-meta-server-rendered>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Eastgate Square</title>
+		<link rel="shortcut icon" href="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/vnd.microsoft.icon/1516652280152/favicon (2).ico" type="image/x-icon" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//preview-5a1891476e6f645140560000.codecloudapp.com/agile.css">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/v-calendar@0.5.2/lib/v-calendar.min.css'>
+		<link href="https://cdn.jsdelivr.net/npm/vue2-animate@1.0.4/dist/vue2-animate.min.css" rel="stylesheet">
+		<script src="https://use.fontawesome.com/9cb86d00ca.js"></script>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="stylesheet" href="/v-calendar.css">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			
+			ga('create', 'UA-50587834-28', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div id="app" v-cloak>
+			<loader v-if="!dataLoaded"></loader>
+			<div class="main_content_container" v-if="dataLoaded">
+				<div class="header-container hidden-phone " id="top" >
+					<div class="header page_container">
+						<div class="col-sm-6 text_left no_padding">
+							<router-link to="/" exact>
+								<img class="site-logo" src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652184126/ES_logo_red.png">
+							</router-link>
+							<span class="pull-right show_phone">
+								<router-link style="background-color:transparent;" to="/newsletter" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png" class="mobile_newsletter_btn"></router-link>
+								<img src="//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1455905827000/icon_menu.png" class="open_menu show_phone" alt="Menu"  id="open_menu"  @click="show_mobile_menu = !show_mobile_menu">
+							</span>
+						</div>
+						<div class="col-sm-6 hidden_phone">
+							<div class="social-div social_icons">
+								<router-link to="/contact_us" style="font-size:12px; margin-right:10px; color:#999999;display: inline-block;height: 30px;line-height: 30px;">CONTACT US</router-link>
+								<a href="http://www.facebook.com/eastgatesquaremall" target="_blank" class="social_link_icon social_fb"></a>
+								<a href="http://www.twitter.com/EastgateSquare" target="_blank" class="social_link_icon social_twitter"></a>
+							</div>
+							<div class="newsletter-div">
+								<div class="newsletter_box" style="margin-bottom:5px">
+									<!--<form style="margin:0" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post">-->
+									<div class="input_box">
+										<input class="sub_input_text" id="fieldEmail" name="cm-irudui-irudui" type="email" v-model="newsletter_email" required placeholder="ENTER YOUR EMAIL TO SUBSCRIBE" />
+										<router-link style="background-color:transparent;" :to="'/newsletter?email='+ newsletter_email" ><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1511797731769/newsletter.png"></router-link>
+									</div>
+									<!--</form>-->
+								</div>
+								<div id="search-form" class="search-form">
+									<div class="input_box">
+										<search-component :list="allStores" placeholder="SEARCH" :suggestion-attribute="suggestionAttribute" v-model="search_result" @select="onOptionSelect" class="text-left">
+											<template slot="item" scope="option" class="manual">
+												<article class="media">
+													<p>
+														<strong>{{ option.data.name }}</strong>
+													</p>
+												</article>
+											</template>
+										</search-component>
+										<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1514998294110/search_icon.png" id="search_icon"> 
+									</div>
+									<div class="input submit"></div>
+								</div>
+							</div>
+						</div>
+						<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+							<div class="mobile_menu_container" v-show="show_mobile_menu">
+								<div class="opened_mobile_menu" >
+									<div class="text-left" style="padding-bottom: 20px;border-bottom: 1px solid #fff;">
+										<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1513713349903/ES_logo_2.png"  alt="">
+										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1513274154350/close_menu_icon.png" class="pull-right" alt="" style="margin-top: 10px;" id="close_menu" @click="show_mobile_menu = !show_mobile_menu">
+									</div>
+									<ul>
+										<li v-for="item in menu_items">
+											<router-link :to="item.href" :id="item.id" class="all_caps">{{item.name}} </router-link>
+											<div v-for="sub_menu in item.sub_menu" class="sub_menu_item">
+												<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>
+											</div>
+										</li>
+									</ul>
+									<div class="tel_num" v-if="property">
+										<a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>
+									</div>
+									<div class="m_menu_today_hour" v-if="todays_hours">
+										Open Today: {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}
+									</div>
+									<div class="social_icons_menu show_phone text-center">
+										<!--<p>Follow us on</p>-->
+										<a href="https://www.facebook.com/eastgatesquaremall/" target="_blank">
+										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/fb.png" class="" alt="">
+										</a>
+										<a href="https://twitter.com/EastgateSquare" target="_blank">
+										<img src="//codecloud.cdn.speedyrails.net/sites/5a1f136e6e6f6472c6240000/image/png/1512590798000/twt.png" class="" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</transition>
+					</div>
+				</div>
+				<div class="menu-container hidden-phone ">
+					<div class="menu-div page_container">
+						<div v-for="item in menu_items" :class="item.parent_class_list" style="display: inline-block;padding: 0 20px;">
+							<router-link :to="item.href" class="all_caps menu_link"  :id="item.name.id" exact v-if="item.sub_menu == undefined">
+								{{item.name}}
+							</router-link>
+							<div v-else class="all_caps dropdown">
+								<div class="menu_link" :id="item.name.id" @click="toggleSubMenu(item.id); item.show_sub_menu = !item.show_sub_menu">{{item.name}} </div>
+								<transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+									<div class="dropdown-menu" v-if="item.sub_menu" v-show="item.show_sub_menu">
+										<router-link tag="li" class="dropdown-item" v-for="sub_menu in item.sub_menu" :to="sub_menu.href">{{sub_menu.name}}</router-link>
+									</div>
+								</transition>
+							</div>
+						</div>
+					</div>
+				</div>
+				<transition name="custom-classes-transition" enter-active-class="fadeIn">
+					<router-view class="content"></router-view>
+				</transition>
+				<div class="footer-div hidden-phone" id="footer-div">
+					<div class="footer-top page_container">
+						<div class="row" style="margin:auto">
+							<div class="col-sm-6 text-left">
+								<p class="footer_sitemap"> <span class="pointer" @click="toggle_sitemap = !toggle_sitemap;">Sitemap</span> | <a href="/pages/eastgate-privacy-policy">Privacy Policy</a> | <a href="/contact_us">Contact Us</a> | <br class="show_phone"> <a href="http://www.mallmaverick.com" target="_blank">Powered by Mall Maverick</a>  </p>
+								<p class="" v-if="property"> {{property.address1}} {{property.city}}{{property.province}} {{property.postal_code}} - {{property.contact_phone}}</p>
+							</div>
+							<div class="col-sm-6 text-right">
+								<p class="footer_copyright">&copy; Copyright {{copyright_year}} {{property.name}} <br/>
+								</p>
+								<p class="">
+									<a href="//www.bentallkennedy.com" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516397300054/bentallblacklogo-01.png" class="" style="height:35px" alt=""></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<transition  name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+						<div class="footer-bottom hidden-phone " v-if="toggle_sitemap">
+							<div class="footer-bottom-title-div ">
+								<div class="page_container">
+									<div v-for="item in menu_items" :id="item.parent_id" class="footer_menu_title col-sm-2">
+										<router-link :to="item.href" :id="item.id" exact>{{item.name}} </router-link>
+										<div v-for="sub_menu in item.sub_menu">
+											<router-link :to="sub_menu.href" :id="sub_menu.id" exact>{{sub_menu.name}} </router-link>
+										</div>
+									</div>
+									&nbsp;
+								</div>
+							</div>
+						</div>
+					</transition>
+				</div>
+			</div>
+		</div>
+		<div class='modal-backdrop custom_backdrop hidden_now' id="popup_backdrop"></div>
+		<script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+		<script src="https://unpkg.com/es6-shim@0.35.3/es6-shim.min.js"></script>
+		<script data-main="/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+	</body>
+</html>
