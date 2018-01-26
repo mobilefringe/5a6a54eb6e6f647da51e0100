@@ -83,7 +83,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/stores"
                             },
                             {
-                                name: "Speciality Leasing",
+                                name: "Center Map",
                                 href: "/pages/eastgate-speciality-leasing-inquiries"
                             },
                             {
