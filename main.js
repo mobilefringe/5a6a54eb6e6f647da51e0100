@@ -110,8 +110,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/community_services"
                             },
                             {
-                                name: "Green Initiative",
-                                href: "/pages/green_intiative"
+                                name: "Green Initiatives",
+                                href: "/pages/green_intiatives"
                             }
                         ]
                     },
