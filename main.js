@@ -124,6 +124,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         href: "/hours",
                         sub_menu: [
                             {
+                                name: "Shopping Hours",
+                                href: "/hours"
+                            },
+                            {
                                 name: "Contact Us ",
                                 href: "/contact_us"
                             },
@@ -142,10 +146,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             {
                                 name: "Jobs",
                                 href: "/jobs"
-                            },
-                            {
-                                name: "Shopping Hours",
-                                href: "/hours"
                             },
                             {
                                 name: "Community",
