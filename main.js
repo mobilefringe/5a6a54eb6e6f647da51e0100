@@ -90,7 +90,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             }
                         ]
                     },
-                    
                     {
                         name: "Promotions",
                         href: "/promotions",
@@ -99,20 +98,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "Events",
                         href: "/events",
                     },
-                    {
-                        name: "Dining",
-                        href: "/dine",
-                        sub_menu: [{
-                                name: "Directory ",
-                                href: "/dine"
-                            },
-                            {
-                                name: "Center Map",
-                                href: "/map"
-                            }
-                        ]
-                    },
-                    
                     {
                         name: "Leasing",
                         href: "",
