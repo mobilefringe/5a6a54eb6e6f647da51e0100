@@ -102,7 +102,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "Guest Services",
                         href: "/services",
                         sub_menu: [{
-                                name: "Leasing ",
+                                name: "Services ",
                                 href: "/pages/eastgate-leasing"
                             },
                             {
