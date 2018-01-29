@@ -132,16 +132,16 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/jobs"
                             },
                             {
+                                name: "Find Us",
+                                href: "/find_us"
+                            },
+                            {
                                 name: "Contact Us ",
                                 href: "/contact_us"
                             },
                             {
                                 name: "Customer Service ",
                                 href: "/pages/eastgate-customer-service"
-                            },
-                            {
-                                name: "Find Us",
-                                href: "/find_us"
                             },
                             {
                                 name: "About Us",
