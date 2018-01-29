@@ -137,7 +137,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "Newsletter",
-                                href: "/community"
+                                href: "/newsletter"
                             }
                         ],
                     }
