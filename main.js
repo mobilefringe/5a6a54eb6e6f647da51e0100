@@ -99,7 +99,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         href: "/events",
                     },
                     {
-                        name: "Leasing",
+                        name: "Guest Services",
                         href: "",
                         sub_menu: [{
                                 name: "Leasing ",
