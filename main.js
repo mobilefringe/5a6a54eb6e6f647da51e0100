@@ -90,6 +90,15 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             }
                         ]
                     },
+                    
+                    {
+                        name: "Promotions",
+                        href: "/promotions",
+                    },
+                    {
+                        name: "Events",
+                        href: "/events",
+                    },
                     {
                         name: "Dining",
                         href: "/dine",
@@ -103,14 +112,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             }
                         ]
                     },
-                    {
-                        name: "Events",
-                        href: "/events",
-                    },
-                    {
-                        name: "Promotions",
-                        href: "/promotions",
-                    },
+                    
                     {
                         name: "Leasing",
                         href: "",
