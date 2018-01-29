@@ -106,7 +106,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/services"
                             },
                             {
-                                name: "Speciality Leasing",
+                                name: "Community Services",
                                 href: "/pages/eastgate-speciality-leasing-inquiries"
                             },
                             {
