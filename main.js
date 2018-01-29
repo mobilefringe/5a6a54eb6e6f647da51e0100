@@ -114,8 +114,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/green_intiatives"
                             },
                             {
-                                name: "Gift Card",
-                                href: "/pages/gift_card"
+                                name: "Gift Cards",
+                                href: "/pages/gift_cards"
                             }
                         ]
                     },
