@@ -124,8 +124,12 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         href: "/hours",
                         sub_menu: [
                             {
-                                name: "Shopping Hours",
+                                name: "Hours",
                                 href: "/hours"
+                            },
+                            {
+                                name: "Jobs",
+                                href: "/jobs"
                             },
                             {
                                 name: "Contact Us ",
@@ -142,10 +146,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             {
                                 name: "About Us",
                                 href: "/pages/eastgate-about-us"
-                            },
-                            {
-                                name: "Jobs",
-                                href: "/jobs"
                             },
                             {
                                 name: "Community",
