@@ -112,7 +112,7 @@
 						<div class="footer_nav">
 						    <nav id="primary_nav">
 								<ul>
-								    <li v-for="item in menu_items" class="menu_item">
+								    <li v-for="item in menu_items" class="">
 								        <router-link :to="item.href">{{item.name}}</router-link>
 								        <ul v-if="item.sub_menu">
 								            <li v-for="sub_menu in item.sub_menu" class="">
