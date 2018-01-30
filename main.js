@@ -36,7 +36,7 @@ require.config({
         'png-map' : 'https://preview-mmvue.codecloudapp.com/png-map.vue?noext',
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
-        'masonry' : 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min',
+        'jquery-bridget' : 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min',
         'vue-masonry-plugin' : 'https://cdn.jsdelivr.net/npm/vue-masonry@0.10.16/dist/vue-masonry-plugin'
         
     }
