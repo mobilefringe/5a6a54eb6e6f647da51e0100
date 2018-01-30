@@ -56,7 +56,7 @@
 								<nav id="mobile_nav" v-show="show_mobile_menu">
 									<ul>
 										<div class="mobile_site_logo">
-											<a href="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></a>
+											<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
 										</div>
 										<li v-for="item in menu_items" class="menu_item">
     								        <a :href="item.href">{{item.name}}</a>
