@@ -147,7 +147,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 suggestionAttribute: 'name',
                 newsletter_email: "",
                 stickyMenu: false,
-                isSticky: 180,
+                isSticky: 250,
             }
         },
         created() {
