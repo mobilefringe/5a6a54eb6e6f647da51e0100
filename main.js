@@ -244,6 +244,9 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
 
             }
         },
+        destroyed: function() {
+            window.removeEventListener('scroll', this.enableStickyNavbar);
+        },
         router: router,
         store,
         i18n
