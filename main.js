@@ -211,7 +211,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
             loadData: async function() {
                 try {
                     await this.$store.dispatch('initializeApi', {
-                        site: "northpark",
+                        site: "bonniedoon",
                         version: "v4"
                     });
                     // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
