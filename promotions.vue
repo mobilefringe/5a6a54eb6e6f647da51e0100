@@ -9,58 +9,59 @@
 			</div>
 		</div>
 		<div class="site_container page_content">
-			<div class="row bold">
-				<div class="col-sm-6 col-md-4">
-					<div class="store_search" >
-						<search-component :list="allStores" placeholder="Find Your Store" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
-							<template slot="item" scope="option" class="manual">
-								<article class="media">
-									<p>
-										<strong>{{ option.data.name }}</strong>
-									</p>
-								</article>
-							</template>
-						</search-component>
-						<img src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1517497861636/search_icon_2x.png" class="pull-right" id="store_search_img" alt="">
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="store_search" >
-						<div class="category-select-container">
-							<v-select v-model="selectedCat" :options="dropDownCats" :searchable="false" :on-change="filterByCategory" class="category-select" placeholder="Sort By Categories" id="selectByCat"></v-select>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-12 hidden_phone">
-					<div class="store_search" >
-						<a class="directory_link" href="/map">
-							<div class="promotions_header_container directory_btn">View Map</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div id="store_list_container">
-					<div class="col-xs-6 col-sm-3 col-md-2 cats_row" v-for="store in filteredStores" :data-cat="store.cat_list">
-						<div class="store_logo_container" :id="store.initial">
-							<router-link :to="'/stores/'+ store.slug">
-								<img class="store_img" :style="store.initial_img" :src="store.store_front_url_abs"/>
-								<img class="store_hover" :style="store.initial_img" :src="store.hover_img"/>
-								<div class="store_coming_soon" v-if="store.is_coming_soon_store">
-									<div class="new_store">Coming soon</div>
-								</div>
-								<div class="store_coming_soon" v-if="store.is_new_store">
-									<div class="new_store">New Store</div>
-								</div>
-								<div class="store_list_promos">
-									<span class="promo_exist" v-if="store.total_published_jobs > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000358000/jobs.png" class="" alt=""> {{store.total_published_jobs}}</span>
-									<span class="promo_exist" v-if="store.total_published_promos > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000371000/promotions.png" class="" alt=""> {{store.total_published_promos}}</span>
-								</div>
-							</router-link>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="row margin_30">
+                <div class="col-md-6">
+                    <h3 class="details_header caps">Events</h3>
+                    <div class="thick_line"></div>        
+                </div>
+            </div>
+            <div id="no_events" class="row hidden_now">
+                <div class="col-md-12">
+                    <p>There are no published Events at this time. Please check back soon.</p>    
+                </div>
+            </div>
+            <div id="events_container">
+                <script id="events_template" type="x-tmpl-mustache/text">
+                    <div class="row event_container">
+                        <div class="col-md-1 hidden_phone">
+                            <div class="pull-left">
+                                <p class="event_side_date">{{day}}</p>
+                                <p class="event_side_day">{{num}}</p>
+                                <p class="event_side_date">{{month}}</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <img src="{{image_url}}" class="event_image" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-7">
+                            <h2 class="event_name">{{name}}</h2> 
+                            <div class="event_thick_line"></div>
+                            <p class="event_dates" style="{{show_date}}">{{dates}}</p>
+                            <p class="event_desc">{{desc_short}}</p> 
+                            <a href="/events/{{slug}}" class="event_learn_more">
+                                Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col-sm-12">
+                            <hr>
+                        </div>
+                    </div>
+                </script>
+                <div id="events_subcontainer">
+                    
+                </div>
+            </div>
+            <div id="loadMoreEvents" class="row">
+                <div class="col-md-12">
+                    <input type="hidden" value="1" id="num_loaded" />
+                    <p class="hidden_now" id ="all_loaded">No More Events</p>
+                    <p class="" id="loaded_posts">
+                        <a href="#" class="red" id="load_more_posts">
+                            <span class="post_details_link">Load More</span><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
 		</div>
 	</div>
 </template>
