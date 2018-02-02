@@ -48,7 +48,7 @@
 			    </div>
 			    
 				<div class="col-sm-12 no_padding">
-				    <img v-lazy="currentJob.image_url"/>
+				    <!--<img v-lazy="currentJob.image_url"/>-->
     				<div class="text-left promo_description">
     				    <p v-html="currentJob.rich_description"></p>
     				</div>
@@ -146,7 +146,7 @@
                                 temp_job.push(current_promo);
                             }
                         });
-                        this.storeJobs = temp_promo;
+                        this.storeJobs = temp_job;
                     }
                     if(this.currentJob.store) {
                         var storeHours = [];
