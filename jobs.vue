@@ -134,7 +134,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/promotions/" + slug;
+                    var share_url = "http://mallmaverick.ca/jobs/" + slug;
                     return share_url;
                 },
             }
