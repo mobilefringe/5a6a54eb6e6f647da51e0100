@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentPage">
+    <div v-if="dataLoaded">
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
