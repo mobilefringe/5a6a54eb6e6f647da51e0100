@@ -1,6 +1,6 @@
 <template>
     <div v-if="currentPage">
-        <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
+        <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
@@ -21,7 +21,6 @@
             </div>
             <div style="padding:20px 0;"></div>
 		</div>
-        
     </div>
     <!--Pages Banner-->
 </template>
