@@ -62,7 +62,7 @@
                 next();
             },
             created(){
-            //   this.updateCurrentPage(this.id);
+            // this.updateCurrentPage(this.id);
                 this.loadData().then(response => {
                     this.updateCurrentPromo(this.id);
                     var temp_repo = this.findRepoByName('Promos Banner');
