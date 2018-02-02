@@ -49,7 +49,7 @@
 			    
 				<div class="col-sm-12 no_padding">
 				    <img v-lazy="currentEvent.image_url"/>
-    				<div class="text-left event_description">
+    				<div class="text-left promo_description">
     				    <p v-html="currentEvent.rich_description"></p>
     				</div>
 				</div>
