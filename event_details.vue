@@ -168,7 +168,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'processedPromos',
+                    'processedEents',
                     'findEventBySlug',
                     'findEventById',
                     'timezone',
