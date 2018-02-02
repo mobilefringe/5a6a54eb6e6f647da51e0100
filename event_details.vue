@@ -30,7 +30,7 @@
 			</div>
 			<div class="col-sm-8 promo_image_container text-left">
 			<router-link to="/event"><i class="fa fa-angle-left"></i> &nbsp; Back to Events</router-link>
-			    <h3 class="event_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
+			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
 			    <div class="row">
 			        <p class="event_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
     			    <social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentEvent.image_url" inline-template >
