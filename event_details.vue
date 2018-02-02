@@ -170,7 +170,7 @@
                     'property',
                     'processedPromos',
                     'findEventBySlug',
-                    'findPromoById',
+                    'findEventById',
                     'timezone',
                     'findRepoByName',
                     'findHourById'
