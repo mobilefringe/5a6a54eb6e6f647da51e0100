@@ -124,51 +124,66 @@
 </style>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-lazy-load", "vue-paginate"], function(Vue, Vuex, moment, tz, VueMoment, Meta, VueLazyload, VuePaginate) {
         Vue.use(Meta);
         Vue.use(VueLazyload);
-        return Vue.component("events-component", {
+        Vue.use(VuePaginate);
+        return Vue.component("promos-component", {
             template: template, // the variable template will be injected
-            data () {
-              return {
-                  dataLoaded: false
-              }  
+            data: function() {
+                return {
+                    selectedDate: null,
+                    filteredPromos:[],
+                    dataloaded: false,
+                    promoBanner: null,
+                    paginate: ['promos'],
+                    promos : null
+                }
             },
-            created () {
-                this.$store.dispatch("getData", "events").then(response => {
-                   this.dataLoaded = true;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({ name: '404'});
+            created() {
+                this.loadData().then(response => {
+                    this.dataloaded = true;
+                    
+                    var temp_repo = this.findRepoByName('Promos Banner');
+                    if(temp_repo) {
+                        this.promoBanner = temp_repo.images[0];
+                    }
+                    console.log(this.promoBanner);
+                    this.promos = this.promotions;
                 });
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
                     'timezone',
-                    'processedEvents'
+                    'processedPromos',
+                    'findRepoByName',
                 ]),
-                events() {
+                promotions() {
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
-                    _.forEach(this.processedEvents, function(value, key) {
+                    _.forEach(this.processedPromos, function(value, key) {
                         value.description_short = _.truncate(value.description, {
-                            'length': 70
+                            'length': 150
                         });
+                        
                         if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                            value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652189884/ES_logo_red2.png";
+                            value.store.image_url = "http://via.placeholder.com/400x400/757575";
+                        }
+                        else if (value.store == null || value.store == undefined) {
+                            value.store = {};
+                            value.store.image_url =  "http://via.placeholder.com/400x400/757575";
                         }
                         if (_.includes(value.image_url, 'missing')) {
-                            value.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652189884/ES_logo_red2.png";
+                            value.image_url = "http://via.placeholder.com/400x400/757575";
                         }
-                            
+                        // value.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1516652189884/ES_logo_red2.png";
+                        
                         temp_promo.push(value);
                     });
-                    
                     _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
                     return temp_promo;
-                }
+                },
             },
             methods: {
                 loadData: async function() {
@@ -180,9 +195,9 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://eastgatesquare.ca/events/" + slug;
+                    var share_url = "http://mallmaverick.ca/promotions/" + slug;
                     return share_url;
-                }
+                },
             }
         });
     });
