@@ -108,7 +108,7 @@
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                this.currentPromo = this.findPEventBySlug(to.params.id);
+                this.currentPromo = this.findEventBySlug(to.params.id);
                     if (this.currentPromo === null || this.currentPromo === undefined){
                         this.$router.replace({ name: '404'});
                     }
@@ -169,7 +169,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'processedPromos',
-                    'findPromoBySlug',
+                    'findEventBySlug',
                     'findPromoById',
                     'timezone',
                     'findRepoByName',
