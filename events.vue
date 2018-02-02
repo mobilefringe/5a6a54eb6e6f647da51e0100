@@ -132,7 +132,6 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    filteredPromos:[],
                     dataloaded: false,
                     promoBanner: null,
                     paginate: ['promos'],
@@ -143,7 +142,7 @@
                 this.loadData().then(response => {
                     this.dataloaded = true;
                     
-                    var temp_repo = this.findRepoByName('Promos Banner');
+                    var temp_repo = this.findRepoByName('Events Banner');
                     if(temp_repo) {
                         this.promoBanner = temp_repo.images[0];
                     }
