@@ -1,5 +1,16 @@
 <template>
-    <div id="pages_container" v-if="currentPage">
+    <div v-if="currentPage">
+        <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
+			<!--http://via.placeholder.com/1920x300-->
+			<div class="site_container">
+				<div class="header_content">
+					<h1>Shopping</h1>
+				</div>
+			</div>
+		</div>
+		<div>
+		    
+		</div>
         <div class="page_header all_caps double_border_bottom">
 			<div class="page_container text_left" v-html="currentPage.title"> </div>
 		</div>
