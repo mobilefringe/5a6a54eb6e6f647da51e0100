@@ -48,7 +48,7 @@
 			    </div>
 			    
 				<div class="col-sm-12 no_padding">
-				    <img v-lazy="currentEvent.image_url"/>
+				    <img v-lazy="currentEvent.image_url" class="image"/>
     				<div class="text-left promo_description">
     				    <p v-html="currentEvent.rich_description"></p>
     				</div>
