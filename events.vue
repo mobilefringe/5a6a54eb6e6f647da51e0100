@@ -151,7 +151,7 @@
             computed: {
                 ...Vuex.mapGetters([
                     'timezone',
-                    'processedPromos',
+                    'processedEvents',
                     'findRepoByName',
                 ]),
                 events() {
