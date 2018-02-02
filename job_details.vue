@@ -143,7 +143,7 @@
                             if(_.toNumber(value) != current_id){
                                 var current_promo = vm.findJobById(value);
                                 current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
-                                temp_promo.push(current_promo);
+                                temp_job.push(current_promo);
                             }
                         });
                         this.storeJobs = temp_promo;
