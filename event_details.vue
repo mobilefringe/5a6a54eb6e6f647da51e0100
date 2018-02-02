@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="col-sm-8 event_image_container text-left">
-			<router-link to="/eventtions"><i class="fa fa-angle-left"></i> &nbsp; Back to Eventtions</router-link>
+			<router-link to="/event"><i class="fa fa-angle-left"></i> &nbsp; Back to Eventtions</router-link>
 			    <h3 class="event_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
 			    <div class="row">
 			        <p class="event_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
@@ -82,7 +82,7 @@
 		            <p class="event_div_date">{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
 		            <p class="event_div_description">{{event.description_short}}</p>
 					<span class="feature_read_more">
-						<router-link :to="'/eventtions/'+event.slug" class="mobile_readmore" >
+						<router-link :to="'/event/'+event.slug" class="mobile_readmore" >
 							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
 						</router-link>
 					</span>
@@ -122,7 +122,7 @@
                         this.eventBanner = temp_repo.images[0];
                     }
                     console.log(this.eventBanner);
-                    this.events = this.eventtions;
+                    this.events = this.event;
                 });
             },
             watch: {
@@ -139,7 +139,7 @@
                         var vm = this;
                         var temp_event = [];
                         var current_id =_.toNumber(this.currentEvent.id);
-                        _.forEach(this.currentEvent.store.eventtions, function(value, key) {
+                        _.forEach(this.currentEvent.store.event, function(value, key) {
                             if(_.toNumber(value) != current_id){
                                 var current_event = vm.findEventById(value);
                                 current_event.description_short = _.truncate(current_event.description, {'length': 70});
@@ -195,7 +195,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/eventtions/" + slug;
+                    var share_url = "http://mallmaverick.ca/event/" + slug;
                     return share_url;
                 },
             }
