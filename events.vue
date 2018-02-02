@@ -134,8 +134,7 @@
                 return {
                     dataloaded: false,
                     promoBanner: null,
-                    paginate: ['promos'],
-                    promos : null
+                    paginate: ['events']
                 }
             },
             created() {
@@ -156,7 +155,7 @@
                     'processedPromos',
                     'findRepoByName',
                 ]),
-                promotions() {
+                events() {
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
