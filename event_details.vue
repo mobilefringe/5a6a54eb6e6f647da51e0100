@@ -3,7 +3,7 @@
 	    <div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
-				<div class="header_content">
+				<div class="header_content caps">
 					<h1>EVENTS</h1>
 				</div>
 			</div>
