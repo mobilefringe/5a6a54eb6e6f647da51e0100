@@ -94,14 +94,14 @@
             computed: {
                 ...Vuex.mapGetters([
                     'timezone',
-                    'processedPromos',
+                    'processedJobs',
                     'findRepoByName',
                 ]),
                 promotions() {
                     var vm = this;
                     var temp_promo = [];
                     var temp_job = [];
-                    _.forEach(this.processedPromos, function(value, key) {
+                    _.forEach(this.processedJobs, function(value, key) {
                         value.description_short = _.truncate(value.description, {
                             'length': 150
                         });
