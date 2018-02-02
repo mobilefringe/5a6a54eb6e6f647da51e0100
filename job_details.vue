@@ -1,6 +1,6 @@
 <template>
 	<div class="promo_dets_container" v-if="currentJob">
-	    <div class="page_header" v-if="jobBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
+	    <div class="page_header" v-if="jobBanner" v-bind:style="{ backgroundImage: 'url(' + jobBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
