@@ -1,5 +1,5 @@
 <template>
-    <div v-if="dataLoaded">
+    <div v-if="currentPage">
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
@@ -9,19 +9,19 @@
 			</div>
 		</div>
 		<div>
-		    
-		</div>
-        <div class="page_header all_caps double_border_bottom">
-			<div class="page_container text_left" v-html="currentPage.title"> </div>
-		</div>
-        <div class="page_container">
-            <div class="row padding_30" >
-                <div class="page_body description_text text_left" v-html="currentPage.body">
-                    
+		    <div class="page_header all_caps double_border_bottom">
+    			<div class="page_container text_left" v-html="currentPage.title"> </div>
+    		</div>
+            <div class="page_container">
+                <div class="row padding_30" >
+                    <div class="page_body description_text text_left" v-html="currentPage.body">
+                        
+                    </div>
                 </div>
             </div>
-        </div>
-        <div style="padding:20px 0;"></div>
+            <div style="padding:20px 0;"></div>
+		</div>
+        
     </div>
     <!--Pages Banner-->
 </template>
