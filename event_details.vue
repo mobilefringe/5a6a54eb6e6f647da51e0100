@@ -1,6 +1,6 @@
 <template>
-	<div class="promo_dets_container" v-if="currentPromo">
-	    <div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
+	<div class="event_dets_container" v-if="currentEvent">
+	    <div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
@@ -10,13 +10,13 @@
 		</div>
 		<div class="site_container">
     		<div class="row">
-			<div class="col-sm-4 promo_logo_container hidden_phone">
+			<div class="col-sm-4 event_logo_container hidden_phone">
 				<div class="image_container">
-					<img v-lazy="currentPromo.store.image_url" class="image"/>
+					<img v-lazy="currentEvent.store.image_url" class="image"/>
 				</div>
 				<div class="text-center">
-				    <h4 v-if="currentPromo.store.phone" class="store_dets_title"> {{currentPromo.store.phone}}</h4>
-				    <h4 v-if="currentPromo.store.website" class="store_dets_title"> <a :href="'//'+currentPromo.store.website" target="_blank">Store Website</a></h4>
+				    <h4 v-if="currentEvent.store.phone" class="store_dets_title"> {{currentEvent.store.phone}}</h4>
+				    <h4 v-if="currentEvent.store.website" class="store_dets_title"> <a :href="'//'+currentEvent.store.website" target="_blank">Store Website</a></h4>
 				    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>
 				    <ul class="store_hours_list">
                         <li v-if="storeHours" v-for="hour in storeHours">
@@ -24,16 +24,16 @@
                         </li>
                     </ul>
                     <div class="store_dets_btn caps">
-                        <router-link :to="'/stores'+currentPromo.store.slug">Store Details & Location</router-link>
+                        <router-link :to="'/stores'+currentEvent.store.slug">Store Details & Location</router-link>
                     </div>
 				</div>
 			</div>
-			<div class="col-sm-8 promo_image_container text-left">
-			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
-			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentPromo.name}}</h3>
+			<div class="col-sm-8 event_image_container text-left">
+			<router-link to="/eventtions"><i class="fa fa-angle-left"></i> &nbsp; Back to Eventtions</router-link>
+			    <h3 class="event_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
 			    <div class="row">
-			        <p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
-    			    <social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentPromo.image_url" inline-template >
+			        <p class="event_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+    			    <social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentEvent.image_url" inline-template >
     					<div class="blog-social-share pull-right" style="margin: 15px auto;">
     						<div class="social_share">
     							<network network="facebook">
@@ -48,41 +48,41 @@
 			    </div>
 			    
 				<div class="col-sm-12 no_padding">
-				    <img v-lazy="currentPromo.image_url"/>
-    				<div class="text-left promo_description">
-    				    <p v-html="currentPromo.rich_description"></p>
+				    <img v-lazy="currentEvent.image_url"/>
+    				<div class="text-left event_description">
+    				    <p v-html="currentEvent.rich_description"></p>
     				</div>
 				</div>
 				
 			</div>
 		<!--</div>-->
 		<!--<div class="row" style="margin-left:0;">-->
-			<!--<div class="col-sm-4 promo_details_container text-left">-->
+			<!--<div class="col-sm-4 event_details_container text-left">-->
 			<!--	<div>-->
 					
-			<!--		<p class="promo_store_name">{{currentPromo.store.name}}</p>-->
+			<!--		<p class="event_store_name">{{currentEvent.store.name}}</p>-->
 					
 			<!--	</div>-->
 			<!--</div>-->
-			<!--<div class="col-sm-8 promo_desc_container">-->
+			<!--<div class="col-sm-8 event_desc_container">-->
 				
 			<!--</div>-->
 		</div>
-		<div class="promo_promo_container" v-if="storePromos.length > 0">
-		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Promotions</div>
-		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
+		<div class="event_event_container" v-if="storeEvents.length > 0">
+		    <div class="event_container_title text-left all_caps"> OTHER {{currentEvent.store.name | uppercase }} Eventtions</div>
+		    <div class="row event_event_dets text-left" v-for="event in storeEvents">
 		        <div class="col-sm-7" >
-		        <div class="promo_div_image">
-		            <img v-lazy="promo.image_url" alt=""/>
+		        <div class="event_div_image">
+		            <img v-lazy="event.image_url" alt=""/>
 		        </div>
 		        </div>
-		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name">{{promo.name}}</p>
-		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="promo_div_description">{{promo.description_short}}</p>
+		        <div class="col-sm-5 event_div_dets">
+		            <p class="event_div_name">{{event.name}}</p>
+		            <p class="event_div_event_name">{{event.store.name | uppercase}}</p>
+		            <p class="event_div_date">{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
+		            <p class="event_div_description">{{event.description_short}}</p>
 					<span class="feature_read_more">
-						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
+						<router-link :to="'/eventtions/'+event.slug" class="mobile_readmore" >
 							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
 						</router-link>
 					</span>
@@ -100,58 +100,58 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
-                    currentPromo: null,
-                    storePromos : null,
+                    currentEvent: null,
+                    storeEvents : null,
                     storeHours : null,
-                    promoBanner : null
+                    eventBanner : null
                 }
             },
             props:['id'],
             beforeRouteUpdate(to, from, next) {
-                this.currentPromo = this.findEventBySlug(to.params.id);
-                    if (this.currentPromo === null || this.currentPromo === undefined){
+                this.currentEvent = this.findEventBySlug(to.params.id);
+                    if (this.currentEvent === null || this.currentEvent === undefined){
                         this.$router.replace({ name: '404'});
                     }
                 next();
             },
             created(){
                 this.loadData().then(response => {
-                    this.updateCurrentPromo(this.id);
-                    var temp_repo = this.findRepoByName('Promos Banner');
+                    this.updatecurrentEvent(this.id);
+                    var temp_repo = this.findRepoByName('Events Banner');
                     if(temp_repo) {
-                        this.promoBanner = temp_repo.images[0];
+                        this.eventBanner = temp_repo.images[0];
                     }
-                    console.log(this.promoBanner);
-                    this.promos = this.promotions;
+                    console.log(this.eventBanner);
+                    this.events = this.eventtions;
                 });
             },
             watch: {
-                currentPromo : function (){
-                    if(this.currentPromo != null) {
-                        console.log(this.currentPromo.store);
-                        if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
-                            this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
+                currentEvent : function (){
+                    if(this.currentEvent != null) {
+                        console.log(this.currentEvent.store);
+                        if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.image_url, 'missing')) {
+                            this.currentEvent.store.image_url = "http://via.placeholder.com/400x400/757575";
                         }
-                        else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
-                            this.currentPromo.store = {};
-                            this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                        else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
+                            this.currentEvent.store = {};
+                            this.currentEvent.store.image_url =  "http://via.placeholder.com/400x400/757575";
                         }
                         var vm = this;
-                        var temp_promo = [];
-                        var current_id =_.toNumber(this.currentPromo.id);
-                        _.forEach(this.currentPromo.store.promotions, function(value, key) {
+                        var temp_event = [];
+                        var current_id =_.toNumber(this.currentEvent.id);
+                        _.forEach(this.currentEvent.store.eventtions, function(value, key) {
                             if(_.toNumber(value) != current_id){
-                                var current_promo = vm.findPromoById(value);
-                                current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
-                                temp_promo.push(current_promo);
+                                var current_event = vm.findEventById(value);
+                                current_event.description_short = _.truncate(current_event.description, {'length': 70});
+                                temp_event.push(current_event);
                             }
                         });
-                        this.storePromos = temp_promo;
+                        this.storeEvents = temp_event;
                     }
-                    if(this.currentPromo.store) {
+                    if(this.currentEvent.store) {
                         var storeHours = [];
                         var vm = this;
-                        _.forEach(this.currentPromo.store.store_hours, function (value, key) {
+                        _.forEach(this.currentEvent.store.store_hours, function (value, key) {
                             var hour = vm.findHourById(value);
                             if(hour.day_of_week === 0){
                                 hour.order = 7;
@@ -175,27 +175,27 @@
                     'findRepoByName',
                     'findHourById'
                 ]),
-                allPromos() {
-                    return this.processedPromos;
+                allEvents() {
+                    return this.processedEvents;
                 },
             },
             methods: {
-                updateCurrentPromo (id) {
-                    this.currentPromo = this.findPromoBySlug(id);
-                    if (this.currentPromo === null || this.currentPromo === undefined){
+                updatecurrentEvent (id) {
+                    this.currentEvent = this.findEventBySlug(id);
+                    if (this.currentEvent === null || this.currentEvent === undefined){
                         this.$router.replace({ name: '404'});
                     }
                 },
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "eventtions"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/promotions/" + slug;
+                    var share_url = "http://mallmaverick.ca/eventtions/" + slug;
                     return share_url;
                 },
             }
