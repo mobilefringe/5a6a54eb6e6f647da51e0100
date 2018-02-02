@@ -29,7 +29,7 @@
 				</div>
 			</div>
 			<div class="col-sm-8 promo_image_container text-left">
-			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
+			<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; Back to Jobs</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentPromo.name}}</h3>
 			    <div class="row">
 			        <p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
@@ -69,20 +69,20 @@
 			<!--</div>-->
 		</div>
 		<div class="promo_promo_container" v-if="storePromos.length > 0">
-		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Promotions</div>
-		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
+		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Jobs</div>
+		    <div class="row promo_promo_dets text-left" v-for="job in storePromos">
 		        <div class="col-sm-7" >
 		        <div class="promo_div_image">
-		            <img v-lazy="promo.image_url" alt=""/>
+		            <img v-lazy="job.image_url" alt=""/>
 		        </div>
 		        </div>
 		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name">{{promo.name}}</p>
-		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="promo_div_description">{{promo.description_short}}</p>
+		            <p class="promo_div_name">{{job.name}}</p>
+		            <p class="promo_div_promo_name">{{job.store.name | uppercase}}</p>
+		            <p class="promo_div_date">{{job.start_date | moment("MMM D", timezone)}} - {{job.end_date | moment("MMM D", timezone)}}</p>
+		            <p class="promo_div_description">{{job.description_short}}</p>
 					<span class="feature_read_more">
-						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
+						<router-link :to="'/jobs/'+job.slug" class="mobile_readmore" >
 							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
 						</router-link>
 					</span>
@@ -117,7 +117,7 @@
             created(){
                 this.loadData().then(response => {
                     this.updateCurrentPromo(this.id);
-                    var temp_repo = this.findRepoByName('Promos Banner');
+                    var temp_repo = this.findRepoByName('Jobs Banner');
                     if(temp_repo) {
                         this.jobBanner = temp_repo.images[0];
                     }
@@ -137,9 +137,9 @@
                             this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
                         }
                         var vm = this;
-                        var temp_promo = [];
+                        var temp_job = [];
                         var current_id =_.toNumber(this.currentPromo.id);
-                        _.forEach(this.currentPromo.store.promotions, function(value, key) {
+                        _.forEach(this.currentPromo.store.jobs, function(value, key) {
                             if(_.toNumber(value) != current_id){
                                 var current_promo = vm.findPromoById(value);
                                 current_promo.description_short = _.truncate(current_promo.description, {'length': 70});
@@ -189,13 +189,13 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "jobs"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/promotions/" + slug;
+                    var share_url = "http://mallmaverick.ca/jobs/" + slug;
                     return share_url;
                 },
             }
