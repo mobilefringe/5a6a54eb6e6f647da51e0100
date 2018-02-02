@@ -101,7 +101,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     },
                     {
                         name: "Guest Services",
-                        href: "/services",
+                        href: "/pages/bonniedoon-services",
                         sub_menu: [{
                                 name: "Services ",
                                 href: "/pages/bonniedoon-services"
