@@ -112,7 +112,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "Green Initiatives",
-                                href: "/pages/green_intiatives"
+                                href: "	/pages/bonniedoon-gift-cards"
                             },
                             {
                                 name: "Gift Cards",
