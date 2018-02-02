@@ -65,6 +65,7 @@
             // this.updateCurrentPage(this.id);
                 this.loadData().then(response => {
                     // this.updateCurrentPromo(this.id);
+                    console.log('response', response;)
                     var temp_repo = this.findRepoByName('Promos Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
