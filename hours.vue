@@ -64,7 +64,6 @@
                    console.log(this.storeBanner); 
                 });
             },
-            
             computed: {
                 ...Vuex.mapGetters([
                     'property',
