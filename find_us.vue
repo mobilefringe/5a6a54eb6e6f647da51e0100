@@ -36,22 +36,22 @@
 	</div>
 </template>
 
-<style>
-    #find_us_container .row{
-        margin-left:inherit;
-    }
-    #find_us_container {
-        margin: 20px auto 0;
-    }
-    #find_us_container .directions {
-        padding: 10px 0;   
-    }
-    .form-group .form-control-feedback{
-        font-size: 12px;
-        top:50px;
-        color: #F44336;
-    }
-</style>
+<!--<style>-->
+<!--    #find_us_container .row{-->
+<!--        margin-left:inherit;-->
+<!--    }-->
+<!--    #find_us_container {-->
+<!--        margin: 20px auto 0;-->
+<!--    }-->
+<!--    #find_us_container .directions {-->
+<!--        padding: 10px 0;   -->
+<!--    }-->
+<!--    .form-group .form-control-feedback{-->
+<!--        font-size: 12px;-->
+<!--        top:50px;-->
+<!--        color: #F44336;-->
+<!--    }-->
+<!--</style>-->
 
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
