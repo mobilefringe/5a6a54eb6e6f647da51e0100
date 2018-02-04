@@ -130,7 +130,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    this.pageBanner = this.findRepoByName('Contact Uss Banner').images[0];
+                    this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
                    console.log(this.pageBanner); 
                 });
             },
@@ -183,7 +183,7 @@
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/eastgate-contact-us.json"}),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "	/pages/bonniedoon-contact-us.json"}),this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
