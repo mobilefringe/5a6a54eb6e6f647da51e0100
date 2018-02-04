@@ -32,7 +32,7 @@
                                 <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">-->
                         <!--    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">-->
                         <!--        <label class="label" for="phone">Phone</label>-->
                         <!--        <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" placeholder="Phone" data-vv-delay="500">-->
