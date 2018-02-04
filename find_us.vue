@@ -1,6 +1,6 @@
 <template>
 	<div id="find_us_container">
-	    <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')', margin-bottom:0px;}">
+	    <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')', margin-bottom:'0px'}">
 			<div class="site_container">
 				<div class="header_content">
 					<h1>Find Us</h1>
