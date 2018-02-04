@@ -32,18 +32,6 @@
                                 <span v-show="errors.has('email')" class="form-control-feedback">{{ errors.first('email') }}</span>
                             </div>
                         </div>
-                        <!--<div class="form-group">-->
-                        <!--    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('phone')}">-->
-                        <!--        <label class="label" for="phone">Phone</label>-->
-                        <!--        <input v-model="form_data.phone" v-validate="'required|alpha_dash'" class="form-control" :class="{'input': true}" name="phone" type="phone" placeholder="Phone" data-vv-delay="500">-->
-                        <!--        <span v-show="errors.has('phone')" class="form-control-feedback">{{ errors.first('phone') }}</span>-->
-                        <!--    </div>-->
-                        <!--    <div class="col-sm-6 col-xs-12" :class="{'has-error': errors.has('subject')}">-->
-                        <!--        <label class="label" for="subject">Subject</label>-->
-                        <!--        <input v-model="form_data.subject" v-validate="'required:true'" class="form-control" :class="{'input': true}" name="subject" type="text" placeholder="Subject" data-vv-delay="500">-->
-                        <!--        <span v-show="errors.has('subject')" class="form-control-feedback">{{ errors.first('subject') }}</span>-->
-                        <!--    </div>-->
-                        <!--</div>-->
                         <div class="form-group">
                             <div class="col-xs-12" :class="{'has-error': errors.has('message')}">
                                 <label class="label" for="message">Message</label>
