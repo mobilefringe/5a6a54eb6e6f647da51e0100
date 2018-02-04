@@ -8,11 +8,6 @@
 			</div>
 		</div>  
         <div class="">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <img style="margin: 20px auto; max-width:100%;" src="//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/jpeg/1516643986000/NEW NEW E News a.jpg" alt="plaza">
-                </div> 
-            </div>
             <div class="row"> 
                 <div class="col-md-12 contact_contents padding_top_20">
                     <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
