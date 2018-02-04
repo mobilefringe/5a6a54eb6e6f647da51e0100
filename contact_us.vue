@@ -117,7 +117,8 @@
                     validaNum: '',
                     correctValNum: null,
                     validNumError: false,
-                    currentPage : null
+                    currentPage : null,
+                    pageBanner: null
                 }
             },
             created(){
