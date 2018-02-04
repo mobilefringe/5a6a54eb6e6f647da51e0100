@@ -131,6 +131,11 @@
                         name: '404'
                     });
                 });
+                this.loadData().then(response => {
+                    
+                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
+                   console.log(this.storeBanner); 
+                });
             },
             mounted () {
                 //creating random validation num 
