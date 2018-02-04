@@ -17,7 +17,7 @@
                 </div> 
                 <div class="col-sm-6 contact_contents">
                     <div class="description_text text_left">
-                        We value your feedback. Send us your comments or questions by completing the contact form below.
+                        CONTACT US FOR QUESTIONS, COMMENTS AND MORE INFORMATION.
                     </div>
                     <form class="form-horizontal padding_top_20" action="form-submit" @submit.prevent="validateBeforeSubmit">
                         <div class="form-group ">
@@ -132,7 +132,7 @@
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-                    this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
+                    // this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
                    console.log(this.pageBanner); 
                 });
             },
