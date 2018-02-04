@@ -47,7 +47,7 @@
     				</social-sharing>
 			    </div>
 			    
-				<div class="col-sm-12 no_padding">
+				<div class="col-sm-12 no_padding text-center">
 				    <img v-lazy="currentEvent.image_url" class="image"/>
     				<div class="text-left promo_description">
     				    <p v-html="currentEvent.rich_description"></p>
