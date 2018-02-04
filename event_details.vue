@@ -27,7 +27,7 @@
     <!--                    <router-link :to="'/stores'+currentEvent.store.slug">Store Details & Location</router-link>-->
     <!--                </div>-->
 				<!--</div>-->
-			</div>÷
+			<!--</div>-->
 			<div class="col-sm-12 promo_image_container text-left">
 			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; Back to Events</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
