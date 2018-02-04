@@ -121,16 +121,6 @@
                 }
             },
             created(){
-                this.$store.dispatch('LOAD_PAGE_DATA', {
-                    url: this.property.mm_host + "/pages/eastgate-contact-us.json"
-                }).then(response => {
-                    this.currentPage = response.data;
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                    this.$router.replace({
-                        name: '404'
-                    });
-                });
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
