@@ -130,7 +130,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
+                    this.pageBanner = this.findRepoByName('Contact Uss Banner').images[0];
                    console.log(this.pageBanner); 
                 });
             },
