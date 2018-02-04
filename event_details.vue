@@ -10,10 +10,10 @@
 		</div>
 		<div class="site_container">
     		<div class="row">
-			<div class="col-sm-4 event_logo_container hidden_phone">
-				<div class="image_container">
-					<img v-lazy="currentEvent.store.image_url" class="image"/>
-				</div>
+			<!--<div class="col-sm-4 event_logo_container hidden_phone">-->
+			<!--	<div class="image_container">-->
+			<!--		<img v-lazy="currentEvent.store.image_url" class="image"/>-->
+			<!--	</div>-->
 				<!--<div class="text-center">-->
 				<!--    <h4 v-if="currentEvent.store.phone" class="store_dets_title"> {{currentEvent.store.phone}}</h4>-->
 				<!--    <h4 v-if="currentEvent.store.website" class="store_dets_title"> <a :href="'//'+currentEvent.store.website" target="_blank">Store Website</a></h4>-->
@@ -27,8 +27,8 @@
     <!--                    <router-link :to="'/stores'+currentEvent.store.slug">Store Details & Location</router-link>-->
     <!--                </div>-->
 				<!--</div>-->
-			</div>
-			<div class="col-sm-8 promo_image_container text-left">
+			</div>÷
+			<div class="col-sm-12 promo_image_container text-left">
 			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; Back to Events</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
 			    <div class="row">
