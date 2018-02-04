@@ -9,6 +9,12 @@
 		</div>  
         <div class="margin_25_across padding_top_40 site_container">
             <div class="row"> 
+                <div class="col-sm-4 text-left" v-if="currentPage">
+            		<div class="property_address">
+            		     {{property.address1}} <br/> {{property.city}} <br/> {{property.province}} {{property.postal_code}} 
+            		</div>
+                    <div class="text-left" v-html="currentPage.body"></div>
+                </div> 
                 <div class="col-sm-8 contact_contents">
                     <div class="description_text text_left">
                         We value your feedback. Send us your comments or questions by completing the contact form below.
@@ -72,12 +78,7 @@
                     </div>
                     
                 </div>
-                <div class="col-sm-4 text-left" v-if="currentPage">
-            		<div class="property_address">
-            		     {{property.address1}} <br/> {{property.city}} <br/> {{property.province}} {{property.postal_code}} 
-            		</div>
-                    <div class="text-left" v-html="currentPage.body"></div>
-                </div> 
+                
             </div>
             <div class="padding_top_40"></div>    
         </div>
