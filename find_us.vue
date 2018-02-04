@@ -1,5 +1,5 @@
 <template>
-	<div class="page_container" id="find_us_container">
+	<div id="find_us_container">
 	    <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
