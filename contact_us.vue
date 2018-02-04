@@ -1,5 +1,12 @@
 <template>
     <div class="page_container" id="contact_us_container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+			<div class="site_container">
+				<div class="header_content">
+					<h1>Hours</h1>
+				</div>
+			</div>
+		</div>  
         <div class="margin_25_across padding_top_40">
             <div class="row"> 
                 <div class="col-sm-8 contact_contents">
