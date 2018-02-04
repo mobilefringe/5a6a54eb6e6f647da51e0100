@@ -132,7 +132,7 @@
                     });
                 });
                 this.loadData().then(response => {
-                    
+                    this.currentPage = response[0].data;
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
                    console.log(this.storeBanner); 
                 });
