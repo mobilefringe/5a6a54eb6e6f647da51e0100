@@ -65,7 +65,7 @@
                 return {
                     success_subscribe: false,
                     currentPage: null,
-                    pageBanner
+                    pageBanner: null
                 }
             },
             created(){
