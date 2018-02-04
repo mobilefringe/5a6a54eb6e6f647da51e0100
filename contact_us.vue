@@ -73,9 +73,6 @@
                     
                 </div>
                 <div class="col-sm-4 text-left" v-if="currentPage">
-                    <div class="page_header all_caps double_border_bottom">
-            			<div class="page_container text_left"> CENTRE INFORMATION</div>
-            		</div>
             		<div class="property_address">
             		     {{property.address1}} <br/> {{property.city}} <br/> {{property.province}} {{property.postal_code}} 
             		</div>
