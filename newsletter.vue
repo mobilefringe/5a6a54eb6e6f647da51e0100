@@ -7,7 +7,7 @@
 				</div>
 			</div>
 		</div>  
-        <div class="">
+        <div class="site_container">
             <div class="row"> 
                 <div class="col-md-12 contact_contents padding_top_20">
                     <form class="form-horizontal" action="//mobilefringe.createsend.com/t/d/s/irudui/" method="post" @submit.prevent="validateBeforeSubmit">
