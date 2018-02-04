@@ -1,5 +1,12 @@
 <template>
     <div class="page_container" id="promotions_container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+        <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+			<div class="site_container">
+				<div class="header_content">
+					<h1>Contact Us</h1>
+				</div>
+			</div>
+		</div>  
         <div class="">
             <div class="row">
                 <div class="col-md-12 text-center">
