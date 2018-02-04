@@ -3,7 +3,6 @@
         <div class="margin_25_across padding_top_40">
             <div class="row"> 
                 <div class="col-sm-8 contact_contents">
-                   
                     <div class="description_text text_left">
                         We value your feedback. Send us your comments or questions by completing the contact form below.
                     </div>
