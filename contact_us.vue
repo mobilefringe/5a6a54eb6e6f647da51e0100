@@ -7,7 +7,7 @@
 				</div>
 			</div>
 		</div>  
-        <div class="margin_25_across padding_top_40">
+        <div class="margin_25_across padding_top_40 site_container">
             <div class="row"> 
                 <div class="col-sm-8 contact_contents">
                     <div class="description_text text_left">
