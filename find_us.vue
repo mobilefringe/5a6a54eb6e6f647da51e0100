@@ -64,7 +64,8 @@
             data: function() {
                 return {
                     success_subscribe: false,
-                    currentPage: null
+                    currentPage: null,
+                    pageBanner
                 }
             },
             created(){
