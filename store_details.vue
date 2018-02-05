@@ -24,7 +24,7 @@
     			    
     				<div class="col-sm-12 no_padding">
     				    <!--<img v-lazy="currentStore.image_url"/>-->
-        				<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 450'" height="360"></png-map>
+        				<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 450'" height="460"></png-map>
     				</div>
     				
     			</div>
