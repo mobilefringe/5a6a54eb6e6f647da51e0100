@@ -38,27 +38,6 @@
 				
 			</div>
 		</div>
-		<div class="event_event_container" v-if="storeEvents.length > 0">
-		    <div class="event_container_title text-left all_caps"> OTHER {{currentEvent.store.name | uppercase }} Eventtions</div>
-		    <div class="row event_event_dets text-left" v-for="event in storeEvents">
-		        <div class="col-sm-7" >
-		        <div class="event_div_image">
-		            <img v-lazy="event.image_url" alt=""/>
-		        </div>
-		        </div>
-		        <div class="col-sm-5 event_div_dets">
-		            <p class="event_div_name">{{event.name}}</p>
-		            <p class="event_div_event_name">{{event.store.name | uppercase}}</p>
-		            <p class="event_div_date">{{event.start_date | moment("MMM D", timezone)}} - {{event.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="event_div_description">{{event.description_short}}</p>
-					<span class="feature_read_more">
-						<router-link :to="'/event/'+event.slug" class="mobile_readmore" >
-							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-						</router-link>
-					</span>
-		        </div>
-		    </div>
-		</div>
 		</div>
 	</div>
 </template>
