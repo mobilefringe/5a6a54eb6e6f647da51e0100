@@ -95,5 +95,100 @@
 </style>
 
 <script>
-var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var i in r)Object.prototype.hasOwnProperty.call(r,i)&&(e[i]=r[i])}return e};define(["Vue","vuex","vue-select","jquery","smooth-zoom","vue!png-map"],function(e,t){return e.component("stores-component",{template:template,data:function(){return{listMode:"alphabetical",selectedCat:"All",selectedAlpha:"All",alphabet:["All","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],filteredStores:null,dataloaded:!1,mobile_store:!1,windowWidth:0}},created:function(){var e=this;this.$store.dispatch("getData","categories").then(function(){e.dataloaded=!0,e.filteredStores=e.allStores},function(){console.error("Could not retrieve data from server. Please check internet connection and try again.")})},watch:{windowWidth:function(){this.mobile_store=this.windowWidth<=768?!0:!1}},mounted:function(){this.$nextTick(function(){window.addEventListener("resize",this.getWindowWidth),this.getWindowWidth()})},methods:{changeMode:function(e){this.listMode=e},updateSVGMap:function(e){this.map=e},addLandmark:function(e){this.svgMapRef.addMarker(e)},getWindowWidth:function(){this.windowWidth=window.innerWidth}},computed:_extends({},t.mapGetters(["property","timezone","processedStores","processedCategories","storesByAlphaIndex","storesByCategoryName","findCategoryById","findCategoryByName"]),{allStores:function(){return this.processedStores},allCatergories:function(){return this.processedCategories},dropDownCats:function(){var e=_.map(this.processedCategories,"name");return e.unshift("All"),e},getPNGurl:function(){return"https://www.mallmaverick.com"+this.property.map_url},svgMapRef:function(){return _.filter(this.$children,function(e){return"svg-map"==e.$el.className})[0]},filterStores:function(){if(letter=this.selectedAlpha,"All"==letter)this.filteredStores=this.allStores;else{var e=_.filter(this.allStores,function(e){return _.lowerCase(e.name)[0]==_.lowerCase(letter)});this.filteredStores=e}},filterByCategory:function(){if(category_id=this.selectedCat,category_id="All"==category_id||null==category_id||void 0==category_id?"All":this.findCategoryByName(category_id).id,this.breakIntoCol=!1,"All"==category_id)this.filteredStores=this.allStores;else{var e=(this.findCategoryById,_.filter(this.allStores,function(e){return _.indexOf(e.categories,_.toNumber(category_id))>-1}));this.filteredStores=e}}}),beforeDestroy:function(){window.removeEventListener("resize",this.getWindowWidth)}})});
+    define(["Vue", 'vue-select',jquery", "Raphael", "mm_mapsvg","mousewheel", "vue!svg-map"], function(Vue, VueSelect) {
+        return Vue.component("stores-component", {
+            template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    listMode: "alphabetical",
+                    selectedCat: "All",
+                    selectedAlpha: null,
+                    alphabet: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+                    processedStores: null
+                }
+            },
+            created (){
+                window.Raphael = Raphael; // our mapSvg plugin is stupid and outdated. need this hack to tie Raphael to window object (global variable)
+            },
+            mounted() {
+                processedStores = this.allStores;
+            },
+            methods: {
+                changeMode(mode) {
+                    this.listMode = mode;
+                },
+                filterByCategory(category_id) {
+                    console.dir(JSON.stringify(category_id));
+                    if (category_id == "All" || category_id == null || category_id == undefined) {
+                        category_id = "All";
+                    } else {
+                        category_id = this.findCategoryByName(category_id).id;
+                    }
+                    this.breakIntoCol = false;
+                    console.log(category_id);
+                    if (category_id == "All") {
+                        this.processedStores = this.allStores; //this.storesByAlphaIndex;
+                        // this.breakIntoCol = true;
+                    } else {
+                        var find = this.findCategoryById;
+                        var filtered = _.filter(this.allStores, function(o) {
+                            return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
+                        });
+                        // _.forEach(filtered, function(value, i) {
+                        //     value.currentCategory = find(category_id).name;
+                        // });
+                        // // console.log(filtered)
+                        // sortedCats = _.groupBy(filtered, store => store.currentCategory);
+                        // console.log(sortedCats);
+                        this.processedStores = filtered;
+                    }
+                    // this.processedStores = 
+                },
+                updateSVGMap (map) {
+                    this.map = map;
+                },
+                dropPin(store) {
+                    this.svgMapRef.hideMarkers();
+                    console.log(store);
+                    this.svgMapRef.addMarker(store,'//codecloud.cdn.speedyrails.net/sites/589e308f6e6f641b9f010000/image/png/1484850466000/show_pin.png');
+                    this.svgMapRef.setViewBox(store)
+                },
+            },
+            computed: {
+                storesByAlphaIndex() {
+                    return this.$store.getters.storesByAlphaIndex;
+                },
+                storesByCategoryName() {
+                    return this.$store.getters.storesByCategoryName;
+                },
+                allStores() {
+                    return this.$store.getters.processedStores;
+                },
+                allCatergories() {
+                    return this.$store.getters.processedCategories;
+                },
+                dropDownCats() {
+                    var cats = _.map(this.$store.getters.processedCategories, 'name');
+                    cats.unshift('All');
+                    console.log(cats);
+                    return cats;
+                },
+                findCategoryById() {
+                    return this.$store.getters.findCategoryById;
+                },
+                findCategoryByName() {
+                    return this.$store.getters.findCategoryByName;
+                },
+                getSVGurl () {
+                    return "https://www.mallmaverick.com" + this.property.svgmap_url;
+                    // return "//www.mallmaverick.com/system/site_images/photos/000/035/014/original/Canyon_Crest_-_Map.svg?1512066588";
+                },
+                svgMapRef() {
+                    return _.filter(this.$children, function(o) {
+                        return (o.$el.className == "svg-map")
+                    })[0];
+                }
+            }
+        });
+    });
 </script>
