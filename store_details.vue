@@ -34,9 +34,6 @@
 								<span class="col-xs-6 text-left">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>
 							</li>
 						</ul>
-						<!--<div class="store_dets_btn caps">-->
-						<!--    <router-link :to="'/stores'+currentStore.slug">Store Details & Location</router-link>-->
-						<!--</div>-->
 					</div>
 				</div>
 				<hr class="green_hr visible_phone">
