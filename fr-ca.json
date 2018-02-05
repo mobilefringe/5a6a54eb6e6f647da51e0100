@@ -1,0 +1,10 @@
+{
+  "message": {
+    "hello": "bonjour",
+    "date": "FR Date: {date}"
+  },
+  "home_page": {
+    "explore" : "explore",
+    "our_feed" : "In Our Feed"
+  }
+}
