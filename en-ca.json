@@ -39,7 +39,7 @@
     "events" : "Events",
     "read_more" : "Read More",
     "no_event_message" : "There are no Promotions at this time. Please check back soon.",
-    "back_to_promos" : "Back to Promotions"
+    "back_to_events" : "Back to Promotions"
   },
   "jobs_page": {
     "promotions" : "Promotions",
