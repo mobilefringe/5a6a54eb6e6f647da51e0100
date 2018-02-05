@@ -86,13 +86,13 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/stores"
                             },
                             {
-                                name: "header.centre_map",
+                                name: "Center Map",
                                 href: "/map"
                             }
                         ]
                     },
                     {
-                        name: "header.stores",
+                        name: "Promotions",
                         href: "/promotions",
                     },
                     {
@@ -153,7 +153,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
         created() {
             this.loadData().then(response => {
                 this.dataLoaded = true;
-                this.locale = "en-ca";
+                this.locale = "en";
             });
             window.addEventListener('scroll', this.enableStickyNavbar);
         },
