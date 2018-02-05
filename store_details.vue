@@ -116,6 +116,11 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
+                    var temp_repo = this.findRepoByName('Pages Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    this.pageBanner = this.pageBanner;
                 });
             },
             watch: {
