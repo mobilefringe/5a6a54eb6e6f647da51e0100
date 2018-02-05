@@ -1,0 +1,9 @@
+{
+  "message": {
+    "hello": "hello",
+    "date": "Date: {date}"
+  },
+  "home_page": {
+    "explore" : "EXPLORE"
+  }
+}
