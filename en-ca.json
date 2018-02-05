@@ -20,7 +20,7 @@
   "stores_page" : {
     "shopping" : "shopping",
     "find_your_store": "Find YOur Store",
-    "sort_by_cat" : "Sort By Categories",
+    "sort_by_cats" : "Sort By Categories",
     "view_map": "View Map",
     "new_store" : "New Store",
     "coming_soon" : "Coming Soon"
