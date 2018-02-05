@@ -56,6 +56,9 @@
 									<img v-lazy="promo.image_url" class="image" alt=""/>
 								</div>
 							</div>
+							<!--<div class="col-sm-5 promo_div_dets">-->
+								
+							<!--</div>-->
 						</div>
 					</div>
 				</div>
