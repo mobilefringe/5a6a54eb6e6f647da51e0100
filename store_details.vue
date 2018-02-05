@@ -150,9 +150,9 @@
                     this.promotions = temp_promo;
                     this.jobs = temp_job;
                     
-                    setTimeout(function() {
-                        vm.addLandmark(vm.currentStore);
-                    }, 500);
+                    // setTimeout(function() {
+                    //     vm.addLandmark(vm.currentStore);
+                    // }, 500);
                 },
             },
             computed: {
