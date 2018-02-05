@@ -8,7 +8,8 @@
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
     "enter_email" : "Enter Your Email",
-    "subscribe_thankyou" : "Thank you for subscribing to our newsletter."
+    "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
+    "all_rights" : ""
   },
   "home_page": {
     "explore" : "Explore",
