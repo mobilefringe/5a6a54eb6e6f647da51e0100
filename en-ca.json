@@ -28,7 +28,8 @@
     "store_website": "Store Website",
     "store_hours" : "Store Hours",
     "store_dets_loc" : "Store Details & Location",
-    "about_us" : "About Us"
+    "about_us" : "About Us",
+    "find_store" : "Find Store"
   },
   "promos_page": {
     "promotions" : "Promotions",
