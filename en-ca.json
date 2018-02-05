@@ -2,7 +2,10 @@
   "header": {
     "open_today": "Open Today",
     "closed": "Closed Today",
-    "sign_up": "Sign Up"
+    "sign_up": "Sign Up",
+    "menu" : {
+        
+    }
   },
   "home_page": {
     "explore" : "Explore",
