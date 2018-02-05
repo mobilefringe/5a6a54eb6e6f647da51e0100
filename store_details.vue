@@ -57,14 +57,14 @@
 								</div>
 								<div>
 								    <p class="promo_div_name">{{promo.name}}</p>
-								<p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
-								<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-								<p class="promo_div_description">{{promo.description_short}}</p>
-								<span class="feature_read_more">
-									<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
-										<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-									</router-link>
-								</span>
+    								<p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
+    								<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+    								<p class="promo_div_description">{{promo.description_short}}</p>
+    								<span class="feature_read_more">
+    									<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
+    										<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
+    									</router-link>
+    								</span>
 								</div>
 							</div>
 							<!--<div class="col-sm-5 promo_div_dets">-->
