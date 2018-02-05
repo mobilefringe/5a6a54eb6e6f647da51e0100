@@ -12,11 +12,11 @@
     		<div class="row">
 			<div class="col-sm-4 promo_logo_container hidden_phone">
 				<div class="image_container">
-					<img v-lazy="currentPromo.store.image_url" class="image"/>
+					<img v-lazy="currentStore.store.image_url" class="image"/>
 				</div>
 				<div class="text-center">
-				    <h4 v-if="currentPromo.store.phone" class="store_dets_title"> {{currentPromo.store.phone}}</h4>
-				    <h4 v-if="currentPromo.store.website" class="store_dets_title"> <a :href="'//'+currentPromo.store.website" target="_blank">Store Website</a></h4>
+				    <h4 v-if="currentStore.store.phone" class="store_dets_title"> {{currentStore.store.phone}}</h4>
+				    <h4 v-if="currentStore.store.website" class="store_dets_title"> <a :href="'//'+currentStore.store.website" target="_blank">Store Website</a></h4>
 				    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>
 				    <ul class="store_hours_list">
                         <li v-if="storeHours" v-for="hour in storeHours">
@@ -24,16 +24,16 @@
                         </li>
                     </ul>
                     <div class="store_dets_btn caps">
-                        <router-link :to="'/stores'+currentPromo.store.slug">Store Details & Location</router-link>
+                        <router-link :to="'/stores'+currentStore.store.slug">Store Details & Location</router-link>
                     </div>
 				</div>
 			</div>
 			<div class="col-sm-8 promo_image_container text-left">
 			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
-			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentPromo.name}}</h3>
+			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>
 			    <div class="row">
-			        <p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
-    			    <social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentPromo.image_url" inline-template >
+			        <p class="promo_div_date pull-left">{{currentStore.start_date | moment("MMM D", timezone)}} - {{currentStore.end_date | moment("MMM D", timezone)}}</p>
+    			    <social-sharing :url="shareURL(currentStore.slug)" :title="currentStore.title" :description="currentStore.body" :quote="_.truncate(currentStore.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentStore.image_url" inline-template >
     					<div class="blog-social-share pull-right" style="margin: 15px auto;">
     						<div class="social_share">
     							<network network="facebook">
@@ -48,9 +48,9 @@
 			    </div>
 			    
 				<div class="col-sm-12 no_padding">
-				    <img v-lazy="currentPromo.image_url"/>
+				    <img v-lazy="currentStore.image_url"/>
     				<div class="text-left promo_description">
-    				    <p v-html="currentPromo.rich_description"></p>
+    				    <p v-html="currentStore.rich_description"></p>
     				</div>
 				</div>
 				
@@ -60,7 +60,7 @@
 			<!--<div class="col-sm-4 promo_details_container text-left">-->
 			<!--	<div>-->
 					
-			<!--		<p class="promo_store_name">{{currentPromo.store.name}}</p>-->
+			<!--		<p class="promo_store_name">{{currentStore.store.name}}</p>-->
 					
 			<!--	</div>-->
 			<!--</div>-->
@@ -69,7 +69,7 @@
 			<!--</div>-->
 		</div>
 		<div class="promo_promo_container" v-if="storePromos.length > 0">
-		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Promotions</div>
+		    <div class="promo_container_title text-left all_caps"> OTHER {{currentStore.store.name | uppercase }} Promotions</div>
 		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
 		        <div class="promo_div_image">
