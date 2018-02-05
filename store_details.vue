@@ -15,7 +15,7 @@
 					<img v-lazy="currentStore.image_url" class="image"/>
 				</div>
 				<div class="text-center">
-				    <h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.store.phone}}</h4>
+				    <h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
 				    <h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">Store Website</a></h4>
 				    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>
 				    <ul class="store_hours_list">
