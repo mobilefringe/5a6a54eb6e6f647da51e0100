@@ -1,6 +1,6 @@
 <template>
 	<div class="promo_dets_container" v-if="currentJob">
-	    <div class="page_header" v-if="jobBanner" v-bind:style="{ backgroundImage: 'url(' + jobBanner.image_url + ')' }">
+		<div class="page_header" v-if="jobBanner" v-bind:style="{ backgroundImage: 'url(' + jobBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("jobs_page.jobs")}}</h1>
@@ -8,74 +8,72 @@
 			</div>
 		</div>
 		<div class="site_container">
-    		<div class="row">
-			<div class="col-sm-4 promo_logo_container hidden_phone">
-				<div class="image_container">
-					<img v-lazy="currentJob.store.image_url" class="image"/>
+			<div class="row">
+				<div class="col-sm-4 promo_logo_container hidden_phone">
+					<div class="image_container">
+						<img v-lazy="currentJob.store.image_url" class="image"/>
+					</div>
+					<div class="text-center">
+						<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
+						<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">Store Website</a></h4>
+						<h4 v-if="storeHours.length >0 " class="store_dets_title"> Store Hours</h4>
+						<ul class="store_hours_list">
+							<li v-if="storeHours" v-for="hour in storeHours">
+								{{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+							</li>
+						</ul>
+						<div class="store_dets_btn caps">
+							<router-link :to="'/stores'+currentJob.store.slug">Store Details & Location</router-link>
+						</div>
+					</div>
 				</div>
-				<div class="text-center">
-				    <h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
-				    <h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">Store Website</a></h4>
-				    <h4 v-if="storeHours.length >0 " class="store_dets_title"> Store Hours</h4>
-				    <ul class="store_hours_list">
-                        <li v-if="storeHours" v-for="hour in storeHours">
-                            {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
-                        </li>
-                    </ul>
-                    <div class="store_dets_btn caps">
-                        <router-link :to="'/stores'+currentJob.store.slug">Store Details & Location</router-link>
-                    </div>
+				<div class="col-sm-8 promo_image_container text-left">
+					<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; Back to Jobs</router-link>
+					<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentJob.name}}</h3>
+					<div class="row">
+						<p class="promo_div_date pull-left">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
+						<social-sharing :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentJob.image_url" inline-template >
+							<div class="blog-social-share pull-right" style="margin: 15px auto;">
+								<div class="social_share">
+									<network network="facebook">
+										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+									</network>
+									<network network="twitter">
+										<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+									</network>
+								</div>
+							</div>
+						</social-sharing>
+					</div>
+					<div class="col-sm-12 no_padding">
+						<!--<img v-lazy="currentJob.image_url"/>-->
+						<div class="text-left promo_description">
+							<p v-html="currentJob.rich_description"></p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-sm-8 promo_image_container text-left">
-			<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; Back to Jobs</router-link>
-			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentJob.name}}</h3>
-			    <div class="row">
-			        <p class="promo_div_date pull-left">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
-    			    <social-sharing :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentJob.image_url" inline-template >
-    					<div class="blog-social-share pull-right" style="margin: 15px auto;">
-    						<div class="social_share">
-    							<network network="facebook">
-    								<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
-    							</network>
-    							<network network="twitter">
-    								<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
-    							</network>
-    						</div>
-    					</div>
-    				</social-sharing>
-			    </div>
-			    
-				<div class="col-sm-12 no_padding">
-				    <!--<img v-lazy="currentJob.image_url"/>-->
-    				<div class="text-left promo_description">
-    				    <p v-html="currentJob.rich_description"></p>
-    				</div>
+			<div class="promo_promo_container" v-if="storeJobs.length > 0">
+				<div class="promo_container_title text-left all_caps"> OTHER {{currentJob.store.name | uppercase }} Jobs</div>
+				<div class="row promo_promo_dets text-left" v-for="job in storeJobs">
+					<div class="col-sm-7" >
+						<div class="promo_div_image">
+							<img v-lazy="job.image_url" alt=""/>
+						</div>
+					</div>
+					<div class="col-sm-5 promo_div_dets">
+						<p class="promo_div_name">{{job.name}}</p>
+						<p class="promo_div_promo_name">{{job.store.name | uppercase}}</p>
+						<p class="promo_div_date">{{job.start_date | moment("MMM D", timezone)}} - {{job.end_date | moment("MMM D", timezone)}}</p>
+						<p class="promo_div_description">{{job.description_short}}</p>
+						<span class="feature_read_more">
+							<router-link :to="'/jobs/'+job.slug" class="mobile_readmore" >
+								<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
+							</router-link>
+						</span>
+					</div>
 				</div>
-				
 			</div>
-		</div>
-		<div class="promo_promo_container" v-if="storeJobs.length > 0">
-		    <div class="promo_container_title text-left all_caps"> OTHER {{currentJob.store.name | uppercase }} Jobs</div>
-		    <div class="row promo_promo_dets text-left" v-for="job in storeJobs">
-		        <div class="col-sm-7" >
-		        <div class="promo_div_image">
-		            <img v-lazy="job.image_url" alt=""/>
-		        </div>
-		        </div>
-		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name">{{job.name}}</p>
-		            <p class="promo_div_promo_name">{{job.store.name | uppercase}}</p>
-		            <p class="promo_div_date">{{job.start_date | moment("MMM D", timezone)}} - {{job.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="promo_div_description">{{job.description_short}}</p>
-					<span class="feature_read_more">
-						<router-link :to="'/jobs/'+job.slug" class="mobile_readmore" >
-							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-						</router-link>
-					</span>
-		        </div>
-		    </div>
-		</div>
 		</div>
 	</div>
 </template>
