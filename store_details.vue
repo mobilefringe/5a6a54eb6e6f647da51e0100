@@ -67,7 +67,8 @@
 			<!--</div>-->
 		</div>
 		<div class="promo_promo_container" v-if="promotions.length > 0">
-		    <div class="promo_container_title text-left caps">Promotions</div>
+		    <div class="promo_container_title text-left caps"></div>
+		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
 		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
 		        <div class="col-sm-7" >
 		        <div class="promo_div_image">
