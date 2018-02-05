@@ -38,7 +38,7 @@
 				</div>
 				<hr class="green_hr visible_phone">
 				<div class="col-sm-8 text-left">
-					<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> About Us</h4>
+					<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> {{$t("stores_page.about_us")}}</h4>
 					<div class="text-left promo_description">
 						<p v-html="currentStore.rich_description"></p>
 					</div>
@@ -67,7 +67,6 @@
 				</div>
 			</div>
 		</div>
-		<!--</div>-->
 	</div>
 </template>
 
