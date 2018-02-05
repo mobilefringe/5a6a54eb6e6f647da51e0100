@@ -23,6 +23,8 @@
     "sort_by_cats" : "Sort By Categories",
     "view_map": "View Map",
     "new_store" : "New Store",
-    "coming_soon" : "Coming Soon"
+    "coming_soon" : "Coming Soon",
+    "store_website": "Store Website",
+    "store_hours" : "Store Hours
   }
 }
