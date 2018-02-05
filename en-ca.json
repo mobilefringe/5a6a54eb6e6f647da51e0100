@@ -6,7 +6,8 @@
     "stores" : "Stores",
     "promotions" : "Promotions",
     "events" : "Events",
-    "guest_services" : "Guest_services"
+    "guest_services" : "Guest_services",
+    "services" : "services"
   },
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
