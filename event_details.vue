@@ -29,7 +29,7 @@
 				<!--</div>-->
 			<!--</div>-->
 			<div class="col-sm-12 promo_image_container text-left">
-			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; Back to Events</router-link>
+			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
 			    <div class="row">
 			        <p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
