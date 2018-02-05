@@ -54,27 +54,27 @@
         			</div>
         			
         			<div class="promo_promo_container" v-if="promotions.length > 0">
-		    <div class="promo_container_title text-left caps"></div>
-		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
-		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
-		        <div class="col-sm-7" >
-		        <div class="promo_div_image">
-		            <img v-lazy="promo.image_url" alt=""/>
-		        </div>
-		        </div>
-		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name">{{promo.name}}</p>
-		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-		            <p class="promo_div_description">{{promo.description_short}}</p>
-					<span class="feature_read_more">
-						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
-							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-						</router-link>
-					</span>
-		        </div>
-		    </div>
-		</div>
+            		    <div class="promo_container_title text-left caps"></div>
+            		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
+            		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
+            		        <div class="col-sm-7" >
+            		        <div class="promo_div_image">
+            		            <img v-lazy="promo.image_url" alt=""/>
+            		        </div>
+            		        </div>
+            		        <div class="col-sm-5 promo_div_dets">
+            		            <p class="promo_div_name">{{promo.name}}</p>
+            		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
+            		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+            		            <p class="promo_div_description">{{promo.description_short}}</p>
+            					<span class="feature_read_more">
+            						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
+            							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
+            						</router-link>
+            					</span>
+            		        </div>
+            		    </div>
+            		</div>
 		        </div>
 		    </div>
 		<!--<div class="row" style="margin-left:0;">-->
