@@ -37,7 +37,7 @@
     				    <h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">Store Website</a></h4>
     				    <h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
     				    <ul class="store_hours_list">
-                            <li v-if="storeHours" v-for="hour in storeHours">
+                            <li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
                                 {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </li>
                         </ul>
