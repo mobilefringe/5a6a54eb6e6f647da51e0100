@@ -28,8 +28,9 @@
                     <!--</div>-->
 				</div>
 			</div>
+			<hr class="green_hr">
 			<div class="col-sm-8 promo_image_container text-left">
-			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
+			<!--<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>-->
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>
 			    
 			    
