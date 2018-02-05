@@ -48,6 +48,9 @@
                         <!--</div>-->
     				</div>
 		        </div>
+		        <div class="col-sm-8 promo_image_container text-left">
+		            
+		        </div>
 		    </div>
 		<!--<div class="row" style="margin-left:0;">-->
 			<!--<div class="col-sm-4 promo_details_container text-left">-->
