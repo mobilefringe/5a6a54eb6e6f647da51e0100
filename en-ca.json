@@ -19,6 +19,7 @@
   },
   "stores_page" : {
     "shopping" : "shopping",
+    "map" : "Map",
     "find_your_store": "Find Your Store",
     "sort_by_cats" : "Sort By Categories",
     "view_map": "View Map",
