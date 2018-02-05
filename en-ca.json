@@ -61,7 +61,7 @@
     "subscribe" : "Subscribe",
     "success" : "Success", 
     "error": "Error",
-    "thank_you_message" : "",
+    "thank_you_message" : "Thank you for subcribing to our newsletter. You'll hear from us soon!",
     "error_message" : ""
   }
 }
