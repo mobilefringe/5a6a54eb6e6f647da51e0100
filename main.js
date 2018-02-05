@@ -125,7 +125,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         href: "/contact_us",
                         sub_menu: [
                             {
-                                name: "Hours",
+                                name: "header.hours",
                                 href: "/hours"
                             },
                             {
