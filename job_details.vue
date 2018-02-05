@@ -54,18 +54,6 @@
 				</div>
 				
 			</div>
-		<!--</div>-->
-		<!--<div class="row" style="margin-left:0;">-->
-			<!--<div class="col-sm-4 promo_details_container text-left">-->
-			<!--	<div>-->
-					
-			<!--		<p class="promo_store_name">{{currentJob.store.name}}</p>-->
-					
-			<!--	</div>-->
-			<!--</div>-->
-			<!--<div class="col-sm-8 promo_desc_container">-->
-				
-			<!--</div>-->
 		</div>
 		<div class="promo_promo_container" v-if="storeJobs.length > 0">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{currentJob.store.name | uppercase }} Jobs</div>
