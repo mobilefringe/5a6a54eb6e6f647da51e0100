@@ -38,7 +38,7 @@
     				    <h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
     				    <ul class="store_hours_list">
                             <li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
-                            <span class="col-xs-6">{{hour.day_of_week | moment("dddd", timezone)}}</span>
+                            <span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
                             <span class="col-xs-6">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>
                             </li>
                         </ul>
