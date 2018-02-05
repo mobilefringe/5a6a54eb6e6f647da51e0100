@@ -22,7 +22,7 @@
 							
 							<div class="event_thick_line"></div>
 							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-							<p class="event_desc">{{promo.description_short}}</p>
+							<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>
 							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
 								<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">
 									{{$t("jobs_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
