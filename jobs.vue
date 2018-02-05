@@ -69,6 +69,7 @@
         Vue.use(VuePaginate);
         return Vue.component("promos-component", {
             template: template, // the variable template will be injected
+            props:['locale'],
             data: function() {
                 return {
                     selectedDate: null,
