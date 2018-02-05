@@ -152,7 +152,7 @@
                     
                     var storeHours = [];
                     var vm = this;
-                    _.forEach(this.currentPromo.store.store_hours, function (value, key) {
+                    _.forEach(this.currentStore.store_hours, function (value, key) {
                         var hour = vm.findHourById(value);
                         if(hour.day_of_week === 0){
                             hour.order = 7;
