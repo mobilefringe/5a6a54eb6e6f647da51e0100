@@ -76,6 +76,7 @@
         Vue.use(VueLazyload);
         return Vue.component("store-details-component", {
             template: template, // the variable template will be injected,
+            props:['locale'],
             data: function() {
                 return {
                     currentStore: null,
