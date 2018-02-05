@@ -12,7 +12,7 @@
     		<div class="row">
 			<div class="col-sm-4 promo_logo_container hidden_phone">
 				<div class="image_container">
-					<img v-lazy="currentStore.store.image_url" class="image"/>
+					<img v-lazy="currentStore.image_url" class="image"/>
 				</div>
 				<div class="text-center">
 				    <h4 v-if="currentStore.store.phone" class="store_dets_title"> {{currentStore.store.phone}}</h4>
