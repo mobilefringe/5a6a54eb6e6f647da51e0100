@@ -59,7 +59,7 @@
             		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
             		        <div class="col-sm-7" >
             		        <div class="promo_div_image">
-            		            <img v-lazy="promo.image_url" alt=""/>
+            		            <img v-lazy="promo.image_url" class="image" alt=""/>
             		        </div>
             		        </div>
             		        <div class="col-sm-5 promo_div_dets">
