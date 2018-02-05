@@ -82,11 +82,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "header.stores",
                         href: "/stores",
                         sub_menu: [{
-                                name: "Stores ",
+                                name: "header.stores",
                                 href: "/stores"
                             },
                             {
-                                name: "Center Map",
+                                name: "header.centre_map",
                                 href: "/map"
                             }
                         ]
