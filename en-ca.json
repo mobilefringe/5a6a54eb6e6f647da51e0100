@@ -45,6 +45,6 @@
     "jobs" : "Promotions",
     "read_more" : "Read More",
     "no_job_message" : "There are no Promotions at this time. Please check back soon.",
-    "back_to_promos" : "Back to Promotions"
+    "back_to_jobs" : "Back to Promotions"
   }
 }
