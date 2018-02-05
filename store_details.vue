@@ -1,10 +1,10 @@
 <template>
 	<div class="page_container store_dets_container" v-if="dataLoaded" id="store_dets_container">
-		<div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
+		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + storeBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
-					<h1>PROMOTIONS</h1>
+					<h1>Shopping</h1>
 				</div>
 			</div>
 		</div>
