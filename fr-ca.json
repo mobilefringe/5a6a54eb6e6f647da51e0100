@@ -1,82 +1,82 @@
 {
   "header": {
-    "open_today": "Open Today",
-    "closed": "Closed Today",
-    "sign_up": "Sign Up",
-    "stores" : "Stores",
-    "centre_map" : "Centre Map",
+    "open_today": "Ouvert aujourd'hui",
+    "closed": "Fermé aujourd'hui",
+    "sign_up": "Inscription",
+    "stores" : "Magasins",
+    "centre_map" : "Carte du centre",
     "promos" : "Promotions",
-    "events" : "Events",
-    "guest_services" : "Guest Services",
+    "events" : "Evènements",
+    "guest_services" : "Service Clientèle",
     "services" : "Services",
-    "community" : "Community Services",
-    "green_initiatives" : "Green Initiatives",
-    "gift_card" : "Gift Card",
-    "contact_us" : "Contact Us",
-    "hours": "Hours",
-    "jobs" : "Jobs",
-    "find_us" : "Find Us",
+    "community" : "Services communautaires",
+    "green_initiatives" : "Initiatives écologiques",
+    "gift_card" : "Cartes cadeaux",
+    "contact_us" : "Nous contacter",
+    "hours": "Horaires",
+    "jobs" : "Carrières",
+    "find_us" : "Nous Trouver",
     "newsletter" : "Newsletter"
   },
   "footer": {
-    "stay_uptodate" : "Stay up to date on all of our Happenings",
-    "enter_email" : "Enter Your Email",
-    "subscribe_thankyou" : "Thank you for subscribing to our newsletter.",
-    "all_rights" : "All Rights Reserved.",
-    "privacy_policy" : "Privacy Policy",
-    "powered_by" : "Powered by"
+    "stay_uptodate" : "Restez au courant de notre actualité",
+    "enter_email" : "Inscrire votre courriel",
+    "subscribe_thankyou" : "Nous vous remercions de vous être inscrits à notre Newsletter.",
+    "all_rights" : "Tous droits réservés.",
+    "privacy_policy" : "Règles de confidentialité",
+    "powered_by" : "Géré par"
   },
   "home_page": {
-    "explore" : "Explore",
-    "our_feed" : "In Our Feed"
+    "explore" : "Explorer",
+    "our_feed" : "Notre actualité"
   },
   "stores_page" : {
-    "shopping" : "shopping",
-    "map" : "Map",
-    "find_your_store": "Find Your Store",
-    "sort_by_cats" : "Sort By Categories",
-    "view_map": "View Map",
-    "new_store" : "New Store",
-    "coming_soon" : "Coming Soon",
-    "store_website": "Store Website",
-    "store_hours" : "Store Hours",
-    "store_dets_loc" : "Store Details & Location",
-    "about_us" : "About Us",
-    "find_store" : "Find Store"
+    "shopping" : "Magasiner",
+    "map" : "Carte",
+    "find_your_store": "Trouver un magasin",
+    "sort_by_cats" : "Classer par catégorie",
+    "view_map": "Voir la carte",
+    "new_store" : "Nouveau Magasin",
+    "coming_soon" : "Arrive Prochainement",
+    "store_website": "Site internet du magasin",
+    "store_hours" : "Horaires du magasin",
+    "store_dets_loc" : "Details et localisation du magasin",
+    "about_us" : "A propos de nous",
+    "find_store" : "Trouver un magasin"
   },
   "promos_page": {
     "promotions" : "Promotions",
-    "read_more" : "Read More",
-    "no_promo_message" : "There are no Promotions at this time. Please check back soon.",
-    "back_to_promos" : "Back to Promotions"
+    "read_more" : "Voir plus",
+    "no_promo_message" : "Il n'y a pas de promotions pour le moment. Revenez prochainement.",
+    "back_to_promos" : "Retour aux promotions"
   },
   "events_page": {
-    "events" : "Events",
-    "read_more" : "Read More",
-    "no_event_message" : "There are no Events at this time. Please check back soon.",
-    "back_to_events" : "Back to Events"
+    "events" : "Evènements",
+    "read_more" : "En savoir plus",
+    "no_event_message" : "Il n'y a pas d'évènements pour le moment. Nous vous tiendrons au courant ici.",
+    "back_to_events" : "Retour aux évènements"
   },
   "jobs_page": {
-    "jobs" : "Jobs",
-    "read_more" : "Read More",
-    "no_job_message" : "There are no Jobs at this time. Please check back soon.",
-    "back_to_jobs" : "Back to Jobs"
+    "jobs" : "Carrières",
+    "read_more" : "Voir plus",
+    "no_job_message" : "Il n'y a pas de jobs disponibles pour le moment. Revenez ultérieurement.",
+    "back_to_jobs" : "Retour à Carrières"
   },
   "hours_page" : {
-    "hours" : "Hours",
-    "reg_hours" : "Regular Shopping Hours",
-    "extended_holiday_hours" : "Extended Holiday Hours",
-    "holiday_closures" : "Holiday Closures"
+    "hours" : "Horaires",
+    "reg_hours" : "Horaires habituels du centre",
+    "extended_holiday_hours" : "Horaires de vacances du centre",
+    "holiday_closures" : "Fermé pour vacances"
   },
   "newsletter_page" : {
     "newsletter" : "Newsletter",
-    "name" : "Name",
-    "email" : "Email",
-    "agree" : "Yes, I would like to receive ongoing news related to events, promotions and special announcements from",
-    "subscribe" : "Subscribe",
-    "success" : "Success", 
-    "error": "Error",
-    "thank_you_message" : "Thank you for subcribing to our newsletter. You'll hear from us soon!",
-    "error_message" : "There was an error when trying to submit your request. Please try again later."
+    "name" : "Nom et Prénom",
+    "email" : "E-mail",
+    "agree" : "Oui, j'aimerais recevoir des nouvelles concernant les évènements, promotions et annonces diverses de votre part",
+    "subscribe" : "Inscription",
+    "success" : "Réussie", 
+    "error": "Erreur",
+    "thank_you_message" : "Nous vous remercions de votre inscription à notre newsletter. Vous aurez de nos nouvelles prochainement!",
+    "error_message" : "Il semblerait qu'une erreur se soit produite lors de la transmission de votre demande. Merci de réessayer dans quelques instants."
   }
 }
