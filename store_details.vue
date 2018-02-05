@@ -30,7 +30,7 @@
     			</div>
 		    </div>
 		    <hr class="green_hr">
-		    <div class="row">
+		    <div class="row margin_30">
 		        <div class="col-sm-4">
 		            <div class="text-center">
     				    <h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
