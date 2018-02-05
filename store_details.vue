@@ -192,9 +192,9 @@
                 updateSVGMap(map) {
                     this.map = map;
                 },
-                addLandmark(store) {
-                    this.svgMapRef.addMarker(store);
-                },
+                // addLandmark(store) {
+                //     this.svgMapRef.addMarker(store);
+                // },
             }
         });
     });
