@@ -111,7 +111,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/bonniedoon-community-support"
                             },
                             {
-                                name: "Green Initiatives",
+                                name: "header.green_initiatives",
                                 href: "/pages/bonniedoon-green-initiatives"
                             },
                             {
