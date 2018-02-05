@@ -102,7 +102,8 @@
                     promotions : [],
                     jobs:[],
                     dataLoaded: false,
-                    pageBanner : null 
+                    pageBanner : null ,
+                    storeHours :[]
                 }
             },
             props:['id'],
