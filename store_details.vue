@@ -116,7 +116,7 @@
                 this.loadData().then(response => {
                     this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
-                    var temp_repo = this.findRepoByName('Pages Banner');
+                    var temp_repo = this.findRepoByName('Stores Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
