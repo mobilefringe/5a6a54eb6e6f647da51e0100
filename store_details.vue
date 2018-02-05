@@ -44,7 +44,7 @@
 					</div>
 					<div class="store_promo_container" v-if="promotions.length > 0">
 						<div class="promo_container_title text-left caps"></div>
-						<h4 v-if="currentStore.rich_description" class="store_dets_title caps margin_30">{{$t("promo_page.promotions")}}</h4>
+						<h4 v-if="currentStore.rich_description" class="store_dets_title caps margin_30">{{$t("promos_page.promotions")}}</h4>
 						<div class="row store_promo_dets text-left" v-for="promo in promotions">
 							<div class="col-sm-6 no_padding" >
 								<div class="promo_div_image">
@@ -56,7 +56,7 @@
     								<!--<p class="promo_div_description">{{promo.description_short}}</p>-->
     								<div class="text-center">
     								    <span class="store_dets_btn">
-        									<router-link :to="'/promotions/'+promo.slug" class="" >{{$t("promo_page.read_more")}}</router-link>
+        									<router-link :to="'/promotions/'+promo.slug" class="" >{{$t("promos_page.read_more")}}</router-link>
         								</span>
     								</div>
     								
