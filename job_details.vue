@@ -13,7 +13,7 @@
 					<div class="image_container">
 						<img v-lazy="currentJob.store.image_url" class="image"/>
 					</div>
-					<div class="text-center" v-if="currentJob.store">
+					<div class="text-center" v-if="currentJob.store.name">
 						<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
 						<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">Store Website</a></h4>
 						<h4 v-if="storeHours.length >0 " class="store_dets_title"> Store Hours</h4>
