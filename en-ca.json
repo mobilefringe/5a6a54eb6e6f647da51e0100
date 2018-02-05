@@ -59,6 +59,9 @@
     "email" : "email",
     "agree" : "Yes, I would like to receive ongoing news related to events, promotions and special announcements from",
     "subscribe" : "Subscribe",
-    "success" : "Success
+    "success" : "Success", 
+    "error": "Error",
+    "thank_you_message" : "",
+    
   }
 }
