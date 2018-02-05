@@ -80,7 +80,7 @@ define([], function() {
         },
         {
             path: '/hours',
-            component: view('hours'),
+            component: view('default'),
             children: [{
                 path: '',
                 component: view('hours'),
