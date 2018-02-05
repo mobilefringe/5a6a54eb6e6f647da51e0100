@@ -41,7 +41,8 @@
     									<!--<a href="#" data-toggle="modal" data-target="#snap_modal"><div class="social_snapchat"></div></a>-->
     									<!--<a href=" https://open.spotify.com/user/playlist/6ozU5Na6bFInmZOVTnSYIm" target="_blank"><div class="social_spotify"></div></a>-->
     								</div>
-    								<a id="signup" href="/newsletter">Sign Up</a>
+    								<router-link id="signup" to="/newsletter">Sign Up</router-link>
+    								<span> <</span>
     							</div>
     							<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu">
     								<span></span>
@@ -57,10 +58,10 @@
         											<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
         										</div>
         										<li v-for="item in menu_items" class="menu_item">
-            								        <a :href="item.href">{{item.name}}</a>
+            								        <router-link :href="item.href">{{item.name}}</router-link>
             								        <ul v-if="item.sub_menu">
             								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-            								                <a :href="sub_menu.href">{{sub_menu.name}}</a>
+            								                <router-link :href="sub_menu.href">{{sub_menu.name}}</router-link>
             								            </li>
             										</ul>
             								    </li>
