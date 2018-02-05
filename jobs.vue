@@ -3,7 +3,7 @@
 		<div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content cap">
-					<h1>{{$t("jobs_page.events")}}</h1>
+					<h1>{{$t("jobs_page.jobs")}}</h1>
 				</div>
 			</div>
 		</div>
@@ -21,11 +21,10 @@
 							<div class="event_thick_line"></div>
 							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
 							<p class="event_desc">{{promo.description_short}}</p>
-						
 							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
 								<router-link :to="'/jobs/'+ promo.slug" class="event_learn_more pull-left">
-								    Read More <i class="fa fa-angle-right" aria-hidden="true"></i>
-							    </router-link>
+									Read More <i class="fa fa-angle-right" aria-hidden="true"></i>
+								</router-link>
 								<social-sharing :url="shareURL(promo.slug)" :title="promo.title" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="EastgateSquare" :media="promo.image_url" inline-template >
 									<div class="blog-social-share pull_right">
 										<div class="social_share">
