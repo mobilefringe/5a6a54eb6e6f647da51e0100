@@ -32,7 +32,7 @@
 						<img v-lazy="currentEvent.image_url" class="image"/>
 						<div class="text-left promo_description">
 							<p v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></p>
-							<p v-else v-html="currentEvent.rich_description"></p>
+							<p v-else v-html="currentEvent.rich_description_2"></p>
 						</div>
 					</div>
 				</div>
