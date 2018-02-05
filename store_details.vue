@@ -52,21 +52,8 @@
 		            <div class="text-left promo_description">
         				<p v-html="currentStore.rich_description"></p>
         			</div>
-		        </div>
-		    </div>
-		<!--<div class="row" style="margin-left:0;">-->
-			<!--<div class="col-sm-4 promo_details_container text-left">-->
-			<!--	<div>-->
-					
-			<!--		<p class="promo_store_name">{{currentStore.store.name}}</p>-->
-					
-			<!--	</div>-->
-			<!--</div>-->
-			<!--<div class="col-sm-8 promo_desc_container">-->
-				
-			<!--</div>-->
-		</div>
-		<div class="promo_promo_container" v-if="promotions.length > 0">
+        			
+        			<div class="promo_promo_container" v-if="promotions.length > 0">
 		    <div class="promo_container_title text-left caps"></div>
 		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
 		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
@@ -88,6 +75,21 @@
 		        </div>
 		    </div>
 		</div>
+		        </div>
+		    </div>
+		<!--<div class="row" style="margin-left:0;">-->
+			<!--<div class="col-sm-4 promo_details_container text-left">-->
+			<!--	<div>-->
+					
+			<!--		<p class="promo_store_name">{{currentStore.store.name}}</p>-->
+					
+			<!--	</div>-->
+			<!--</div>-->
+			<!--<div class="col-sm-8 promo_desc_container">-->
+				
+			<!--</div>-->
+		</div>
+		
 		<!--</div>-->
 	</div>
 </template>
