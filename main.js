@@ -107,7 +107,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/bonniedoon-services"
                             },
                             {
-                                name: "Community Services",
+                                name: "header.community_services",
                                 href: "/pages/bonniedoon-community-support"
                             },
                             {
