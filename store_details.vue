@@ -55,7 +55,7 @@
 								<div class="promo_div_image">
 									<img v-lazy="promo.image_url" class="image" alt=""/>
 								</div>
-								<div class="store_dets_container padding_tb_20">
+								<div class="store_promo_dets_container padding_tb_20">
 								    <p class="promo_div_name">{{promo.name}}</p>
     								<p class="promo_div_date"><i class="fa fa-calendar-alt"></i>{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
     								<!--<p class="promo_div_description">{{promo.description_short}}</p>-->
