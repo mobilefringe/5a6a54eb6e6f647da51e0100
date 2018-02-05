@@ -58,7 +58,7 @@
         											<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
         										</div>
         										<li v-for="item in menu_items" class="menu_item">
-            								        <router-link :href="item.href">{{item.name}}</router-link>
+            								        <router-link :to="item.href">{{item.name}}</router-link>
             								        <ul v-if="item.sub_menu">
             								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
             								                <router-link :href="sub_menu.href">{{sub_menu.name}}</router-link>
