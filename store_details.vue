@@ -101,7 +101,8 @@
                     currentStore: null,
                     promotions : [],
                     jobs:[],
-                    dataLoaded: false
+                    dataLoaded: false,
+                    pageBanner : null 
                 }
             },
             props:['id'],
