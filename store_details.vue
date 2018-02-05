@@ -49,7 +49,7 @@
 		        </div>
 		        <div class="col-sm-8 text-left">
 		            <div class="text-left promo_description">
-		                <h4 v-if="currentStore.rich_description" class="store_dets_title"> {{currentStore.phone}}</h4>
+		                <h4 v-if="currentStore.rich_description" class="store_dets_title"> About Us</h4>
         				<p v-html="currentStore.rich_description"></p>
         			</div>
 		        </div>
