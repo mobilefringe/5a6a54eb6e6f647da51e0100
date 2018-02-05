@@ -60,8 +60,7 @@
     								<p class="promo_div_date"><i class="fa fa-calendar-alt"></i>{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
     								<p class="promo_div_description">{{promo.description_short}}</p>
     								<span class="feature_read_more">
-    									<router-link :to="'/promotions/'+promo.slug" class="store_dets_btn" >
-    										<p class="feature-readmore">Read More</p>
+    									<router-link :to="'/promotions/'+promo.slug" class="store_dets_btn" >Read More
     									</router-link>
     								</span>
 								</div>
