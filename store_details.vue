@@ -24,9 +24,7 @@
     			    
     				<div class="col-sm-12 no_padding">
     				    <!--<img v-lazy="currentStore.image_url"/>-->
-        				<div class="text-left promo_description">
-        				    <p v-html="currentStore.rich_description"></p>
-        				</div>
+        				
     				</div>
     				
     			</div>
@@ -49,7 +47,9 @@
     				</div>
 		        </div>
 		        <div class="col-sm-8 text-left">
-		            
+		            <div class="text-left promo_description">
+        				    <p v-html="currentStore.rich_description"></p>
+        				</div>
 		        </div>
 		    </div>
 		<!--<div class="row" style="margin-left:0;">-->
