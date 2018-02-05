@@ -5,7 +5,7 @@ define([], function() {
         },
         {
             path: '/stores',
-            // component: view('default'),
+            component: view('default'),
             children: [{
                     path: '',
                     component: view('stores'),
