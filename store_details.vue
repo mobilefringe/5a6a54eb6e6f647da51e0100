@@ -1,64 +1,84 @@
 <template>
 	<div class="page_container store_dets_container" v-if="dataLoaded" id="store_dets_container">
-		<div class="row">
-			<div class="col-sm-4 store_logo_container">
-				<div>
-					<img :src="currentStore.store_front_url_abs"/>
-				</div>
-			</div>
-			<div class="col-sm-8 store_map_container">
-				<div id="mapsvg_store_detail">
-					<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'150 150'"></png-map>
+		<div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
+			<!--http://via.placeholder.com/1920x300-->
+			<div class="site_container">
+				<div class="header_content">
+					<h1>PROMOTIONS</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row is-table-row">
-			<div class="col-sm-4 store_details_container">
-				<div>
-					<h1>{{currentStore.name}}</h1>
-					<p>{{currentStore.category_name}}</p>
-					<p>{{currentStore.phone}}</p>
-					<a v-bind:href="'//'+currentStore.website" target="_blank">Visit Store Site</a>
+		<div class="site_container">
+    		<div class="row">
+			<div class="col-sm-4 promo_logo_container hidden_phone">
+				<div class="image_container">
+					<img v-lazy="currentPromo.store.image_url" class="image"/>
+				</div>
+				<div class="text-center">
+				    <h4 v-if="currentPromo.store.phone" class="store_dets_title"> {{currentPromo.store.phone}}</h4>
+				    <h4 v-if="currentPromo.store.website" class="store_dets_title"> <a :href="'//'+currentPromo.store.website" target="_blank">Store Website</a></h4>
+				    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>
+				    <ul class="store_hours_list">
+                        <li v-if="storeHours" v-for="hour in storeHours">
+                            {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
+                        </li>
+                    </ul>
+                    <div class="store_dets_btn caps">
+                        <router-link :to="'/stores'+currentPromo.store.slug">Store Details & Location</router-link>
+                    </div>
 				</div>
 			</div>
-			<div class="col-sm-8 store_desc_container">
-				<div class="text-left store_description">
-					<p>{{currentStore.description}}</p>
+			<div class="col-sm-8 promo_image_container text-left">
+			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
+			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentPromo.name}}</h3>
+			    <div class="row">
+			        <p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
+    			    <social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentPromo.image_url" inline-template >
+    					<div class="blog-social-share pull-right" style="margin: 15px auto;">
+    						<div class="social_share">
+    							<network network="facebook">
+    								<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+    							</network>
+    							<network network="twitter">
+    								<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+    							</network>
+    						</div>
+    					</div>
+    				</social-sharing>
+			    </div>
+			    
+				<div class="col-sm-12 no_padding">
+				    <img v-lazy="currentPromo.image_url"/>
+    				<div class="text-left promo_description">
+    				    <p v-html="currentPromo.rich_description"></p>
+    				</div>
 				</div>
+				
 			</div>
+		<!--</div>-->
+		<!--<div class="row" style="margin-left:0;">-->
+			<!--<div class="col-sm-4 promo_details_container text-left">-->
+			<!--	<div>-->
+					
+			<!--		<p class="promo_store_name">{{currentPromo.store.name}}</p>-->
+					
+			<!--	</div>-->
+			<!--</div>-->
+			<!--<div class="col-sm-8 promo_desc_container">-->
+				
+			<!--</div>-->
 		</div>
-		<div class="store_promo_container" v-if="currentStore && currentStore.total_published_promos > 0">
-		    <div class="promo_container_title text-left all_caps"> Sales & Promotions</div>
-		    <div class="row store_promo_dets text-left" v-for="promo in promotions">
+		<div class="promo_promo_container" v-if="storePromos.length > 0">
+		    <div class="promo_container_title text-left all_caps"> OTHER {{currentPromo.store.name | uppercase }} Promotions</div>
+		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
 		        <div class="promo_div_image">
-		            <img :src="promo.image_url" alt=""/>
+		            <img v-lazy="promo.image_url" alt=""/>
 		        </div>
 		        </div>
 		        <div class="col-sm-5 promo_div_dets">
 		            <p class="promo_div_name">{{promo.name}}</p>
-		            <p class="promo_div_store_name">{{currentStore.name | uppercase}}</p>
-		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-					<p class="promo_div_description">{{promo.description_short}}</p>
-					<span class="feature_read_more">
-						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
-							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-						</router-link>
-					</span>
-		        </div>
-		    </div>
-		</div>
-		<div class="store_promo_container" v-if="currentStore && currentStore.total_published_jobs > 0">
-		    <div class="promo_container_title text-left all_caps"> Careers</div>
-		    <div class="row store_promo_dets text-left" v-for="promo in jobs">
-		        <div class="col-sm-7" >
-		        <div class="promo_div_image">
-		            <img :src="currentStore.store_front_url_abs" alt=""/>
-		        </div>
-		        </div>
-		        <div class="col-sm-5 promo_div_dets">
-		            <p class="promo_div_name">{{promo.name}}</p>
-		            <p class="promo_div_store_name">{{currentStore.name | uppercase}}</p>
+		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
 		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
 		            <p class="promo_div_description">{{promo.description_short}}</p>
 					<span class="feature_read_more">
@@ -68,6 +88,7 @@
 					</span>
 		        </div>
 		    </div>
+		</div>
 		</div>
 	</div>
 </template>
