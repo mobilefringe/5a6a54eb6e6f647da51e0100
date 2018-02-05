@@ -42,7 +42,8 @@
     				</div>
     				
     			</div>
-		</div>
+		    </div>
+		    <hr class="green_hr">
 		<!--<div class="row" style="margin-left:0;">-->
 			<!--<div class="col-sm-4 promo_details_container text-left">-->
 			<!--	<div>-->
