@@ -30,6 +30,7 @@
   },
   "promo_page": {
     "promotions" : "Promotions",
-    "read_more" : "Read More"
+    "read_more" : "Read More",
+    "no_promo_message" : "There are no Promotions at this time. Please check back soon."
   }
 }
