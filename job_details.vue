@@ -48,7 +48,7 @@
 					<div class="col-sm-12 no_padding">
 						<div class="text-left promo_description">
 							<p v-if="locale=='en-ca'" v-html="currentJob.rich_description"></p>
-							<p v-else v-html="currentEvent.rich_description"></p>
+							<p v-else v-html="currentJob.rich_description"></p>
 						</div>
 					</div>
 				</div>
