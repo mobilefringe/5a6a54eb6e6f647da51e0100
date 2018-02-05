@@ -17,5 +17,7 @@
     "explore" : "Explore",
     "our_feed" : "In Our Feed"
   },
-  "stores_page"
+  "stores_page" : {
+      
+  }
 }
