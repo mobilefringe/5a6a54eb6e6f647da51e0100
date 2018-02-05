@@ -27,7 +27,7 @@
 					<div class="text-center">
 						<h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
 						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
-						<h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
+						<h4 v-if="storeHours.length > 0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
 						<ul class="store_hours_list">
 							<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
 								<span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
