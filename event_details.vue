@@ -10,24 +10,6 @@
 		</div>
 		<div class="site_container">
     		<div class="row">
-			<!--<div class="col-sm-4 event_logo_container hidden_phone">-->
-			<!--	<div class="image_container">-->
-			<!--		<img v-lazy="currentEvent.store.image_url" class="image"/>-->
-			<!--	</div>-->
-				<!--<div class="text-center">-->
-				<!--    <h4 v-if="currentEvent.store.phone" class="store_dets_title"> {{currentEvent.store.phone}}</h4>-->
-				<!--    <h4 v-if="currentEvent.store.website" class="store_dets_title"> <a :href="'//'+currentEvent.store.website" target="_blank">Store Website</a></h4>-->
-				<!--    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>-->
-				<!--    <ul class="store_hours_list">-->
-    <!--                    <li v-if="storeHours" v-for="hour in storeHours">-->
-    <!--                        {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}-->
-    <!--                    </li>-->
-    <!--                </ul>-->
-    <!--                <div class="store_dets_btn caps">-->
-    <!--                    <router-link :to="'/stores'+currentEvent.store.slug">Store Details & Location</router-link>-->
-    <!--                </div>-->
-				<!--</div>-->
-			<!--</div>-->
 			<div class="col-sm-12 promo_image_container text-left">
 			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
