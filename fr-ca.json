@@ -3,6 +3,12 @@
     "hello": "bonjour",
     "date": "FR Date: {date}"
   },
+  "header": {
+    "open_today": "Open Today",
+    "closed": "Closed Today",
+    "sign_up": "Sign Up",
+    "stores" : "Stores"
+  },
   "home_page": {
     "explore" : "Explorer",
     "our_feed" : "notre feed instagram"
