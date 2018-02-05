@@ -48,6 +48,7 @@
     "back_to_jobs" : "Back to Jobs"
   },
   "hours_page" : {
-    "hours" : "Hours"
+    "hours" : "Hours",
+    "reg_hours" : "Regular Shopping Hours"
   }
 }
