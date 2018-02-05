@@ -5,69 +5,69 @@
     "sign_up": "Sign Up",
     "menu" : {
         {
-                        name: "Stores",
-                        href: "/stores",
-                        sub_menu: [{
-                                name: "Stores ",
-                                href: "/stores"
-                            },
-                            {
-                                name: "Center Map",
-                                href: "/map"
-                            }
-                        ]
-                    },
-                    {
-                        name: "Promotions",
-                        href: "/promotions",
-                    },
-                    {
-                        name: "Events",
-                        href: "/events",
-                    },
-                    {
-                        name: "Guest Services",
-                        href: "/pages/bonniedoon-services",
-                        sub_menu: [{
-                                name: "Services ",
-                                href: "/pages/bonniedoon-services"
-                            },
-                            {
-                                name: "Community Services",
-                                href: "/pages/bonniedoon-community-support"
-                            },
-                            {
-                                name: "Green Initiatives",
-                                href: "/pages/bonniedoon-green-initiatives"
-                            },
-                            {
-                                name: "Gift Cards",
-                                href: "/pages/bonniedoon-gift-cards"
-                            }
-                        ]
-                    },
-                    {
-                        name: "Contact Us",
-                        href: "/contact_us",
-                        sub_menu: [
-                            {
-                                name: "Hours",
-                                href: "/hours"
-                            },
-                            {
-                                name: "Jobs",
-                                href: "/jobs"
-                            },
-                            {
-                                name: "Find Us",
-                                href: "/find_us"
-                            },
-                            {
-                                name: "Newsletter",
-                                href: "/newsletter"
-                            }
-                        ],
-                    }
+            name: "Stores",
+            href: "/stores",
+            sub_menu: [{
+                    name: "Stores ",
+                    href: "/stores"
+                },
+                {
+                    name: "Center Map",
+                    href: "/map"
+                }
+            ]
+        },
+        {
+            name: "Promotions",
+            href: "/promotions",
+        },
+        {
+            name: "Events",
+            href: "/events",
+        },
+        {
+            name: "Guest Services",
+            href: "/pages/bonniedoon-services",
+            sub_menu: [{
+                    name: "Services ",
+                    href: "/pages/bonniedoon-services"
+                },
+                {
+                    name: "Community Services",
+                    href: "/pages/bonniedoon-community-support"
+                },
+                {
+                    name: "Green Initiatives",
+                    href: "/pages/bonniedoon-green-initiatives"
+                },
+                {
+                    name: "Gift Cards",
+                    href: "/pages/bonniedoon-gift-cards"
+                }
+            ]
+        },
+        {
+            name: "Contact Us",
+            href: "/contact_us",
+            sub_menu: [
+                {
+                    name: "Hours",
+                    href: "/hours"
+                },
+                {
+                    name: "Jobs",
+                    href: "/jobs"
+                },
+                {
+                    name: "Find Us",
+                    href: "/find_us"
+                },
+                {
+                    name: "Newsletter",
+                    href: "/newsletter"
+                }
+            ],
+        }
     }
   },
   "home_page": {
