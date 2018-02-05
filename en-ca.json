@@ -8,7 +8,8 @@
     "events" : "Events",
     "guest_services" : "Guest_services",
     "services" : "Services",
-    "community" : "Community Services"
+    "community" : "Community Services",
+    "green_initiatives"
   },
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
