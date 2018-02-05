@@ -31,7 +31,8 @@
 					<div class="col-sm-12 no_padding text-center">
 						<img v-lazy="currentEvent.image_url" class="image"/>
 						<div class="text-left promo_description">
-							<p v-html="currentEvent.rich_description"></p>
+							<p v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></p>
+							<p v-else v-html="currentEvent.rich_description"></p>
 						</div>
 					</div>
 				</div>
