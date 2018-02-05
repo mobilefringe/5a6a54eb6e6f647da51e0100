@@ -5,7 +5,8 @@
     "sign_up": "Sign Up",
     "stores" : "Stores",
     "promotions" : "Promotions",
-    "events" : "Events"
+    "events" : "Events",
+    "guest_services" : "Promotions"
   },
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
