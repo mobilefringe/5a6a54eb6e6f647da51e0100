@@ -23,7 +23,7 @@
 							</li>
 						</ul>
 						<div class="store_dets_btn caps">
-							<router-link :to="'/stores'+currentJob.store.slug"> {{$t("stores_page.back_to_jobs")}}</router-link>
+							<router-link :to="'/stores'+currentJob.store.slug"> {{$t("stores_page.store_dets_loc")}}</router-link>
 						</div>
 					</div>
 				</div>
