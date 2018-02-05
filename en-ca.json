@@ -1,6 +1,6 @@
 {
-  "message": {
-    "hello": "hello",
+  "header": {
+    "open_today": "OPEN TODAY ",
     "date": "Date: {date}"
   },
   "home_page": {
