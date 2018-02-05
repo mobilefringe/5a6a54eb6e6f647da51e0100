@@ -49,7 +49,7 @@
 			</div>
 			<div id="no_events" class="row" v-else>
 				<div class="col-md-12">
-					<p>{{$t("events_page.events")}}</p>
+					<p>{{$t("events_page.no_event_message")}}</p>
 				</div>
 			</div>
 			<div class="row margin-60">
