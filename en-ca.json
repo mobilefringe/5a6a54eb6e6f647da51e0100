@@ -18,6 +18,7 @@
     "our_feed" : "In Our Feed"
   },
   "stores_page" : {
-    "shopping" : "shopping"
+    "shopping" : "shopping",
+    "find_your_store", "Find YOur Store"
   }
 }
