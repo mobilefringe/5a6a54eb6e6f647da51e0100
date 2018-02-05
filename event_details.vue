@@ -1,6 +1,6 @@
 <template>
 	<div class="event_dets_container" v-if="currentEvent">
-	    <div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
+		<div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content caps">
@@ -9,35 +9,33 @@
 			</div>
 		</div>
 		<div class="site_container">
-    		<div class="row">
-			<div class="col-sm-12 promo_image_container text-left">
-			<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
-			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
-			    <div class="row">
-			        <p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-    			    <social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentEvent.image_url" inline-template >
-    					<div class="blog-social-share pull-right" style="margin: 15px auto;">
-    						<div class="social_share">
-    							<network network="facebook">
-    								<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
-    							</network>
-    							<network network="twitter">
-    								<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
-    							</network>
-    						</div>
-    					</div>
-    				</social-sharing>
-			    </div>
-			    
-				<div class="col-sm-12 no_padding text-center">
-				    <img v-lazy="currentEvent.image_url" class="image"/>
-    				<div class="text-left promo_description">
-    				    <p v-html="currentEvent.rich_description"></p>
-    				</div>
+			<div class="row">
+				<div class="col-sm-12 promo_image_container text-left">
+					<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
+					<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentEvent.name}}</h3>
+					<div class="row">
+						<p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+						<social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentEvent.image_url" inline-template >
+							<div class="blog-social-share pull-right" style="margin: 15px auto;">
+								<div class="social_share">
+									<network network="facebook">
+										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+									</network>
+									<network network="twitter">
+										<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+									</network>
+								</div>
+							</div>
+						</social-sharing>
+					</div>
+					<div class="col-sm-12 no_padding text-center">
+						<img v-lazy="currentEvent.image_url" class="image"/>
+						<div class="text-left promo_description">
+							<p v-html="currentEvent.rich_description"></p>
+						</div>
+					</div>
 				</div>
-				
 			</div>
-		</div>
 		</div>
 	</div>
 </template>
