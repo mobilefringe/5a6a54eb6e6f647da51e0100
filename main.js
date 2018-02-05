@@ -79,7 +79,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 show_mobile_menu: false,
                 menu_items: [
                     {
-                        name: this.$t("header.stores"),
+                        name: "header.stores",
                         href: "/stores",
                         sub_menu: [{
                                 name: "Stores ",
