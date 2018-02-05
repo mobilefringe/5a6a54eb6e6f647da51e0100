@@ -31,21 +31,7 @@
 			<div class="col-sm-8 promo_image_container text-left">
 			<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>
 			    <h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>
-			    <div class="row">
-			        <p class="promo_div_date pull-left">{{currentStore.start_date | moment("MMM D", timezone)}} - {{currentStore.end_date | moment("MMM D", timezone)}}</p>
-    			    <social-sharing :url="shareURL(currentStore.slug)" :title="currentStore.title" :description="currentStore.body" :quote="_.truncate(currentStore.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentStore.image_url" inline-template >
-    					<div class="blog-social-share pull-right" style="margin: 15px auto;">
-    						<div class="social_share">
-    							<network network="facebook">
-    								<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
-    							</network>
-    							<network network="twitter">
-    								<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
-    							</network>
-    						</div>
-    					</div>
-    				</social-sharing>
-			    </div>
+			    
 			    
 				<div class="col-sm-12 no_padding">
 				    <img v-lazy="currentStore.image_url"/>
