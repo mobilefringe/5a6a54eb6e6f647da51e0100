@@ -163,7 +163,8 @@
                     'findStoreBySlug',
                     'findPromoById',
                     'findJobById',
-                    'findRepoByName'
+                    'findRepoByName',
+                    'findHourById'
                 ]),
                 getPNGurl () {
                     return "https://www.mallmaverick.com" + this.property.map_url;
