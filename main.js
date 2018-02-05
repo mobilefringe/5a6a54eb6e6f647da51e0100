@@ -133,7 +133,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/jobs"
                             },
                             {
-                                name: "Find Us",
+                                name: "header.find_us",
                                 href: "/find_us"
                             },
                             {
