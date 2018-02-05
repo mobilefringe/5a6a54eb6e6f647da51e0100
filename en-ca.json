@@ -4,6 +4,7 @@
     "date": "Date: {date}"
   },
   "home_page": {
-    "explore" : "explore"
+    "explore" : "explore",
+    "our_feed" : "In Our Feed"
   }
 }
