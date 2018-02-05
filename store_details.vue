@@ -83,6 +83,8 @@
 		<!--</div>-->
 	</div>
 </template>
+
+
 <script>
     define(['Vue', 'vuex', 'moment', "jquery", "smooth-zoom", "vue!png-map", 'vue-lazy-load'], function(Vue, Vuex, moment, $, smoothZoom, PNGMapComponent, VueLazyload) {
         Vue.use(VueLazyload);
