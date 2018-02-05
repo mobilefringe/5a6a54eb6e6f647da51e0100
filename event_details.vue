@@ -55,18 +55,6 @@
 				</div>
 				
 			</div>
-		<!--</div>-->
-		<!--<div class="row" style="margin-left:0;">-->
-			<!--<div class="col-sm-4 event_details_container text-left">-->
-			<!--	<div>-->
-					
-			<!--		<p class="event_store_name">{{currentEvent.store.name}}</p>-->
-					
-			<!--	</div>-->
-			<!--</div>-->
-			<!--<div class="col-sm-8 event_desc_container">-->
-				
-			<!--</div>-->
 		</div>
 		<div class="event_event_container" v-if="storeEvents.length > 0">
 		    <div class="event_container_title text-left all_caps"> OTHER {{currentEvent.store.name | uppercase }} Eventtions</div>
