@@ -103,7 +103,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "header.guest_services",
                         href: "/pages/bonniedoon-services",
                         sub_menu: [{
-                                name: "Services ",
+                                name: "header.services ",
                                 href: "/pages/bonniedoon-services"
                             },
                             {
