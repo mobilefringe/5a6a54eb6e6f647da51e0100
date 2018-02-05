@@ -27,5 +27,9 @@
     "store_website": "Store Website",
     "store_hours" : "Store Hours",
     "about_us" : "About Us"
-  }
+  },
+  "home_page": {
+    "explore" : "Explore",
+    "our_feed" : "In Our Feed"
+  },
 }
