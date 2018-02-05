@@ -24,7 +24,7 @@
     			    
     				<div class="col-sm-12 no_padding">
     				    <!--<img v-lazy="currentStore.image_url"/>-->
-        				<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'5000 0'" :height="_.toNumber('600')"></png-map>
+        				<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 0'" :height="_.toNumber('600')"></png-map>
     				</div>
     				
     			</div>
@@ -35,7 +35,7 @@
 		            <div class="text-center">
     				    <h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
     				    <h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">Store Website</a></h4>
-    				    <h4 v-if="storeHours " class="store_dets_title"> Store Hours</h4>
+    				    <h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
     				    <ul class="store_hours_list">
                             <li v-if="storeHours" v-for="hour in storeHours">
                                 {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
