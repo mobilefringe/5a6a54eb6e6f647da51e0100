@@ -4,7 +4,8 @@
     "closed": "Closed Today",
     "sign_up": "Sign Up",
     "menu" : "Menu",
-    "stay_uptodate" : "Stay up to date on all of our Happenings"
+    "stay_uptodate" : "Stay up to date on all of our Happenings",
+    "subscribe_thankyou" : "Thank you for subscribing to our newsletter."
   },
   "home_page": {
     "explore" : "Explore",
