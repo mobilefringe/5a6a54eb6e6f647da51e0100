@@ -56,7 +56,7 @@
   "newsletter_page" : {
     "newsletter" : "Newsletter",
     "name" : "Name",
-    "email" : "Extended Holiday Hours",
+    "email" : "email",
     "holiday_closures" : "Holiday Closures"
   }
 }
