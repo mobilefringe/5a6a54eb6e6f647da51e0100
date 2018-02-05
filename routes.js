@@ -81,11 +81,12 @@ define([], function() {
         {
             path: '/hours',
             component: view('hours'),
-            // children: [{
-            //     path: '',
-            //     component: view('hours'),
-            //     name: 'hourList'
-            // }]
+            children: [{
+                path: '',
+                component: view('hours'),
+                name: 'hourList',
+                props: true
+            }]
         },
         {
             path: '/contest',
