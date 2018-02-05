@@ -232,13 +232,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 this.search_result = "";
                 this.$router.push("/stores/"+option.slug);
             },
-            // toggleSubMenu (id) {
-            //   this.menu_items.map(menu => {
-            //         if(menu.id !== id) {
-            //             menu.show_sub_menu = false;
-            //         }
-            //     });
-            // },
             enableStickyNavbar(e) {
                 // console.log("scrolling");
                 // console.log(window.pageYOffset,this.isSticky,window.pageYOffset >= this.isSticky );
