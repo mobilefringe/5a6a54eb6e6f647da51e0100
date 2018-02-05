@@ -1,7 +1,8 @@
 {
   "header": {
     "open_today": "Open Today",
-    "closed": "Closed Today"
+    "closed": "Closed Today",
+    "sign_up": "Sign Up
   },
   "home_page": {
     "explore" : "Explore",
