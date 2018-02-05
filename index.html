@@ -58,10 +58,10 @@
         											<router-link to="/"><img src="http://via.placeholder.com/500x150/000" alt="Property Logo"/></router-link>
         										</div>
         										<li v-for="item in menu_items" class="menu_item">
-            								        <router-link :to="item.href">{{item.name}}</router-link>
+            								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
             								        <ul v-if="item.sub_menu">
             								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-            								                <router-link :to="sub_menu.href">{{sub_menu.name}}</router-link>
+            								                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
             								            </li>
             										</ul>
             								    </li>
@@ -133,7 +133,7 @@
 						    <nav id="primary_nav">
 								<ul>
 								    <li v-for="item in menu_items" class="menu_item">
-								        <router-link :to="item.href">{{item.name}}</router-link>
+								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
 								    </li>
 								</ul>
 							</nav>
