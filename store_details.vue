@@ -61,8 +61,7 @@
     								<!--<p class="promo_div_description">{{promo.description_short}}</p>-->
     								<div>
     								    <span class="store_dets_btn">
-    									<router-link :to="'/promotions/'+promo.slug" class="" >Read More
-    									</router-link>
+    									<router-link :to="'/promotions/'+promo.slug" class="" >Read More</router-link>
     								</span>
     								</div>
     								
