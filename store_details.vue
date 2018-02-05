@@ -16,8 +16,6 @@
 					</div>
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
-					<!--<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>-->
-					<!--<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>-->
 					<div class="col-sm-12 no_padding">
 						<!--<img v-lazy="currentStore.image_url"/>-->
 						<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 0'" :height="_.toNumber('625')"></png-map>
