@@ -150,6 +150,19 @@
                     this.promotions = temp_promo;
                     this.jobs = temp_job;
                     
+                    var storeHours = [];
+                    var vm = this;
+                    _.forEach(this.currentPromo.store.store_hours, function (value, key) {
+                        var hour = vm.findHourById(value);
+                        if(hour.day_of_week === 0){
+                            hour.order = 7;
+                        }
+                        else {
+                            hour.order = hour.day_of_week;
+                        }
+                        storeHours.push();
+                    });
+                        this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
                     // setTimeout(function() {
                     //     vm.addLandmark(vm.currentStore);
                     // }, 500);
