@@ -57,12 +57,12 @@
             		    <div class="promo_container_title text-left caps"></div>
             		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
             		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
-            		        <div class="col-sm-7" >
+            		        <div class="col-sm-6" >
             		        <div class="promo_div_image">
             		            <img v-lazy="promo.image_url" class="image" alt=""/>
             		        </div>
             		        </div>
-            		        <div class="col-sm-5 promo_div_dets">
+            		        <div class="col-sm-6 promo_div_dets">
             		            <p class="promo_div_name">{{promo.name}}</p>
             		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
             		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
