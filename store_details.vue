@@ -66,7 +66,7 @@
 				
 			<!--</div>-->
 		</div>
-		<div class="promo_promo_container" v-if="storePromos.length > 0">
+		<div class="promo_promo_container" v-if="promotions.length > 0">
 		    <div class="promo_container_title text-left all_caps"> OTHER {{currentStore.store.name | uppercase }} Promotions</div>
 		    <div class="row promo_promo_dets text-left" v-for="promo in storePromos">
 		        <div class="col-sm-7" >
