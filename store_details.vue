@@ -9,87 +9,77 @@
 			</div>
 		</div>
 		<div class="site_container">
-    		<div class="row">
-    			<div class="col-sm-4 promo_logo_container hidden_phone">
-    				<div class="image_container">
-    					<img v-lazy="currentStore.image_url" class="image"/>
-    				</div>
-    				
-    			</div>
-    			
-    			<div class="col-sm-8 promo_image_container text-left">
-    			<!--<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>-->
-    			    <!--<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>-->
-    			    
-    			    
-    				<div class="col-sm-12 no_padding">
-    				    <!--<img v-lazy="currentStore.image_url"/>-->
-        				<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 0'" :height="_.toNumber('625')"></png-map>
-    				</div>
-    				
-    			</div>
-		    </div>
-		    <hr class="green_hr">
-		    <div class="row margin_30">
-		        <div class="col-sm-4">
-		            <div class="text-center">
-    				    <h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
-    				    <h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">Store Website</a></h4>
-    				    <h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
-    				    <ul class="store_hours_list">
-                            <li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
-                            <span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
-                            <span class="col-xs-6 text-left">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>
-                            </li>
-                        </ul>
-                        <!--<div class="store_dets_btn caps">-->
-                        <!--    <router-link :to="'/stores'+currentStore.slug">Store Details & Location</router-link>-->
-                        <!--</div>-->
-    				</div>
-		        </div>
-		        <div class="col-sm-8 text-left">
-		            <h4 v-if="currentStore.rich_description" class="store_dets_title caps"> About Us</h4>
-		            <div class="text-left promo_description">
-        				<p v-html="currentStore.rich_description"></p>
-        			</div>
-        			
-        			<div class="store_promo_container" v-if="promotions.length > 0">
-            		    <div class="promo_container_title text-left caps"></div>
-            		    <h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
-            		    <div class="row promo_promo_dets text-left" v-for="promo in promotions">
-            		        <div class="col-sm-6" >
-            		        <div class="promo_div_image">
-            		            <img v-lazy="promo.image_url" class="image" alt=""/>
-            		        </div>
-            		        </div>
-            		        <div class="col-sm-5 promo_div_dets">
-            		            <p class="promo_div_name">{{promo.name}}</p>
-            		            <p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
-            		            <p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
-            		            <p class="promo_div_description">{{promo.description_short}}</p>
-            					<span class="feature_read_more">
-            						<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
-            							<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
-            						</router-link>
-            					</span>
-            		        </div>
-            		    </div>
-            		</div>
-		        </div>
-		    </div>
-		<!--<div class="row" style="margin-left:0;">-->
+			<div class="row">
+				<div class="col-sm-4 promo_logo_container hidden_phone">
+					<div class="image_container">
+						<img v-lazy="currentStore.image_url" class="image"/>
+					</div>
+				</div>
+				<div class="col-sm-8 promo_image_container text-left">
+					<!--<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp; Back to Promotions</router-link>-->
+					<!--<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentStore.name}}</h3>-->
+					<div class="col-sm-12 no_padding">
+						<!--<img v-lazy="currentStore.image_url"/>-->
+						<png-map v-bind:png-map-url="getPNGurl" v-bind:initial-position="'500 0'" :height="_.toNumber('625')"></png-map>
+					</div>
+				</div>
+			</div>
+			<hr class="green_hr">
+			<div class="row margin_30">
+				<div class="col-sm-4">
+					<div class="text-center">
+						<h4 v-if="currentStore.phone" class="store_dets_title"> {{currentStore.phone}}</h4>
+						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">Store Website</a></h4>
+						<h4 v-if="storeHours.length > 0 " class="store_dets_title"> Store Hours</h4>
+						<ul class="store_hours_list">
+							<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
+								<span class="col-xs-6 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
+								<span class="col-xs-6 text-left">{{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}</span>
+							</li>
+						</ul>
+						<!--<div class="store_dets_btn caps">-->
+						<!--    <router-link :to="'/stores'+currentStore.slug">Store Details & Location</router-link>-->
+						<!--</div>-->
+					</div>
+				</div>
+				<div class="col-sm-8 text-left">
+					<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> About Us</h4>
+					<div class="text-left promo_description">
+						<p v-html="currentStore.rich_description"></p>
+					</div>
+					<div class="store_promo_container" v-if="promotions.length > 0">
+						<div class="promo_container_title text-left caps"></div>
+						<h4 v-if="currentStore.rich_description" class="store_dets_title caps">Promotions</h4>
+						<div class="row promo_promo_dets text-left" v-for="promo in promotions">
+							<div class="col-sm-6" >
+								<div class="promo_div_image">
+									<img v-lazy="promo.image_url" class="image" alt=""/>
+								</div>
+							</div>
+							<div class="col-sm-5 promo_div_dets">
+								<p class="promo_div_name">{{promo.name}}</p>
+								<p class="promo_div_promo_name">{{promo.store.name | uppercase}}</p>
+								<p class="promo_div_date">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+								<p class="promo_div_description">{{promo.description_short}}</p>
+								<span class="feature_read_more">
+									<router-link :to="'/promotions/'+promo.slug" class="mobile_readmore" >
+										<p class="feature-readmore">Read More <i class="fa fa-chevron-right pull-right" aria-hidden="true"></i></p>
+									</router-link>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="row" style="margin-left:0;">-->
 			<!--<div class="col-sm-4 promo_details_container text-left">-->
 			<!--	<div>-->
-					
 			<!--		<p class="promo_store_name">{{currentStore.store.name}}</p>-->
-					
 			<!--	</div>-->
 			<!--</div>-->
 			<!--<div class="col-sm-8 promo_desc_container">-->
-				
 			<!--</div>-->
 		</div>
-		
 		<!--</div>-->
 	</div>
 </template>
