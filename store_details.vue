@@ -23,9 +23,9 @@
                             {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                         </li>
                     </ul>
-                    <div class="store_dets_btn caps">
-                        <router-link :to="'/stores'+currentStore.store.slug">Store Details & Location</router-link>
-                    </div>
+                    <!--<div class="store_dets_btn caps">-->
+                    <!--    <router-link :to="'/stores'+currentStore.slug">Store Details & Location</router-link>-->
+                    <!--</div>-->
 				</div>
 			</div>
 			<div class="col-sm-8 promo_image_container text-left">
