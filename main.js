@@ -181,7 +181,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
             // computed property for locale which returns locale value from data store and also updates the data store with new locale information
             locale: {
                 get() {
-                    console.log(this.$store.state.locale)
                     return this.$store.state.locale
                 },
                 set(value) {
