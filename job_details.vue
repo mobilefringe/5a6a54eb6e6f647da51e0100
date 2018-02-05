@@ -29,7 +29,7 @@
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; {{$t("jobs_page.back_to_jobs")}}</router-link>
-					<h3 class="promo_name" style="margin: 20px auto 0px;">{{currentJob.name}}</h3>
+					<h3 class="promo_name" style="margin: 20px auto 0px;" >{{currentJob.name}}</h3>
 					<div class="row">
 						<p class="promo_div_date pull-left">{{currentJob.start_date | moment("MMM D", timezone)}} - {{currentJob.end_date | moment("MMM D", timezone)}}</p>
 						<social-sharing :url="shareURL(currentJob.slug)" :title="currentJob.title" :description="currentJob.body" :quote="_.truncate(currentJob.description, {'length': 99})" twitter-user="EastgateSquare" :media="currentJob.image_url" inline-template >
@@ -47,7 +47,8 @@
 					</div>
 					<div class="col-sm-12 no_padding">
 						<div class="text-left promo_description">
-							<p v-html="currentJob.rich_description"></p>
+							<p v-if="locale=='en-ca'" v-html="currentJob.rich_description"></p>
+							<p v-else v-html="currentEvent.rich_description"></p>
 						</div>
 					</div>
 				</div>
