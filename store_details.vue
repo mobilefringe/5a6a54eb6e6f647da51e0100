@@ -39,7 +39,7 @@
     				    <ul class="store_hours_list">
                             <li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
                             <span class="col-xs-6"></span>
-                            <span></span>
+                            <span class="col-xs-6"></span>
                                 {{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
                             </li>
                         </ul>
