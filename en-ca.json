@@ -10,7 +10,8 @@
     "services" : "Services",
     "community" : "Community Services",
     "green_initiatives" : "Green Initiatives",
-    "gift_card" : "Gift Card"
+    "gift_card" : "Gift Card",
+    "contact_us"
   },
   "footer": {
     "stay_uptodate" : "Stay up to date on all of our Happenings",
