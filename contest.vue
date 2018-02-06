@@ -182,6 +182,14 @@
                 }, error => {
                     console.error("Could not retrieve data from server. Please check internet connection and try again.");
                 });
+                this.loadData(this.id).then(response => {
+                    this.currentContest = this.findContestBySlug('bonniedoon-test-contest');
+                    var temp_repo = this.findRepoByName('Pages Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    this.pageBanner = this.pageBanner;
+                });
             },
             mounted() {
                 //creating random validation num 
