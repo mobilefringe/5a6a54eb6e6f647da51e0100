@@ -176,12 +176,6 @@
                 }
             },
             created() {
-                this.$store.dispatch("getData", "contests").then(response => {
-                    // this.dataloaded = true;
-                    this.currentContest = this.findContestBySlug('bonniedoon-test-contest');
-                }, error => {
-                    console.error("Could not retrieve data from server. Please check internet connection and try again.");
-                });
                 this.loadData(this.id).then(response => {
                     this.currentContest = this.findContestBySlug('bonniedoon-test-contest');
                     var temp_repo = this.findRepoByName('Pages Banner');
