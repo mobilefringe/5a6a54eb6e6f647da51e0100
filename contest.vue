@@ -195,7 +195,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findContestBySlug'
+                    'findContestBySlug',
+                    'findRepoByName'
                 ]),
             },
             methods: {
