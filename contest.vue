@@ -172,7 +172,8 @@
                     validaNum: '',
                     correctValNum: null,
                     validNumError: false,
-                    currentContest: null
+                    currentContest: null,
+                    pageBanner: null
                 }
             },
             created() {
