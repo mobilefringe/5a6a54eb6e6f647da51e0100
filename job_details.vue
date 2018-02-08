@@ -14,9 +14,9 @@
 						<img v-lazy="currentJob.store.image_url" class="image"/>
 					</div>
 					<div class="text-center" v-if="currentJob.store.name">
-					    <div v-if="currentPromo.promotionable_type == 'Store'">
-						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentPromo.store.name}}</h4>
-						    <h4 class="event_store_name caps" v-else>{{currentPromo.store.name_2}}</h4>
+					    <div v-if="currentJob.promotionable_type == 'Store'">
+						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>
+						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
 						</div>
 						<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
 						<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
