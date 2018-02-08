@@ -16,11 +16,8 @@
             },
             computed: {
                 ...Vuex.mapGetters([
-                    'property',
+                    'property'
                 ]),
-                allPromos() {
-                    return this.processedPromos;
-                },
             },
         });
     });
