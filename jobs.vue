@@ -20,9 +20,9 @@
 							<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>
 							<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>
 							<div v-if="currentPromo.promotionable_type == 'Store'">
-						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentPromo.store.name}}</h4>
-						    <h4 class="event_store_name caps" v-else>{{currentPromo.store.name_2}}</h4>
-						</div>
+    						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentPromo.store.name}}</h4>
+    						    <h4 class="event_store_name caps" v-else>{{currentPromo.store.name_2}}</h4>
+    						</div>
 							<div class="event_thick_line"></div>
 							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
 							<p class="event_desc"  v-if="locale=='en-ca'">{{promo.description_short}}</p>
