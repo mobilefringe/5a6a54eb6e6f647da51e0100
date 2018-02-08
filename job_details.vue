@@ -14,7 +14,7 @@
 						<img v-lazy="currentJob.store.image_url" class="image"/>
 					</div>
 					<div class="text-center" v-if="currentJob.store.name">
-					    <div v-if="currentJob.promotionable_type == 'Store'">
+					    <div v-if="currentJob.jobable_type == 'Store'">
 						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>
 						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
 						</div>
