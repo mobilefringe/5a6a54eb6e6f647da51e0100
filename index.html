@@ -46,7 +46,7 @@
     								<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>
     								<span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>
     							</div>
-    							<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu">
+    							<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_menu}">
     								<span></span>
     								<span></span>
     								<span></span>
