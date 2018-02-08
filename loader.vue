@@ -17,12 +17,6 @@
             computed: {
                 ...Vuex.mapGetters([
                     'property',
-                    'processedPromos',
-                    'findPromoBySlug',
-                    'findPromoById',
-                    'timezone',
-                    'findRepoByName',
-                    'findHourById'
                 ]),
                 allPromos() {
                     return this.processedPromos;
