@@ -29,7 +29,7 @@
     								<div class="site_logo visible_phone">
         							    <router-link to="/"><img src="http://via.placeholder.com/500x150/fff" alt="Property Logo"/></router-link>
         						    </div>
-    								<div id="home_hours_container" class="">
+    								<div id="home_hours_container" class="hidden_phone">
     									<p class="open_now"><span v-if="!todays_hours.is_closed || todays_hours.is_closed == null">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed_today")}}</span> <span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}}</p>
     								</div>
     							</div>
