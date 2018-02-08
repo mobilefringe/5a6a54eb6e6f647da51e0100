@@ -13,7 +13,21 @@
             template: template, // the variable template will be injected,
             data: function () {
                 return {};
-            }
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'processedPromos',
+                    'findPromoBySlug',
+                    'findPromoById',
+                    'timezone',
+                    'findRepoByName',
+                    'findHourById'
+                ]),
+                allPromos() {
+                    return this.processedPromos;
+                },
+            },
         });
     });
 </script>
