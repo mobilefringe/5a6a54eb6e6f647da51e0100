@@ -35,7 +35,7 @@ require.config({
         'smooth-zoom' : 'https://codecloud.cdn.speedyrails.net/sites/59035a6c6e6f645a5b420000/application/x-javascript/1503602727000/smoothZoomA24',
         'png-map' : 'https://preview-mmvue.codecloudapp.com/png-map.vue?noext',
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
-        'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
+        'vue-lazy-load': 'https://unpkg.com/vue-lazyload@1.2.0/vue-lazyload',
         'masonry' : 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min',
         'vue-masonry-plugin' : 'https://cdn.jsdelivr.net/npm/vue-masonry@0.10.16/dist/vue-masonry-plugin',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
