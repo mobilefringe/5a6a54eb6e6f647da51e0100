@@ -1,7 +1,7 @@
 <template>
     <div id="overlay">
         <div class="loading-container">
-            <vue-simple-spinner size="huge" :message="property.name + ' is loading...'"></vue-simple-spinner>
+            <vue-simple-spinner size="huge" :message="property.name + ' is loading...'" v-if="property"></vue-simple-spinner>
         </div>
     </div>
 </template>
