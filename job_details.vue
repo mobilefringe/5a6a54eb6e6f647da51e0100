@@ -31,7 +31,7 @@
 							<router-link :to="'/stores/'+currentJob.store.slug"> {{$t("stores_page.store_dets_loc")}}</router-link>
 						</div>
 					</div>
-					<div class="text-center" v-else>
+					<div class="text-center" v-if="currentJob.jobable_type == 'Store'">
 					    <h4 class="event_store_name caps" v-if="property">{{property.name_2}}</h4>
 					</div>
 				</div>
