@@ -31,9 +31,9 @@
 							<router-link :to="'/stores/'+currentJob.store.slug"> {{$t("stores_page.store_dets_loc")}}</router-link>
 						</div>
 					</div>
-					<div v-else>
-						    <h4 class="event_store_name caps" v-if="property">{{property.name_2}}</h4>
-						</div>
+					<div class="text-center" v-else>
+					    <h4 class="event_store_name caps" v-if="property">{{property.name_2}}</h4>
+					</div>
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<router-link to="/jobs"><i class="fa fa-angle-left"></i> &nbsp; {{$t("jobs_page.back_to_jobs")}}</router-link>
