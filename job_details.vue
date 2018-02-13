@@ -19,7 +19,6 @@
 						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
 						</div>
 						<div v-else>
-						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>
 						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
 						</div>
 						<h4 v-if="currentJob.store.phone" class="store_dets_title"> {{currentJob.store.phone}}</h4>
