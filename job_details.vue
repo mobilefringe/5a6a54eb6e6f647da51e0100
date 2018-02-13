@@ -99,11 +99,11 @@
                     if(this.currentJob != null) {
                         console.log(this.currentJob.store);
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
-                            this.currentJob.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            this.currentJob.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
-                            this.currentJob.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                            this.currentJob.store.image_url =  "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         var vm = this;
                         var temp_job = [];
