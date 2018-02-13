@@ -147,6 +147,7 @@
                     var temp_repo = this.findRepoByName('Events Banner');
                     if(temp_repo) {
                         this.promoBanner = temp_repo.images[0];
+                        console.log(temp_repo)''
                     }
                     console.log("this.promoBanner",this.promoBanner);
                 });
