@@ -32,7 +32,7 @@
 						</div>
 					</div>
 					<div class="text-center" v-if="currentJob.jobable_type == 'Property'">
-					    <h4 class="event_store_name caps" v-if="property">{{property.name_2}}</h4>
+					    <h4 class="event_store_name caps" v-if="property">{{property.name}}</h4>
 					</div>
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
