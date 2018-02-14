@@ -42,7 +42,8 @@
     "store_hours" : "Horaires du magasin",
     "store_dets_loc" : "Details et localisation du magasin",
     "about_us" : "A propos de nous",
-    "find_store" : "Trouver un magasin"
+    "find_store" : "Trouver un magasin",
+    "select_a_store" : "Choisissez Un Magasin"
   },
   "promos_page": {
     "promotions" : "Promotions",
