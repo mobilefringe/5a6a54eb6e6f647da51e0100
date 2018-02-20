@@ -1936,6 +1936,7 @@ strong, .bold {
     height: 60px;
     line-height: 60px;
     margin-bottom: 30px;
+    font-family: $font_family;
 }
 // .directory_btn:after {
 //     content: " ";
