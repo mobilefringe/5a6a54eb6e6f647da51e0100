@@ -922,7 +922,7 @@ strong, .bold {
 }
 .footer_nav {
     #primary_nav ul .menu_item a {
-    	color: #ff;
+    	color: #fff;
     // 	text-shadow: 0 1px 3px rgba(255,255,255,0.4);
     }
 }
