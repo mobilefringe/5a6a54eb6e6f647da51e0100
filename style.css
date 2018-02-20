@@ -1979,37 +1979,37 @@ strong, .bold {
     .store_img {
         max-width: 100%;
         position: relative;
-        filter: gray; /* IE6-9 */
-        -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-        -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-        -webkit-backface-visibility: hidden; /* Fix for transition flickering */
-        -moz-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-        -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-        -moz-backface-visibility: hidden; /* Fix for transition flickering */
-        -o-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-        -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-        -o-backface-visibility: hidden; /* Fix for transition flickering */
-        -ms-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
-        -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-        -ms-backface-visibility: hidden; /* Fix for transition flickering */
+        // filter: gray; /* IE6-9 */
+        // -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        // -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        // -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+        // -moz-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        // -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        // -moz-backface-visibility: hidden; /* Fix for transition flickering */
+        // -o-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        // -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        // -o-backface-visibility: hidden; /* Fix for transition flickering */
+        // -ms-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        // -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        // -ms-backface-visibility: hidden; /* Fix for transition flickering */
         
-        border: 1px solid #fff;
-        &:hover {
-            filter: none; /* IE6-9 */
-            -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
-            -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-            -webkit-backface-visibility: initial; /* Fix for transition flickering */
-            -moz-filter: none; /* Chrome 19+ & Safari 6+ */
-            -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-            -moz-backface-visibility: initial; /* Fix for transition flickering */
-            -o-filter: none; /* Chrome 19+ & Safari 6+ */
-            -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-            -o-backface-visibility: initial; /* Fix for transition flickering */
-            -ms-filter: none; /* Chrome 19+ & Safari 6+ */
-            -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
-            -ms-backface-visibility: initial; /* Fix for transition flickering */
-            border: 1px solid $accent;
-        }
+        // border: 1px solid #fff;
+        // &:hover {
+        //     filter: none; /* IE6-9 */
+        //     -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
+        //     -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        //     -webkit-backface-visibility: initial; /* Fix for transition flickering */
+        //     -moz-filter: none; /* Chrome 19+ & Safari 6+ */
+        //     -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        //     -moz-backface-visibility: initial; /* Fix for transition flickering */
+        //     -o-filter: none; /* Chrome 19+ & Safari 6+ */
+        //     -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        //     -o-backface-visibility: initial; /* Fix for transition flickering */
+        //     -ms-filter: none; /* Chrome 19+ & Safari 6+ */
+        //     -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        //     -ms-backface-visibility: initial; /* Fix for transition flickering */
+        //     border: 1px solid $accent;
+        // }
     }
     .store_hover {
         max-width: 100%;
