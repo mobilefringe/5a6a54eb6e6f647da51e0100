@@ -1993,8 +1993,8 @@ strong, .bold {
         // -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
         // -ms-backface-visibility: hidden; /* Fix for transition flickering */
         
-        // border: 1px solid #fff;
-        // &:hover {
+        border: 1px solid #fff;
+        &:hover {
         //     filter: none; /* IE6-9 */
         //     -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
         //     -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
@@ -2008,8 +2008,8 @@ strong, .bold {
         //     -ms-filter: none; /* Chrome 19+ & Safari 6+ */
         //     -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
         //     -ms-backface-visibility: initial; /* Fix for transition flickering */
-        //     border: 1px solid $accent;
-        // }
+            border: 1px solid $accent;
+        }
     }
     .store_hover {
         max-width: 100%;
