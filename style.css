@@ -924,9 +924,6 @@ strong, .bold {
     #primary_nav ul .menu_item a {
     	color: #ff;
     // 	text-shadow: 0 1px 3px rgba(255,255,255,0.4);
-    	&:hover {
-    	    text-decoration: underline;
-    	}
     }
 }
 .footer_social {
