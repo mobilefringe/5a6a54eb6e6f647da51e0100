@@ -633,6 +633,7 @@ strong, .bold {
     height: 115px;
     background: #fff;
     z-index: 999;
+    border-bottom: 1px solid #ccc;
 }
 .top_nav {
     display:inline-block;
