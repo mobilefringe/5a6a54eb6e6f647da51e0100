@@ -922,6 +922,7 @@ strong, .bold {
 }
 .footer_nav {
     #primary_nav ul .menu_item {
+            padding: 20px 0 20px;
         a {
     	    color: #fff;
         }
