@@ -942,6 +942,12 @@ strong, .bold {
         }
     }
 }
+.footer_property {
+    height: 100px;
+    margin: 20px auto;
+    text-align: left;
+    display: inline-block;
+}
 .footer_conduct p, .footer_terms p {
     font-size: 0.75rem;
 }
