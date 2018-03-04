@@ -947,6 +947,9 @@ strong, .bold {
     margin: 20px auto;
     text-align: left;
     display: inline-block;
+    img {
+        
+    }
 }
 .footer_conduct p, .footer_terms p {
     font-size: 0.75rem;
