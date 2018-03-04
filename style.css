@@ -948,7 +948,7 @@ strong, .bold {
     text-align: left;
     display: inline-block;
     img {
-        
+        max-width: 100%;
     }
 }
 .footer_conduct p, .footer_terms p {
