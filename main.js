@@ -92,7 +92,8 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "header.download_directory",
-                                href: "/"
+                                href: "/",
+                                external: true
                             }
                         ]
                     },
