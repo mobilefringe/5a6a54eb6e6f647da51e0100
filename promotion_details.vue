@@ -155,7 +155,7 @@
                 updateCurrentPromo (id) {
                     this.currentPromo = this.findPromoBySlug(id);
                     if (this.currentPromo === null || this.currentPromo === undefined){
-                        this.$router.replace({ name: '/'});
+                        this.$router.replace('/');
                     }
                 },
                 loadData: async function() {
