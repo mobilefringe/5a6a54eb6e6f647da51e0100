@@ -69,7 +69,7 @@
                     if(temp_repo) {
                         this.eventBanner = temp_repo.images[0];
                     }
-                    console.log(this.eventBanner);
+                    // console.log(this.eventBanner);
                     this.events = this.event;
                 });
             },
