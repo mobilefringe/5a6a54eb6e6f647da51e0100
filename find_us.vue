@@ -19,7 +19,6 @@
 	</div>
 </template>
 
-
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate) {
         Vue.use(Meta);
@@ -41,7 +40,7 @@
                         this.pageBanner = temp_repo.images[0];
                     }
                     // this.pageBanner = this.findRepoByName('Contact Us Banner').images[0];
-                   console.log(this.pageBanner); 
+                //   console.log(this.pageBanner); 
                 });
             },
             computed: {
