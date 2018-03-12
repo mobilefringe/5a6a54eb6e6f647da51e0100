@@ -93,7 +93,7 @@
                     if(temp_repo) {
                         this.promoBanner = temp_repo.images[0];
                     }
-                    console.log(this.promoBanner);
+                    // console.log(this.promoBanner);
                     this.promos = this.promotions;
                 });
             },
