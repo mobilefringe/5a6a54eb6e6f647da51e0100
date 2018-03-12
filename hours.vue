@@ -92,7 +92,8 @@
                     'timezone',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
-                    'findRepoByName'
+                    'findRepoByName',
+                    'findMetaDataByPath'
                 ]),
                 hours () {
                     return this.getPropertyHours;
