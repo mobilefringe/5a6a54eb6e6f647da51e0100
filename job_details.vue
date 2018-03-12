@@ -95,7 +95,7 @@
                     if(temp_repo) {
                         this.jobBanner = temp_repo.images[0];
                     }
-                    console.log(this.jobBanner);
+                    // console.log(this.jobBanner);
                     this.jobs = this.job;
                 });
             },
