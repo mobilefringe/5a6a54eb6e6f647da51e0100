@@ -88,11 +88,6 @@
                 });
                 
             },
-            watch : {
-                locale: function(val, oldVal) {
-                    console.log("locale", this.locale);
-                },
-            },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
