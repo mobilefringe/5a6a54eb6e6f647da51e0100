@@ -76,7 +76,7 @@
             watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        console.log(this.currentEvent.store);
+                        // console.log(this.currentEvent.store);
                         if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.image_url, 'missing')) {
                             this.currentEvent.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
