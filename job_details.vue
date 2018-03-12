@@ -102,7 +102,7 @@
             watch: {
                 currentJob : function (){
                     if(this.currentJob != null) {
-                        console.log(this.currentJob.store);
+                        // console.log(this.currentJob.store);
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
                             this.currentJob.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
