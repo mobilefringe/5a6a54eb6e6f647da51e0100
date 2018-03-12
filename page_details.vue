@@ -81,7 +81,7 @@
                 loadData: async function(id) {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        console.log("this.id", this.id);
+                        // console.log("this.id", this.id);
                         let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/" + id + ".json"}),this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
