@@ -114,7 +114,7 @@
                     }
                     this.pageBanner = this.pageBanner;
                 });
-                 console.log("locale created", this.locale);
+                //  console.log("locale created", this.locale);
             },
             watch: {
                 currentStore: function() {
