@@ -69,7 +69,12 @@
             props:['locale'],
             data: function() {
                 return {
-                    pageBanner : null
+                    pageBanner : null,
+                    meta: {
+                        meta_title: "",
+                        meta_description: "",
+                        meta_keywords: ""
+                    }
                 }
             },
             created() {
