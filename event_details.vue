@@ -131,7 +131,7 @@
                 updatecurrentEvent (id) {
                     this.currentEvent = this.findEventBySlug(id);
                     if (this.currentEvent === null || this.currentEvent === undefined){
-                        this.$router.replace({ name: '/'});
+                        this.$router.replace('/');
                     }
                 },
                 loadData: async function() {
