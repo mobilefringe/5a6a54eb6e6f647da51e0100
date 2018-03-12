@@ -194,7 +194,7 @@
                 updateCurrentStore (id) {
                     this.currentStore = this.findStoreBySlug(id);
                     if (this.currentStore === null || this.currentStore === undefined){
-                        this.$router.replace({ name: '/'});
+                        this.$router.replace('/');
                     }
                 },
                 // updateSVGMap(map) {
