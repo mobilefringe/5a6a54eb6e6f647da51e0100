@@ -56,7 +56,7 @@
             },
             created(){
                 this.loadData(this.id).then(response => {
-                    if(response[0] == null || response[0]==undefined) {
+                    if(response == null || response == undefined) {
                         this.$router.replace('/');
                     }
                     this.currentPage = response[0].data;
