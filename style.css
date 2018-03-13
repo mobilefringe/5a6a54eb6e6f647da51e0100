@@ -782,6 +782,9 @@ strong, .bold {
 #menu-icon span:nth-child(4) {
   top: 20px;
 }
+#menu-icon.open{
+     background: #000;
+}
 #menu-icon.open span:nth-child(1) {
   top: 18px;
   width: 0%;
