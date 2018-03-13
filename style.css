@@ -3170,7 +3170,7 @@ gallery:after{
         z-index: 999;
         text-align: center;
         opacity:1;
-        background-color: #000;
+        background-color: #fff;
         .top_bar_wrapper {
             padding: 0;
         }
