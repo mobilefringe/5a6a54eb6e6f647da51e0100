@@ -752,7 +752,7 @@ strong, .bold {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #FFF;
+  background: #000;
   border-radius: 9px;
   opacity: 1;
   left: 0;
