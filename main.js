@@ -92,7 +92,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "header.download_directory",
-                                href: "https://www.mallmaverick.com/system/site_images/photos/000/037/226/original/Bonnie_Doon_Centre_Map_v2-01_-_April_1st.pdf",
+                                href: "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/application/pdf/1521040646000/BD DOWNLOADABLE MAP MARCH (1).pdf//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/application/pdf/1521040646000/BD DOWNLOADABLE MAP MARCH (1).pdf",
                                 external: true
                             }
                         ]
