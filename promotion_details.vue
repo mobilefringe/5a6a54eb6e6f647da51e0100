@@ -167,7 +167,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/promotions/" + slug;
+                    var share_url = "http://bonniedoonshoppingcentre.com/promotions/" + slug;
                     return share_url;
                 },
             }
