@@ -8,6 +8,11 @@
     </div>
     
 </template>
+<style>
+    .lb-data .lb-number {
+        display:none;
+    }
+</style>
 <script>
     define(["Vue", "vuex", "lightbox"], function(Vue, Vuex, Lightbox) {
         Vue.use(Lightbox);
