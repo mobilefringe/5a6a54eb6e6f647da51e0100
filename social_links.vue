@@ -9,7 +9,7 @@
     
 </template>
 <style>
-    .lb-data .lb-number {
+    .lb-data .lb-number, .lb-nav {
         display:none;
     }
 </style>
