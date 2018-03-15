@@ -114,13 +114,13 @@
                             'length': 150
                         });
                         if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                            value.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
+                            value.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         else if (value.store == null || value.store == undefined) {
                             value.store = {};
-                            value.store.image_url =  "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
+                            value.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
-                        if (_.includes(value.image_url, 'missing')) {
+                        if (_.includes(value.store_front_url_abs, 'missing')) {
                             value.image_url = "http://via.placeholder.com/400x400/757575";
                         }
                         // value.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1516652189884/ES_logo_red2.png";
