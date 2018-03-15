@@ -40,11 +40,11 @@ define([], function() {
               metaTags: [
                 {
                   name: 'description',
-                  content: 'The home page of our example app.'
+                  content: 'Bonnie Doon Centre - Edmonton, Alberta. Anchored by Safeway on the south and Sears on the north, Bonnie Doon Centre offers up over 100 stores and services including three drug stores, Target, and a food court that boasts all the selection you might wish for including a Tim Horton’s.'
                 },
                 {
                   property: 'og:description',
-                  content: 'The home page of our example app.'
+                  content: 'Bonnie Doon Centre - Edmonton, Alberta. Anchored by Safeway on the south and Sears on the north, Bonnie Doon Centre offers up over 100 stores and services including three drug stores, Target, and a food court that boasts all the selection you might wish for including a Tim Horton’s.'
                 }
               ]
             }
