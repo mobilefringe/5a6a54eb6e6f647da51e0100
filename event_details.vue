@@ -15,7 +15,7 @@
 					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentEvent.name_2}}</h3>
 					<div class="row">
 						<p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
-						<social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.body" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="BonnieDoonSC" :media="currentEvent.image_url" inline-template >
+						<social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.title" :description="currentEvent.description" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="BonnieDoonSC" :media="currentEvent.image_url" inline-template >
 							<div class="blog-social-share pull-right" style="margin: 15px auto;">
 								<div class="social_share">
 									<network network="facebook">
@@ -78,7 +78,7 @@
                     if(this.currentEvent != null) {
                         // console.log(this.currentEvent.store);
                         if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.image_url, 'missing')) {
-                            this.currentEvent.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
+                            this.currentEvent.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
                             this.currentEvent.store = {};
