@@ -143,7 +143,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://mallmaverick.ca/event/" + slug;
+                    var share_url = "http://bonniedoonshoppingcentre.com/event/" + slug;
                     return share_url;
                 },
             }
