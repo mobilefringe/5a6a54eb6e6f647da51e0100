@@ -86,7 +86,7 @@
 						    <div class="col-xs-12">
 						        <label class="checkbox">
                                     <input name="agree_terms" required type="checkbox" >
-                                    I agree to the <a href = "/pages/eastgate-contest-rules-and-regulations" target="_blank"><u> rules and regulations</u></a>
+                                    I agree to the <a href = "/pages/" target="_blank"><u> rules and regulations</u></a>
                                 </label>
 						    </div>
 							<div class="col-xs-12" style="margin-top: 20px;padding: 0;">
@@ -158,105 +158,5 @@
 </style>
 
 <script>
-    define(["Vue", "vuex", "axios", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', "v-calendar", 'utility'], function(Vue, Vuex,axios, moment, tz, VueMoment, Meta, VeeValidate, VCalendar, Utility) {
-        Vue.use(Meta);
-        Vue.use(VeeValidate);
-        Vue.use(VCalendar.default);
-
-        return Vue.component("contest-component", {
-            template: template, // the variable template will be injected
-            props:['locale'],
-            data: function() {
-                return {
-                    form_data: {},
-                    formSuccess: false,
-                    formError: false,
-                    validaNum: '',
-                    correctValNum: null,
-                    validNumError: false,
-                    currentContest: null,
-                    pageBanner: null
-                }
-            },
-            created() {
-                this.loadData(this.id).then(response => {
-                    this.currentContest = this.findContestBySlug('bonniedoon-test-contest');
-                    var temp_repo = this.findRepoByName('Contest Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
-                    this.pageBanner = this.pageBanner;
-                });
-            },
-            mounted() {
-                //creating random validation num 
-                this.correctValNum = Utility.rannumber();
-                
-            },
-            computed: {
-                ...Vuex.mapGetters([
-                    'property',
-                    'timezone',
-                    'findContestBySlug',
-                    'findRepoByName'
-                ]),
-            },
-            methods: {
-                validateBeforeSubmit() {
-                    this.$validator.validateAll().then((result) => {
-                        if (result &&  (this.correctValNum === this.validaNum)) {
-                            let errors = this.errors;
-                            this.validNumError = false;
-                            if(this.form_data.agree_newsletter ) {
-                                $.getJSON("//mobilefringe.createsend.com/t/d/s/bidirr/?callback=?",
-                                "cm-name=" + this.form_data.first_name + this.form_data.last_name +
-                                "&cm-bidirr-bidirr=" + this.form_data.email +
-                                "&cm-f-jtukyu=" + this.form_data.city+
-                                "&cm-f-jtukjr=" + this.form_data.phone +
-                                "&cm-f-cjddlt=" + this.form_data.mailing_address +
-                                "&cm-f-jtukjj=" + this.form_data.postal_code +
-                                "&cm-f-jtukjt=" + this.form_data.birthday,
-                                    function (data) {
-                                    if (data.Status === 400) {
-                                        e.preventDefault();
-                                        console.error("Please try again later.");
-                                    } else { // 200
-                                        console.log("Newsletter submission successful.");
-                                    }
-                                });  
-                            }
-                            //format contests data for MM
-                            var contest_entry = {};
-                            contest_entry.contest = this.form_data;
-                            var vm = this;
-                            host_name = this.property.mm_host.replace("http:", "");
-                            var url = host_name + "/contests/" + this.currentContest.slug + "/create_js_entry";
-                            $.ajax({
-                                url: url,
-                                type: "POST",
-                                data: contest_entry,
-                                success: function(data) {
-                                    vm.formSuccess = true;
-                                },
-                                error: function(data){
-                                    vm.formError = true;
-                                }
-                            });
-                        }
-
-                    })
-                },
-                loadData: async function(id) {
-                    try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        // console.log("this.id", this.id);
-                        let results = await Promise.all([this.$store.dispatch("getData", "contests"),this.$store.dispatch("getData", "repos")]);
-                        return results;
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
-            }
-        });
-    });
+var _extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var a in r)Object.prototype.hasOwnProperty.call(r,a)&&(e[a]=r[a])}return e};define(["Vue","vuex","axios","moment","moment-timezone","vue-moment","vue-meta","vee-validate","v-calendar","utility"],function(t,r,a,n,o,s,c,i,u,m){return t.use(c),t.use(i),t.use(u["default"]),t.component("contest-component",{template:template,props:["locale"],data:function(){return{form_data:{},formSuccess:!1,formError:!1,validaNum:"",correctValNum:null,validNumError:!1,currentContest:null,pageBanner:null}},created:function(){var e=this;this.loadData(this.id).then(function(){e.currentContest=e.findContestBySlug("bonniedoon-test-contest");var t=e.findRepoByName("Contest Banner");t&&(e.pageBanner=t.images[0]),e.pageBanner=e.pageBanner})},mounted:function(){this.correctValNum=m.rannumber()},computed:_extends({},r.mapGetters(["property","timezone","findContestBySlug","findRepoByName"])),methods:{validateBeforeSubmit:function(){var t=this;this.$validator.validateAll().then(function(r){if(r&&t.correctValNum===t.validaNum){{t.errors}t.validNumError=!1,t.form_data.agree_newsletter&&$.getJSON("//mobilefringe.createsend.com/t/d/s/bidirr/?callback=?","cm-name="+t.form_data.first_name+t.form_data.last_name+"&cm-bidirr-bidirr="+t.form_data.email+"&cm-f-jtukyu="+t.form_data.city+"&cm-f-jtukjr="+t.form_data.phone+"&cm-f-cjddlt="+t.form_data.mailing_address+"&cm-f-jtukjj="+t.form_data.postal_code+"&cm-f-jtukjt="+t.form_data.birthday,function(t){400===t.Status?(e.preventDefault(),console.error("Please try again later.")):console.log("Newsletter submission successful.")});var a={};a.contest=t.form_data;var n=t;host_name=t.property.mm_host.replace("http:","");var o=host_name+"/contests/"+t.currentContest.slug+"/create_js_entry";$.ajax({url:o,type:"POST",data:a,success:function(){n.formSuccess=!0},error:function(){n.formError=!0}})}})},loadData:function(){var e;return regeneratorRuntime.async(function(t){for(;;)switch(t.prev=t.next){case 0:return t.prev=0,t.next=3,regeneratorRuntime.awrap(Promise.all([this.$store.dispatch("getData","contests"),this.$store.dispatch("getData","repos")]));case 3:return e=t.sent,t.abrupt("return",e);case 7:t.prev=7,t.t0=t["catch"](0),console.log("Error loading data: "+t.t0.message);case 10:case"end":return t.stop()}},null,this,[[0,7]])}}})});
 </script>
