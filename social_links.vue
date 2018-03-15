@@ -10,7 +10,7 @@
 </template>
 <style>
     .lb-data .lb-number, .lb-nav {
-        display:none;
+        display:none!important;
     }
 </style>
 <script>
