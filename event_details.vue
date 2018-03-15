@@ -82,7 +82,7 @@
                         }
                         else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
                             this.currentEvent.store = {};
-                            this.currentEvent.store.image_url =  "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
+                            this.currentEvent.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         var vm = this;
                         var temp_event = [];
