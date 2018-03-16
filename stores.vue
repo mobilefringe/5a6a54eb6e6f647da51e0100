@@ -52,10 +52,10 @@
 								<div class="store_coming_soon" v-if="store.is_new_store">
 									<div class="new_store">{{$t("stores_page.new_store")}}</div>
 								</div>
-								<div class="store_list_promos">
-									<span class="promo_exist" v-if="store.total_published_jobs > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000358000/jobs.png" class="" alt=""> {{store.total_published_jobs}}</span>
-									<span class="promo_exist" v-if="store.total_published_promos > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000371000/promotions.png" class="" alt=""> {{store.total_published_promos}}</span>
-								</div>
+								<!--<div class="store_list_promos">-->
+								<!--	<span class="promo_exist" v-if="store.total_published_jobs > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000358000/jobs.png" class="" alt=""> {{store.total_published_jobs}}</span>-->
+								<!--	<span class="promo_exist" v-if="store.total_published_promos > 0"><img src="//codecloud.cdn.speedyrails.net/sites/58bdb9106e6f644783090000/image/png/1489000371000/promotions.png" class="" alt=""> {{store.total_published_promos}}</span>-->
+								<!--</div>-->
 							</router-link>
 						</div>
 					</div>
