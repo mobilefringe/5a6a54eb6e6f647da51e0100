@@ -2393,6 +2393,9 @@ strong, .bold {
 }
 .promo_description {
     margin: 20px auto 50px;
+    img {
+            max-width: 100%;
+    }
 }
 .promo_dets_container {
     margin-bottom: 30px;
