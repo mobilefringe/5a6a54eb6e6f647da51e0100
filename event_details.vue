@@ -58,7 +58,7 @@
             beforeRouteUpdate(to, from, next) {
                 this.currentEvent = this.findEventBySlug(to.params.id);
                     if (this.currentEvent === null || this.currentEvent === undefined){
-                        this.$router.replace({ name: '404'});
+                        this.$router.replace('/');
                     }
                 next();
             },
