@@ -82,7 +82,7 @@
             beforeRouteUpdate(to, from, next) {
                 this.currentPromo = this.findPromoBySlug(to.params.id);
                     if (this.currentPromo === null || this.currentPromo === undefined){
-                        this.$router.replace({ name: '404'});
+                        this.$router.replace('/');
                     }
                 next();
             },
