@@ -86,29 +86,10 @@
                     this.dataloaded = true;
                     this.filteredStores = this.allStores;
                     
-                    // this.storeBanner = this.findRepoByName('Stores Banner').images[0];
                     var temp_repo = this.findRepoByName('Stores Banner');
                     if(temp_repo) {
                         this.storeBanner = temp_repo.images[0];
                     }
-                    console.log(temp_repo, this.storeBanner); 
-                });
-            },
-            watch: {
-                windowWidth: function() {
-                    if (this.windowWidth <= 768) {
-                        this.mobile_store = true;
-                    } else {
-                        this.mobile_store = false;
-                    }
-                },
-            },
-            mounted() {
-                // this.filteredStores = this.allStores;
-                this.$nextTick(function() {
-                    window.addEventListener('resize', this.getWindowWidth);
-                    //Init
-                    this.getWindowWidth();
                 });
             },
             methods: {
@@ -119,12 +100,6 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                changeMode(mode) {
-                    this.listMode = mode;
-                },
-                getWindowWidth(event) {
-                    this.windowWidth = window.innerWidth;
                 },
                 onOptionSelect(option) {
                     this.search_result = "";
@@ -145,10 +120,8 @@
 
                 ]),
                 allStores() {
-                    console.log(this.processedStores);
-                    // http://via.placeholder.com/400x400/757575
                     var stores = this.processedStores;
-                   stores.map(store => {
+                    stores.map(store => {
                        if (_.includes(store.store_front_url_abs, 'missing')) {
                             store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                         }
