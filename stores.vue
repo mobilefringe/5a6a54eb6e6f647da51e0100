@@ -126,12 +126,6 @@
                 changeMode(mode) {
                     this.listMode = mode;
                 },
-                updateSVGMap(map) {
-                    this.map = map;
-                },
-                addLandmark(store) {
-                    this.svgMapRef.addMarker(store);
-                },
                 getWindowWidth(event) {
                     this.windowWidth = window.innerWidth;
                 },
