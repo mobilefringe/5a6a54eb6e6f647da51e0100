@@ -164,9 +164,6 @@
                     });
                     return this.processedStores;
                 },
-                allCatergories() {
-                    return this.processedCategories;
-                },
                 dropDownCats() {
                     var cats = _.map(this.processedCategories, 'name');
                     cats.unshift('All');
