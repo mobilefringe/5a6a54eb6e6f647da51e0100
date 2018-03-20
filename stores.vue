@@ -171,10 +171,7 @@
                     
                 },
                 
-            },
-            beforeDestroy: function() {
-                window.removeEventListener('resize', this.getWindowWidth);
-            },
+            }
         });
     });
 </script>
