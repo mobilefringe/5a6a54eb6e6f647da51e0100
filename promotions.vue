@@ -120,7 +120,7 @@
                             value.description_short_2 = _.truncate(value.description_2, {
                                 'length': 150
                             });
-                            if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
+                            if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')) {
                                 value.store.store_front_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                             }
                             else if (value.store == null || value.store == undefined) {
