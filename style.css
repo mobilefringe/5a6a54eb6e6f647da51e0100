@@ -3232,7 +3232,15 @@ gallery:after{
         width: 300% !important;
         height: 35px !important;
     }
-    
+    .footer_logos {
+        margin-bottom: 0;
+        padding: 0 20px;
+        max-width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
     #menu-icon {
         display: inline-block;
     }
