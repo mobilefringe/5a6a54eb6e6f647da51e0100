@@ -3677,11 +3677,11 @@ gallery:after{
             padding: 0 10%;
             line-height: 20px;
         }
-        .footer_property { 
-            img {
-                height:80px;
-            }
-        }
+        // .footer_property { 
+        //     img {
+        //         height:80px;
+        //     }
+        // }
     }
 }
 
