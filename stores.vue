@@ -93,7 +93,7 @@
                     }
                     
                     if(this.category == "food"){
-                       this.selectedCat = "Food Services";
+                       this.selectedCat = "Food and Restaurants";
                        this.filterByCategory;
                     } else {
                         this.filteredStores = this.allStores;
