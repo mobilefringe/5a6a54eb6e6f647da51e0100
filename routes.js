@@ -9,7 +9,8 @@ define([], function() {
             children: [{
                     path: '',
                     component: view('stores'),
-                    name: 'storeList'
+                    name: 'storeList',
+                    props: true
                 },
                 {
                     path: ':id',
