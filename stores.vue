@@ -91,6 +91,13 @@
                     if(temp_repo) {
                         this.storeBanner = temp_repo.images[0];
                     }
+                    
+                    if(this.category == "food"){
+                       this.selectedCat = "Food Services";
+                       this.filterByCategory;
+                    } else {
+                        this.filteredStores = this.allStores;
+                    }
                 });
             },
             methods: {
