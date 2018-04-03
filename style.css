@@ -3239,6 +3239,7 @@ gallery:after{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
+        -webkit-flex-direction: column;
         flex-direction: column;
     }
     #menu-icon {
