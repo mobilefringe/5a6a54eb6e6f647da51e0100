@@ -70,6 +70,7 @@
         Vue.use(VueLazyload);
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
+            props: ['category'],
             data: function() {
                 return {
                     listMode: "alphabetical",
