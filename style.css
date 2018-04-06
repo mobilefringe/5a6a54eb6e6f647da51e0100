@@ -2342,8 +2342,12 @@ strong, .bold {
     }
     .event_store_name {
         font-size:1.3rem;
+        margin-top:20px;
     }
 }
+.event_store_name {
+        margin-top:20px;
+    }
 /* PROMOTIONS */
 
 #promo_dets_container .promo_logo_container,
