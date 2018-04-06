@@ -1634,6 +1634,9 @@ strong, .bold {
 .image_container {
     max-width: 360px;
     margin: auto;
+    img {
+        border: 1px solid #eee;
+    }
 }
 .promos.ih-item.circle.effect19 .info .content {
     margin: auto;
