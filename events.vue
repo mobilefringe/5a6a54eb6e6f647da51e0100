@@ -179,8 +179,8 @@
                                 value.store = {};
                                 value.store.store_front_url_abs =  "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                             }
-                            if (value.image_url != null && value.image_url != undefined && _.includes(value.image_url, 'missing')) {
-                                value.value.image_url = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
+                            if (value.event_image_url_abs != null && value.event_image_url_abs != undefined && _.includes(value.event_image_url_abs, 'missing')) {
+                                value.event_image_url_abs = "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1518554684072/bonniedoonlogo.png";
                             }
                             temp_promo.push(value);
                         }
