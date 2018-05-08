@@ -94,7 +94,7 @@
                 return {
                     dataLoaded: false,
                     show_mobile_menu: false,
-                    property_logo: "//codecloud.cdn.speedyrails.net/sites/5aec62a16e6f64422c090000/image/png/1520457420000/whitelogo1@2x.png",
+                    property_logo: "//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1519142064997/bonnielogoBlack3x.png",
                     menu_items: MenuItems,
                 }
             },
