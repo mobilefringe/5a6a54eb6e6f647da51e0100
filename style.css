@@ -697,6 +697,9 @@ strong, .bold {
 	min-width: 150px;
 	font-size: 0.8rem;
 	line-height: 26px;
+	a{
+	     background: transparent;
+	}
 }
 
 #primary_nav ul ul .dropdown_item:hover {
