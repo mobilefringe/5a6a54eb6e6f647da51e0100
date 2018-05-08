@@ -2,6 +2,7 @@
     {
         "name": "header.stores",
         "href": "/stores",
+        "open_dropdown": false,
         "sub_menu": [{
                 "name": "header.stores",
                 "href": "/stores"
@@ -28,6 +29,7 @@
     {
         "name": "header.guest_services",
         "href": "/pages/bonniedoon-services",
+        "open_dropdown": false,
         "sub_menu": [{
                 "name": "header.services ",
                 "href": "/pages/bonniedoon-services"
@@ -49,6 +51,7 @@
     {
         "name": "header.contact_us",
         "href": "/contact_us",
+        "open_dropdown": false,
         "sub_menu": [
             {
                 "name": "header.contact_us",
