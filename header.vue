@@ -63,7 +63,7 @@
 			<div class="site_container">
 				<div class="nav_container hidden_phone">
 					<div class="site_logo">
-						<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
+						<router-link to="/"><img :src="property_logo" :alt="property.name"/></router-link>
 					</div>
 					<div class="row top_nav hidden_phone">
 						<nav id="primary_nav">
