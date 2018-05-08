@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-vue-meta-server-rendered>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="fragment" content="!">
+		<meta property="og:title" content="{{meta_title}}">
+        <meta property="og:description" content="{{meta_description}}">
+        <meta property="og:image" content="{{meta_image}}">
+		<meta name="description" content="{{meta_description}}">
+        <meta name="keywords" content="{{meta_keywords}}">
+        <meta name="author" content="">
+        <title>{{meta_title}}</title>
+		<link rel="shortcut icon" href="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/vnd.microsoft.icon/1516979866096/old_favicon.ico" type="image/x-icon" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//preview-5a1891476e6f645140560000.codecloudapp.com/agile.css">
+		<link href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+		<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/v-calendar@0.5.2/lib/v-calendar.min.css'>
+		<link href="https://cdn.jsdelivr.net/npm/vue2-animate@1.0.4/dist/vue2-animate.min.css" rel="stylesheet">
+		<link href="//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/text/css/1438916432000/ihover.css" rel="stylesheet">
+		<script src="https://use.fontawesome.com/9cb86d00ca.js"></script>
+		<link rel="stylesheet" href="/style.css">
+		<script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-115200481-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+	</head>
+	<body>
+	    {%raw-%}
+		<div id="app" v-cloak>
+			<loader v-if="!dataLoaded"></loader>
+			<div class="main_content_container" v-if="dataLoaded">
+			    
+				<transition name="custom-classes-transition" enter-active-class="fadeIn">
+					<router-view class="router_content" :locale="locale"></router-view>
+				</transition>
+				<div class="home_subscription hidden_phone">
+                    <div class="subscribeBlog content_container">
+                         <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
+                         <div id="newsletterBlogForm">
+                            <label for="fieldEmail" style="display:none"></label>
+                            <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
+                            <router-link class="contact_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i></router-link>
+                            
+                            <span id="success_subscribe" class="hidden_now">{{$t("footer.subscribe_thankyou")}}</span>
+                         </div>
+                    </div>
+                </div>
+				<div class="footer">
+					<div class="site_container">
+						<!--<div class="site_logo visible_phone">-->
+						<!--	<router-link to="/"><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1518204428289/bonnielogoWhite3x.png" alt="Property Logo"/></router-link>-->
+							
+						<!--</div>-->
+						<div class="footer_logos">
+							<div class="site_logo ">
+								<router-link to="/"><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1518204428289/bonnielogoWhite3x.png" alt="Property Logo"/></router-link>
+							</div>
+							<div class="footer_property">
+								<a href="https://www.morguard.com/" target="_blank">
+								<img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1524517405981/Morguard_White_3.5inch.png" class="" alt="">
+								</a>
+							</div>
+							<div class="safe_emplyer_logo">
+							    <a href="https://www.morguard.com/news-knowledge/posts/cse2017-silverwin" target="_blank">
+								    <img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1524507714020/CSE2017winnersbadge_silver.png" alt="Property Logo"/>
+								</a>
+							</div>
+						</div>
+						<div class="footer_nav hidden_phone">
+						    <nav id="primary_nav">
+								<ul>
+								    <li v-for="item in menu_items" class="menu_item">
+								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+								    </li>
+								</ul>
+							</nav>
+					    </div>
+						<!--<div class="footer_property">-->
+						<!--    <a href="https://www.morguard.com/" target="_blank">-->
+						<!--    <img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1520125891440/managed_by_logo.png" class="" alt=""></a><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/jpeg/1520125615042/Morguard-CSE-winners-badge_silver.jpg" class="" alt="">-->
+						<!--</div>-->
+						<div class="footer_terms">
+							<p>&copy; {{copyright_year}}<span class="caps"> {{property.name}}</span> {{$t("footer.all_rights")}}<router-link to="/pages/bonniedoon-privacy-policy"> {{$t("footer.privacy_policy")}} </router-link> <span class="hidden_phone">|</span><br class="visible_phone"/><span> {{$t("footer.powered_by")}}<a href="//www.mallmaverick.com" target="_blank"> Mall Maverick</a></span></p>
+							<!--<p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{%endraw-%}
+		<div class='modal-backdrop custom_backdrop hidden_now' id="popup_backdrop"></div>
+		<script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+		<script src="https://unpkg.com/es6-shim@0.35.3/es6-shim.min.js"></script>
+		<script data-main="/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+	</body>
+</html>
