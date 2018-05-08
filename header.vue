@@ -63,7 +63,7 @@
 			<div class="site_container">
 				<div class="nav_container hidden_phone">
 					<div class="site_logo">
-						<router-link to="/"><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1519142064997/bonnielogoBlack3x.png" alt="Property Logo"/></router-link>
+						<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
 					</div>
 					<div class="row top_nav hidden_phone">
 						<nav id="primary_nav">
