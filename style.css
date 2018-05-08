@@ -688,6 +688,7 @@ strong, .bold {
 	top: 100%;
 	left: 0;
 	background: rgba(255,255,255,0.7);
+	border-radius: 0px;
 }
 
 #primary_nav ul .menu_item ul .dropdown_item {
