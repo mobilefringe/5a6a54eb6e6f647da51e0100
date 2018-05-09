@@ -5,7 +5,7 @@
 				<div class="row top_bar_wrapper">
 					<div class="col-sm-6">
 						<div class="mobile_site_logo visible_phone">
-						    <router-link to="/"><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1519142064997/bonnielogoBlack3x.png" :alt="properrty.name"/></router-link>
+						    <router-link to="/"><img :src="property_logo" :alt="properrty.name"/></router-link>
 					    </div>
 						<div id="home_hours_container" class="hidden_phone" v-if="todays_hours">
 							<p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>
