@@ -14,7 +14,7 @@
                         <div class="form-group ">
                             <div class="col-sm-6 col-xs-12" >
                                 <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
-                                <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name">
+                                <input v-model="form_data.name" required class="form-control" name="cm-name" type="text" placeholder="Name" id="cm-name">
                             </div>
                         </div>
                         <div class="form-group">
