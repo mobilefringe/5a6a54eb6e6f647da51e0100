@@ -47,7 +47,7 @@
                                     <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>
                                 </div>
                                 <div>
-                                   <p style="display:block"> {{property.address1}}</p>
+                                    <p style="display:block"> {{property.address1}}</p>
                                     <p style="display:block">{{property.city}}, {{property.postal_code}} {{property.province_state}}</p>
                                 </div>
 								<div class="header_social">
