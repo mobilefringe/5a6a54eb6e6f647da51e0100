@@ -32,7 +32,7 @@
 										<router-link to="/"><img :src="property_logo_white" :alt="property.name"/></router-link>
 									</div>
 									<li v-for="item in menu_items" class="menu_item">
-									    <router-link v-if="item.sub_menu" to="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" :aria-expanded="item.open_dropdown">{{$t(item.name)}}</router-link>
+									    <router-link v-if="item.sub_menu" to="#">{{$t(item.name)}}</router-link>
 								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
 								        <ul v-if="item.sub_menu">
 								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
