@@ -13,7 +13,7 @@
 				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }" :key="promo.id">
 						<div class="col-sm-6 col-md-4 event_image_container">
-								<img :data-src="promo.image_url"  data-loading='//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1521035009104/Screen Shot 2018-03-14 at 9.43.24 AM.png' class="event_image image" alt=""/>
+							<img :data-src="promo.image_url"  data-loading='//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1521035009104/Screen Shot 2018-03-14 at 9.43.24 AM.png' class="event_image image" alt=""/>
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
 							<h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>
