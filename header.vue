@@ -36,7 +36,7 @@
 								        <router-link v-else :to="item.href">{{$t(item.name)}}</router-link>
 								        <ul v-if="item.sub_menu">
 								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
-								                <a v-if="sub_menu.external" :href="sub_menu.href" target="_blank">{{$t(sub_menu.name)}}</a>
+								                <a v-if="sub_menu.external" :href="sub_menu.href" target="_blank" :aria="'This opens the pdf of '+submenu.name">{{$t(sub_menu.name)}}</a>
 								                <router-link v-else :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
 								            </li>
 										</ul>
