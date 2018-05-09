@@ -15,13 +15,13 @@
 					</div>
 					<div class="text-center" v-if="currentJob.store.name">
 					    <div v-if="currentJob.jobable_type == 'Store'">
-						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h4>
-						    <h4 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h4>
+						    <h2 class="event_store_name caps" v-if="locale=='en-ca'">{{currentJob.store.name}}</h2>
+						    <h2 class="event_store_name caps" v-else>{{currentJob.store.name_2}}</h2>
 						</div>
 						
-						<h4 v-if="currentJob.store.phone" class="store_dets_title"> <a :href="'tel:'+currentJob.store.phone">{{currentJob.store.phone}}</a></h4>
-						<h4 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
-						<h4 v-if="storeHours.length >0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
+						<h3 v-if="currentJob.store.phone" class="store_dets_title"> <a :href="'tel:'+currentJob.store.phone">{{currentJob.store.phone}}</a></h3>
+						<h3 v-if="currentJob.store.website" class="store_dets_title"> <a :href="'//'+currentJob.store.website" target="_blank">{{$t("stores_page.store_website")}}</a></h3>
+						<h3 v-if="storeHours.length >0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h3>
 						<ul class="store_hours_list">
 							<li v-if="storeHours" v-for="hour in storeHours">
 								{{hour.day_of_week | moment("dddd", timezone)}} - {{hour.open_time | moment("h A", timezone)}} - {{hour.close_time | moment("h A", timezone)}}
