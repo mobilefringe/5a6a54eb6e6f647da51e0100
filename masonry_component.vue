@@ -1,40 +1,40 @@
 <template>
     <div v-masonry transition-duration="0.3s" item-selector=".grid-item" >
-                <div v-masonry-tile class="item" >
-                    <div v-for="feature in feature_items" :class="'grid-item ' + feature.masonry_class ">
-                    	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
-                    	<!--class="ih-item circle effect19"-->
-                    	    <a v-if="feature.do_anchor_tag" :href="feature.url">
-                    	        <img :src="feature.image_url" alt="name">
-                    			<div class="info">
-                    				<div class="content">
-                    					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
-                    					<h3 v-else> {{feature.name_2}} </h3>
-                    				</div>
-                    			</div>
-                    	    </a>
-                    	    <router-link :to="{ name: 'storeList', params: { category: feature.prop }}" v-else-if="feature.prop">
-                    			<img :src="feature.image_url" alt="name">
-                    			<div class="info">
-                    				<div class="content">
-                    					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
-                    					<h3 v-else> {{feature.name_2}} </h3>
-                    				</div>
-                    			</div>
-                    		</router-link>
-                    		<router-link :to="feature.url" v-else>
-                    			<img :src="feature.image_url" alt="name">
-                    			<div class="info">
-                    				<div class="content">
-                    					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
-                    					<h3 v-else> {{feature.name_2}} </h3>
-                    				</div>
-                    			</div>
-                    		</router-link>
-                    	</div>
-                    </div>
-                </div>
+        <div v-masonry-tile class="item" >
+            <div v-for="feature in feature_items" :class="'grid-item ' + feature.masonry_class ">
+            	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
+            	<!--class="ih-item circle effect19"-->
+            	    <a v-if="feature.do_anchor_tag" :href="feature.url">
+            	        <img :src="feature.image_url" alt="name">
+            			<div class="info">
+            				<div class="content">
+            					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
+            					<h3 v-else> {{feature.name_2}} </h3>
+            				</div>
+            			</div>
+            	    </a>
+            	    <router-link :to="{ name: 'storeList', params: { category: feature.prop }}" v-else-if="feature.prop">
+            			<img :src="feature.image_url" alt="name">
+            			<div class="info">
+            				<div class="content">
+            					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
+            					<h3 v-else> {{feature.name_2}} </h3>
+            				</div>
+            			</div>
+            		</router-link>
+            		<router-link :to="feature.url" v-else>
+            			<img :src="feature.image_url" alt="name">
+            			<div class="info">
+            				<div class="content">
+            					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
+            					<h3 v-else> {{feature.name_2}} </h3>
+            				</div>
+            			</div>
+            		</router-link>
+            	</div>
             </div>
+        </div>
+    </div>
 </template>
 
 <script>
