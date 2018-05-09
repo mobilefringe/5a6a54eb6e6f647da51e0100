@@ -72,7 +72,7 @@
     						    <li v-for="(item, index) in menu_items" class="menu_item" :class="{dropdown : item.sub_menu,open : item.open_dropdown}" @keyup.enter="toggleDropdown(index)">
     						        <router-link v-if="item.sub_menu" to="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" :aria-expanded="item.open_dropdown">{{$t(item.name)}}</router-link>
     						        <router-link v-else :to="item.href">{{$t(item.name)}}</router-link>
-    						        <ul v-if="item.sub_menu" class="dropdown-menu" :class="{ show: item.open_dropdown }">
+    						        <ul v-if="item.sub_menu" class="dropdown-menu" :class="{ show: item.open_dropdown }" @focus="item.open_dropdown = true" @blur="magic_flag = false">
     						            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
     						                <a v-if="sub_menu.external" :href="sub_menu.href" target="_blank" :aria="'This opens the pdf of '+sub_menu.name">{{$t(sub_menu.name)}}</a>
     						                <router-link v-else :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
