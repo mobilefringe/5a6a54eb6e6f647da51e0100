@@ -23,7 +23,7 @@
 		    <div class="insta-feed-container">
                 <a v-for="(item, index) in instaFeed" :href="item.link" target="_blank" class="col-xs-6 col-sm-3 no_padding">
                 <div class="insta-feed-image "  v-lazy:background-image="item.images.standard_resolution.url">
-                    <!--<a :href="item.link" target="_blank"><img :src="item.images.thumbnail.url"/></a>-->
+                    <p style="display:none;">{{item.caption.text}}</p>
                 </div></a>
             </div>
             
