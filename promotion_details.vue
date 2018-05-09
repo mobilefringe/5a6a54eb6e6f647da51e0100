@@ -35,8 +35,8 @@
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<router-link to="/promotions"><i class="fa fa-angle-left"></i> &nbsp;{{$t("promos_page.back_to_promos")}}</router-link>
-					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-if="locale=='en-ca'">{{currentPromo.name}}</h3>
-					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentPromo.name_2}}</h3>
+					<h2 class="promo_name" style="margin: 20px auto 0px;"  v-if="locale=='en-ca'">{{currentPromo.name}}</h2>
+					<h2 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentPromo.name_2}}</h2>
 					<div class="row">
 						<p class="promo_div_date pull-left">{{currentPromo.start_date | moment("MMM D", timezone)}} - {{currentPromo.end_date | moment("MMM D", timezone)}}</p>
 						<social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.description" :quote="currentPromo.description_short" twitter-user="BonnieDoonSC" :media="currentPromo.image_url" inline-template >
