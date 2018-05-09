@@ -29,7 +29,7 @@
 							<nav id="mobile_nav" v-show="show_mobile_menu">
 								<ul>
 									<div class="mobile_menu_site_logo">
-										<router-link to="/"><img :src="property_logo_white" :alt="property.name"/></router-link>
+										<router-link to="/"><img :src="property_logo_white" :alt="property.name + 'mobile logo'"/></router-link>
 									</div>
 									<li v-for="item in menu_items" class="menu_item">
 									    <router-link v-if="item.sub_menu" to="#">{{$t(item.name)}}</router-link>
