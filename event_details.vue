@@ -4,6 +4,7 @@
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("events_page.events")}}</h1>
+					<h2 style="display:none;"> Scroll for event details</h2>
 				</div>
 			</div>
 		</div>
