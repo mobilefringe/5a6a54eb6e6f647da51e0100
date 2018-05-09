@@ -95,7 +95,7 @@
                     dataLoaded: false,
                     show_mobile_menu: false,
                     property_logo: "//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1519142064997/bonnielogoBlack3x.png",
-                    property_logo_white: "//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1519142064997/bonnielogoBlack3x.png",
+                    property_logo_white: "//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1518204428289/bonnielogoWhite3x.png",
                     menu_items: MenuItems,
                 }
             },
