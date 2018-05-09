@@ -43,7 +43,7 @@
 								    </li>
 								</ul>
 								<div class="small_hr"></div>
-								<div class="tel_num" v-if="property">
+								<div class="tel_num" v-if="property && property.contact_phone">
                                     <a :href="'tel:'+property.contact_phone">{{property.contact_phone}}</a>
                                 </div>
                                 <div>
