@@ -1801,38 +1801,15 @@ strong, .bold {
             border-color: #000!important;
             background-color:#fff!important;
         }
+    }.spinner {
+            font-size: 1rem;
+        }
     }
-    // .dropdown-menu {
-        // border: 1px solid $secondary;
-        // border-top: none;
-        // border-radius: 0;
-        // font-family: 'Futura-Medium';
-        // font-size: 1rem;
-        // text-transform: uppercase;
-        
-        // li {
-        //     width: 250px;
-        //     white-space: nowrap;
-        //     overflow: hidden;
-        //     text-overflow: ellipsis;
-        // }
-    //     width:100%;
-    //     color:#000;
-    //     margin-left: 0;
-    //     padding-left: 0;
-    //     li {
-    //         list-style: none;
-    //     }
-    //     z-index:9999999;
-    //     // overflow:hidden;
-    //     // overflow-y:scroll;
-    //     // max-height: 400px;
-    //     // MAX-WIDTH:100%;
-    //     height: auto;
-    //     max-height: 400px;
-    //     overflow-x: hidden!important;
-    //     overflow-y:scroll!important;
-    // }
+}
+#mobile_alpha_list {
+    .spinner {
+        font-size: 1rem;
+    }
 }
 
 #store_search:focus {
