@@ -29,7 +29,7 @@
 							<nav id="mobile_nav" v-show="show_mobile_menu">
 								<ul>
 									<div class="mobile_menu_site_logo">
-										<router-link to="/"><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1518204428289/bonnielogoWhite3x.png" :alt="property.name"/></router-link>
+										<router-link to="/"><img :src="property_logo_white" :alt="property.name"/></router-link>
 									</div>
 									<li v-for="item in menu_items" class="menu_item">
 								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
