@@ -2,8 +2,8 @@
     <div>
         <a href="https://www.instagram.com/shopbdc_" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i><p style="display:none">Facebook</p></a>
         <a href="https://www.facebook.com/bonniedoonsc" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i><p style="display:none">Facebook</p></a>
-        <a href="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/jpeg/1521054167714/28907698_10156615165667323_2001433750_n.jpg" data-lightbox="Snapchat" data-title="BCC Snapchat"> <i class="fa fa-snapchat-ghost"></i></a>
-        <a href="https://www.twitter.com/bonniedoonsc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/jpeg/1521054167714/28907698_10156615165667323_2001433750_n.jpg" data-lightbox="Snapchat" data-title="BCC Snapchat"> <i class="fa fa-snapchat-ghost"></i><p style="display:none">Facebook</p></a>
+        <a href="https://www.twitter.com/bonniedoonsc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i><p style="display:none">Twitter</p></a>
     </div>
     
 </template>
