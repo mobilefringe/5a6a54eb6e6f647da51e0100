@@ -132,7 +132,7 @@
                     console.log("menu is", this.menu_items[index]);
                      this.menu_items[index].open_dropdown = true;
                 },
-                consoleLog() {
+                consoleLog(text) {
                     console.log("This is triggered by "+ text)
                 }
                 
