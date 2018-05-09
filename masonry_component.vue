@@ -5,7 +5,7 @@
             	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
             	<!--class="ih-item circle effect19"-->
             	    <a v-if="feature.do_anchor_tag" :href="feature.url">
-            	        <img :src="feature.image_url" alt="name">
+            	        <img :src="feature.image_url" :alt="'Click to read about' + feature.name">
             			<div class="info">
             				<div class="content">
             					<h3 v-if="locale=='en-ca' && feature.name.length > 0">{{feature.name}}</h3>
