@@ -8,8 +8,8 @@
             	        <img :src="feature.image_url" alt="name">
             			<div class="info">
             				<div class="content">
-            					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
-            					<h3 v-else> {{feature.name_2}} </h3>
+            					<h3 v-if="locale=='en-ca' && feature.name.length > 0">{{feature.name}}</h3>
+            					<h3 v-else-if="locale !=='en-ca' && feature.name_2.length > 0">{{feature.name_2}}</h3>
             				</div>
             			</div>
             	    </a>
@@ -17,8 +17,8 @@
             			<img :src="feature.image_url" alt="name">
             			<div class="info">
             				<div class="content">
-            					<h3 v-if="locale=='en-ca'"> {{feature.name}} </h3>
-            					<h3 v-else> {{feature.name_2}} </h3>
+            					<h3 v-if="locale=='en-ca' && feature.name.length > 0">{{feature.name}}</h3>
+            					<h3 v-else-if="locale !=='en-ca' && feature.name_2.length > 0">{{feature.name_2}}</h3>
             				</div>
             			</div>
             		</router-link>
