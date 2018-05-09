@@ -657,6 +657,7 @@ strong, .bold {
 	text-transform: uppercase;
 	text-decoration: none;
 	text-shadow: 0 1px 3px rgba(255,255,255,0.4);
+	    white-space: normal;
 	&:hover {
 	    text-decoration: underline;
 	}
