@@ -32,8 +32,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'masonry' , 'vue-masonry-plugin', 'vue-lazy-load', 'vue!masonry_component'], function(Vue, Vuex, TodayHoursComponent, SearchComponent, slick, Cookies, masonry, VueMasonryPlugin, VueLazyload, VueMasonryComponent) {
-        Vue.use(VueMasonryPlugin.default);
+    define(["Vue", "vuex", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', 'vue!masonry_component'], function(Vue, Vuex, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, VueMasonryComponent) {
         Vue.use(VueLazyload);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
