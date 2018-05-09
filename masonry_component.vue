@@ -14,7 +14,7 @@
             			</div>
             	    </a>
             	    <router-link :to="{ name: 'storeList', params: { category: feature.prop }}" v-else-if="feature.prop">
-            			<img :src="feature.image_url" alt="name">
+            			<img :src="feature.image_url" :alt="'Click to read about' + feature.name">
             			<div class="info">
             				<div class="content">
             					<h3 v-if="locale=='en-ca' && feature.name.length > 0">{{feature.name}}</h3>
@@ -23,7 +23,7 @@
             			</div>
             		</router-link>
             		<router-link :to="feature.url" v-else>
-            			<img :src="feature.image_url" alt="name">
+            			<img :src="feature.image_url" :alt="'Click to read about' + feature.name">
             			<div class="info">
             				<div class="content">
             					<h3 v-if="locale=='en-ca' && feature.name.length > 0">{{feature.name}}</h3>
