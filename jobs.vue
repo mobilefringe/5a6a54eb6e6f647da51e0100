@@ -15,11 +15,11 @@
 							<img v-lazy="promo.store.store_front_url_abs"  class="event_image image" alt=""/>
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
-							<h4 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h4>
-							<h4 class="event_name caps"  v-else>{{promo.name_2}}</h4>
+							<h2 class="event_name caps"  v-if="locale=='en-ca'">{{promo.name}}</h2>
+							<h2 class="event_name caps"  v-else>{{promo.name_2}}</h2>
 							<div v-if="promo.jobable_type == 'Store'">
-    						    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>
-    						    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>
+    						    <h3 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h3>
+    						    <h3 class="event_store_name caps" v-else>{{promo.store.name_2}}</h3>
     						</div>
 							<div class="event_thick_line"></div>
 							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
