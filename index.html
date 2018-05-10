@@ -48,8 +48,7 @@
                          <div id="newsletterBlogForm">
                             <label for="fieldEmail" style="display:none">Email Address</label>
                             <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
-                            <router-link class="contact_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i><p for="fieldEmail" style="display:none">Submit</p></router-link
-                            
+                            <router-link class="contact_btn" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i><p for="fieldEmail" style="display:none">Submit</p></router-link>
                          </div>
                     </div>
                 </div>
@@ -79,10 +78,6 @@
 								</ul>
 							</nav>
 					    </div>
-						<!--<div class="footer_property">-->
-						<!--    <a href="https://www.morguard.com/" target="_blank">-->
-						<!--    <img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/png/1520125891440/managed_by_logo.png" class="" alt=""></a><img src="//codecloud.cdn.speedyrails.net/sites/5af1ff176e6f645120180000/image/jpeg/1520125615042/Morguard-CSE-winners-badge_silver.jpg" class="" alt="">-->
-						<!--</div>-->
 						<div class="footer_terms">
 							<p>&copy; {{copyright_year}}<span class="caps"> {{property.name}}</span> {{$t("footer.all_rights")}}<router-link to="/pages/bonniedoon-privacy-policy"> {{$t("footer.privacy_policy")}} </router-link> <span class="hidden_phone">|</span><br class="visible_phone"/><span> {{$t("footer.powered_by")}}<a href="//www.mallmaverick.com" target="_blank"> Mall Maverick</a></span></p>
 							<!--<p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>-->
