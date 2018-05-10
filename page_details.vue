@@ -18,7 +18,6 @@
         </div>
         <div style="padding:20px 0;"></div>
     </div>
-    <!--Pages Banner-->
 </template>
 <style>
     .page_title {
