@@ -78,7 +78,7 @@
 	#store_dets_container .mapplic-popup-link, .mapplic-tooltip-close {
 	    display:none!important;
 	}
-	.mapplic-tooltip-content {
+	#store_dets_container .mapplic-tooltip-content {
 	    margin-right: auto;
 	}
 	.mapplic-tooltip-title {
