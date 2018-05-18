@@ -75,7 +75,7 @@
 	</div>
 </template>
 <style>
-	.mapplic-popup-link {
+	.mapplic-popup-link, .mapplic-tooltip-close {
 	    display:none!important;
 	}
 </style>
