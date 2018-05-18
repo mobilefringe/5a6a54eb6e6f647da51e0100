@@ -81,9 +81,9 @@
 	#store_dets_container .mapplic-tooltip-content {
 	    margin-right: auto;
 	}
-	.mapplic-tooltip-title {
+	#store_dets_container .mapplic-tooltip-title {
 	        text-align: center;
-    margin: auto!important;
+        margin: auto!important;
 	}
 </style>
 <script>
