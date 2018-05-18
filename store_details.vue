@@ -81,6 +81,9 @@
 	.mapplic-tooltip-content {
 	    margin-right: auto;
 	}
+	.mapplic-tooltip-title {
+	    
+	}
 </style>
 <script>
     define(['Vue', 'vuex', 'moment', 'vue-lazy-load', "vue!mapplic-png-map"], function(Vue, Vuex, moment, VueLazyload, MapplicComponent) {
