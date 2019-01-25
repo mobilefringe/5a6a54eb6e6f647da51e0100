@@ -92,7 +92,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "header.download_directory",
-                                href: "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/application/pdf/1521040285000/BD DOWNLOADABLE_Map_MARCH.pdf",
+                                href: "//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/application/pdf/1548435641000/BD Directory Feb 2019.pdf",
                                 external: true
                             }
                         ]
@@ -136,7 +136,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "header.leasing",
-                                href: "pages/bonniedoon-leasing"
+                                href: "/pages/bonniedoon-leasing"
                             },
                             {
                                 name: "header.hours",
