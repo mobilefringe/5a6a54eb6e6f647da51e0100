@@ -11,6 +11,7 @@
             <div class="row"> 
                 <div class="col-md-12 contact_contents">
                     <form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/fiilhi/" method="post">
+                    <!--@submit.prevent="validateBeforeSubmit"-->
                         <div class="form-group ">
                             <div class="col-sm-6 col-xs-12" >
                                 <label class="label" for="cm-name">{{$t("newsletter_page.name")}}</label>
@@ -27,7 +28,7 @@
                             <div class="col-xs-12">
     					        <label class="checkbox">
                                     <input name="agree_newsletter" required  type="checkbox">
-                                        {{$t("newsletter_page.agree")}} {{property.name}}. 
+                                       I agree to receive Commercial Electronic Messages from Morguard, the management company of Bonnie Doon Shopping Centre and its affiliates that will include: special retail sales offers, promotions, new retailer announcements, upcoming events, trend and style news and other inside information. You can unsubscribe at any time. Bonnie Doon Shopping Centre and 8330 82 Ave NW, Edmonton, AB T6C 4E3 also bonniedoonshoppingcentre.com.  
                                 </label>
     					    </div>
     					</div>
