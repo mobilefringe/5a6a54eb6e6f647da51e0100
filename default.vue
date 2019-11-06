@@ -38,6 +38,7 @@
           meta: [
             {name: 'description', content: this.meta.meta_description},
             {name: 'keywords', content: this.meta.meta_keywords},
+            {property: 'og:title',content: this.meta.meta_title}
             {property: 'og:description',content: this.meta.meta_description}
           ]
         }
