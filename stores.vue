@@ -65,13 +65,6 @@
 	</div>
 </template>
 
-<style>
-    .accessibility {
-        position: absolute !important;
-    }
-    
-</style>
-
 <script>
     define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component", "vue-lazy-load"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent,VueLazyload) {
         Vue.use(VueLazyload);
