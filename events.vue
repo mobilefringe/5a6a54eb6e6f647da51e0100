@@ -136,7 +136,6 @@
                 return {
                     dataloaded: false,
                     promoBanner: null,
-                    paginate: ['events']
                 }
             },
             created() {
