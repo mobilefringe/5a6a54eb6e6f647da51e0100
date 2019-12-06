@@ -115,7 +115,7 @@
                     this.pageBanner = this.pageBanner;
                 });
                 //  console.log("locale created", this.locale);
-                console.log(currentStore)
+                
             },
             watch: {
                 currentStore: function() {
@@ -163,6 +163,7 @@
                     //     vm.addLandmark(vm.currentStore);
                     // }, 500);
                 },
+                console.log(currentStore)
             },
             
             computed: {
