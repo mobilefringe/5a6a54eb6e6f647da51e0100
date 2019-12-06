@@ -76,7 +76,6 @@
                     filteredPromos:[],
                     dataloaded: false,
                     promoBanner: null,
-                    paginate: ['promos'],
                     promos : null
                 }
             },
