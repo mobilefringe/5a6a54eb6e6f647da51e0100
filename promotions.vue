@@ -61,8 +61,7 @@
 			</div>
 			<div class="row margin-60">
 				<div class="col-md-12">
-					<!--<paginate-links for="promos" :async="true" :limit="5" :show-step-links="true"></paginate-links>-->
-					<!--<paginate-links for="currentSelection" :async="true" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>-->
+				
 				</div>
 			</div>
 		</div>
