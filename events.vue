@@ -12,7 +12,7 @@
 		<div class="site_container page_content">
 			<div id="events_container" v-if="events.length > 0">
 			
-					<div class="row event_container" v-for="(promo,index) in events" :class="{ 'last': index === events.length - 1) }" :key="promo.id">
+					<div class="row event_container" v-for="(promo,index) in events" :class="{ 'last': index === events.length - 1 }" :key="promo.id">
 						<div class="col-sm-6 col-md-4 event_image_container">
 							<router-link :to="'/events/'+ promo.slug" class="event_learn_more">
 								<img v-lazy="promo.event_image_url_abs"  class="event_image image" alt=""/>
@@ -185,7 +185,7 @@
                             temp_promo.push(value);
                         }
                     });
-                    _.sortBy(temp_promo, [function(o) { return o.start_date; }]);
+                    _.sortBy(temp_promo, [function(o) { return o.end_date; }]);
                     return temp_promo;
                 },
             },
