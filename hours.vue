@@ -52,7 +52,7 @@
                         <!--extended hours-->
                          <h3 class="hours_heading text-left" v-if="extendedHours.length > 0">Extended Hours</h3>
                         <div id="holidays_hours_container" class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in reducedHolidays">
+                            <div class="hours_div text-left"  v-for="hour in extendedHours">
                                 <span>
                                     <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
                                     <span v-else>{{hour.holiday_name_2}}</span>
