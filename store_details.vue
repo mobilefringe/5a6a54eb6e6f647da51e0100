@@ -115,6 +115,7 @@
                     this.pageBanner = this.pageBanner;
                 });
                 //  console.log("locale created", this.locale);
+                console.log(currentStore)
             },
             watch: {
                 currentStore: function() {
@@ -143,7 +144,7 @@
                     this.jobs = temp_job;
                     
                     this.isGov = false;
-                    console.log(currentStore)
+
                     
                     var storeHours = [];
                     var vm = this;
