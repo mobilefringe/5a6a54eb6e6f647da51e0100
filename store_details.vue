@@ -142,6 +142,9 @@
                     this.promotions = temp_promo;
                     this.jobs = temp_job;
                     
+                    this.isGov = false;
+                    console.log(currentStore)
+                    
                     var storeHours = [];
                     var vm = this;
                     _.forEach(this.currentStore.store_hours, function (value, key) {
