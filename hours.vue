@@ -24,7 +24,7 @@
                     <div class="col-sm-12 ">
                         <div class="padding_top_20"></div>
                         
-                        <h3 class="hours_heading text-left" v-if="reducedHolidays.length > ">{{$t("hours_page.holiday_hours")}}</h3>
+                        <h3 class="hours_heading text-left" v-if="reducedHolidays.length > 0">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container">
                             <div class="hours_div text-left"  v-for="hour in reducedHolidays">
                                 <span>
@@ -94,6 +94,7 @@
                     'timezone',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
+                    'getPropertyExtendedHours',
                     'findRepoByName',
                     'findMetaDataByPath'
                 ]),
@@ -110,6 +111,9 @@
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
                     return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                },
+                extendedHours() {
+                    return this.getPropertyExtendedHours
                 }
             },
             methods : {
