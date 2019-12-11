@@ -4,61 +4,46 @@
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("hours_page.hours")}}</h1>
+					<h2 style="display:none;">Scroll to  view hours</h2>
 				</div>
 			</div>
 		</div>  
         <div class="site_container">
             <div class="all_hours_container">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6">
                         <h3 class="hours_heading text-left" >{{$t("hours_page.reg_hours")}}</h3>
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
-                                <span>{{hour.day_of_week | moment("dddd", timezone)}} : </span>
+                                <span>{{hour.day_of_week | moment("dddd", timezone)}}: </span>
                                 <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 ">
-                        <div class="padding_top_20"></div>
-                        
-                        <h3 class="hours_heading text-left" v-if="reducedHolidays.length > 0">{{$t("hours_page.holiday_hours")}}</h3>
+                    <div class="col-sm-6 ">
+                        <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in reducedHolidays">
-                                <span>
-                                    <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
-                                    <span v-else>{{hour.holiday_name_2}}</span>
-                                    ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})
+                            <div class="hours_div text-left" v-for="hour in reducedHolidays">
+                                <span v-if="hour.holiday_name">
+                                    <span v-if="locale=='en-ca'">{{ hour.holiday_name }}</span>
+                                    <span v-else>{{ hour.holiday_name_2 }}</span>
+                                    ({{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}):
                                 </span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
+                                <span v-else>
+                                    {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:
+                                </span>
+                                <span class="opening_hours">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                             </div>
                         </div>
-                        
                         <div class="padding_top_20"></div>
-                        
-                        <h3 class="hours_heading text-left" v-if="closeHolidays.length > 0">{{$t("hours_page.holiday_closures")}}</h3>
+                        <h3 class="hours_heading text-left">{{$t("hours_page.holiday_closures")}}</h3>
                         <div id="closed_hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in closeHolidays">
                                 <span>
                                     <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
                                     <span v-else>{{hour.holiday_name_2}}</span>
-                                    ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})
+                                    ({{hour.holiday_date | moment("MMM D, YYYY", timezone)}})
                                 </span>
-                            </div>
-                        </div>
-                        
-                        <!--extended hours-->
-                         <h3 class="hours_heading text-left" v-if="extendedHours.length > 0">Extended Hours</h3>
-                        <div id="holidays_hours_container" class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in extendedHours">
-                                <span>
-                                    <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
-                                    <span v-else>{{hour.holiday_name_2}}</span>
-                                    ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})
-                                </span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                             </div>
                         </div>
                         
