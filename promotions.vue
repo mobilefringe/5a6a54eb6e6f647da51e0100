@@ -129,7 +129,10 @@
                     });
                     
                     
-                    _.sortBy(temp_promo, [function(o) { return o.end_date; }]);
+                    temp_promo = _.sortBy(temp_promo, [function(o) { return o.end_date; }]);
+                    
+                    console.log(temp_promo)
+                    
                     return temp_promo;
                 },
             },
