@@ -67,24 +67,19 @@
             props:['locale'],
             data: function() {
                 return {
-                    pageBanner : null,
-                    meta: {
-                        meta_title: "",
-                        meta_description: "",
-                        meta_keywords: ""
-                    }
+                    pageBanner : null
                 }
             },
             created() {
                 this.loadData().then(response => {
-                    
-                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
-                //   console.log(this.pageBanner); 
-                //   console.log("locale created", this.locale);
-                   
-                   this.meta = this.findMetaDataByPath(this.$route.path);
+                    var temp_repo = this.findRepoByName('Hours Banner');
+                    if (temp_repo && temp_repo.images) {
+                        this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner= {};
+                        this.pageBanner.image_url = "";
+                    }
                 });
-                
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -93,47 +88,66 @@
                     'getPropertyHours',
                     'getPropertyHolidayHours',
                     'getPropertyExtendedHours',
-                    'findRepoByName',
-                    'findMetaDataByPath'
+                    'findRepoByName'
                 ]),
                 hours () {
-                    return this.getPropertyHours;
+                   var hours = _.sortBy(this.getPropertyHours, ['day_of_week']);
+                    // var ordered_hours = [];
+                    // _.forEach(hours, function (val, key) {
+                    // //   if(val.day_of_week !== 0) {
+                    // //       ordered_hours.push(val);
+                    // //   }
+                    // });
+                    // ordered_hours.push(hours[0]);
+                    // return ordered_hours;
+                    return hours
                 },
                 holidayHours () {
-                    return this.getPropertyHolidayHours;
+                    return _.sortBy(this.getPropertyHolidayHours,['holiday_date']);
                 },
                 reducedHolidays () {
-                    var holidayHours = this.holidayHours;
-                    return _.filter(holidayHours, function(o) { return !o.is_closed; });
+                    var holidayHours = _.filter(this.holidayHours, function(o) { return !o.is_closed; });
+                    var extendedHours = this.getPropertyExtendedHours;
+                    var open_holidays = _.concat(holidayHours, extendedHours);
+                    var holidays = [];
+                    _.forEach(open_holidays, function(val, key) {
+                        var today = moment().format('X');
+                        var holiday_date = moment(val.holiday_date).format('X');
+                        if (today < holiday_date) {
+                            holidays.push(val);
+                        }
+                    });
+                    return _.sortBy(holidays, function(o) { return o.holiday_date; });
                 },
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
-                    return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                    var closed_holidays = _.filter(holidayHours, function(o) { return o.is_closed; });
+                    var holidays = [];
+                    _.forEach(closed_holidays, function(val, key) {
+                        var today = moment().format('X');
+                        var holiday_date = moment(val.holiday_date).format('X');
+                        if (today < holiday_date) {
+                            holidays.push(val);
+                        }
+                    });
+                    return _.sortBy(holidays, function(o) { return o.holiday_date; });
                 },
-                extendedHours() {
-                    return this.getPropertyExtendedHours
+                extendedHours () {
+                    var extendedHours = this.getPropertyExtendedHours;
+                    return _.sortBy(extendedHours, function(o) { return o.holiday_date; });
                 }
             },
             methods : {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
                         let results = await Promise.all([this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-            },
-            metaInfo () {
-                return {
-                    title: this.meta.meta_title,
-                    meta: [
-                        {name: 'description', content: this.meta.meta_description},
-                        {name: 'keywords', content: this.meta.meta_keywords}
-                    ] 
                 }
             }
         });
     });
 </script>
+
