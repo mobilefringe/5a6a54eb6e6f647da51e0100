@@ -129,6 +129,8 @@
                     });
                     console.log(temp_promo.reverse())
                     
+                    temp_promo = temp_promo.reverse()
+                    
                     _.sortBy(temp_promo, [function(o) { return o.end_date; }]);
                     return temp_promo;
                 },
