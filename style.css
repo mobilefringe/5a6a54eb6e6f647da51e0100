@@ -1299,11 +1299,9 @@ html .feature_item_container {
     // position: relative;
     .home-banner {
         width: 100%;
-        height: calc(100vh - 150px);
         position: relative;
-        background-position: center center;
-        background-repeat: no-repeat;    
-        background-size: cover;
+        @include responsive-ratio(12,5);
+	    @include background();
     }
     .no-overflow {
         overflow: hidden;
