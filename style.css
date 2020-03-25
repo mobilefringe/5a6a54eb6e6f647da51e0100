@@ -148,6 +148,40 @@ a{
 .hidden_now {
     display:none;
 }
+
+// MIXINS
+@mixin pseudo($display: block,
+$pos: absolute,
+$content: '') {
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+@mixin background($background-position: center center,
+$background-repeat: no-repeat,
+$background-size: cover) {
+	background-position: $background-position;
+	background-repeat: $background-repeat;
+	background-size: $background-size;
+}
+
+@mixin responsive-ratio($x,
+$y,
+$pseudo: false) {
+	$padding: unquote( ( $y / $x) * 100 + '%');
+	@if $pseudo {
+		&:before {
+			@include pseudo($pos: relative);
+			width: 100%;
+			padding-top: $padding;
+		}
+	}
+	@else {
+		padding-top: $padding;
+	}
+}
+
 .shake_element {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
