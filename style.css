@@ -3629,12 +3629,12 @@ gallery:after{
     // .home-banner-container .slick-slider {
     //     top:0;
     // }
-    .home-banner-container{
-        height:280px;
-        .home-banner {
-            height: 280px;
-        }
-    }
+    // .home-banner-container{
+    //     height:280px;
+    //     .home-banner {
+    //         height: 280px;
+    //     }
+    // }
     
     .flexslider {
         margin-bottom: 30px;
