@@ -1344,7 +1344,7 @@ html .feature_item_container {
     button {
         background-color: $secondary;
         // border: 1px solid $secondary;
-        border: 1px solid $primary;
+        border: 1px solid $accent;
         // opacity: 0.5;
         width: 15px;
         height: 15px;
