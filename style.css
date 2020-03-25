@@ -1295,7 +1295,7 @@ html .feature_item_container {
         width: 100%;
         position: relative;
         top: 0;
-        overflow: hidden; 
+        // overflow: hidden; 
         .slick-list {
             width: 100%;
         }
@@ -1337,7 +1337,7 @@ html .feature_item_container {
     font-size: 0;
     line-height: 0;
     position: absolute;
-    bottom: 15px;
+    bottom: -42px;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 0;
