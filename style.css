@@ -1343,7 +1343,8 @@ html .feature_item_container {
     padding: 0;
     button {
         background-color: $secondary;
-        border: 1px solid $secondary;
+        // border: 1px solid $secondary;
+        border: 1px solid $primary;
         // opacity: 0.5;
         width: 15px;
         height: 15px;
