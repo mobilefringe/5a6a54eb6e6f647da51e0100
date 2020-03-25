@@ -1300,13 +1300,13 @@ html .feature_item_container {
             width: 100%;
         }
     }
-    .slick-slider div.slick-active .home-banner {
-        -webkit-animation: myMove 8s 1 ease-out;
-        -moz-animation: myMove 8s 1 ease-out;
-        -o-animation: myMove 8s 1 ease-out;
-        -ms-animation: myMove 8s 1 ease-out;
-        animation: myMove 8s 1 ease-out;
-    }
+    // .slick-slider div.slick-active .home-banner {
+    //     -webkit-animation: myMove 8s 1 ease-out;
+    //     -moz-animation: myMove 8s 1 ease-out;
+    //     -o-animation: myMove 8s 1 ease-out;
+    //     -ms-animation: myMove 8s 1 ease-out;
+    //     animation: myMove 8s 1 ease-out;
+    // }
 }
 
 @keyframes myMove {
