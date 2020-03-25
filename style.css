@@ -3436,7 +3436,7 @@ gallery:after{
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     .router_content {
-        margin-top:49px;
+        margin-top:80px;
     }
     h1 {
         // font-size: 72px;
