@@ -1,6 +1,17 @@
 <template>
     <div v-if="currentPage">
-        <div v-if="pageBanner && currentPage.slug == 'bonniedoon-covid-19-update'" class="page_header" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1585342622000/COVID-19.png)' }">
+  <!--      <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">-->
+			<!--http://via.placeholder.com/1920x300-->
+		<!--	<div class="site_container">-->
+		<!--		<div class="header_content">-->
+		<!--			<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>-->
+		<!--			<h1 v-else>{{currentPage.title_2}}</h1>-->
+		<!--		</div>-->
+		<!--	</div>-->
+		<!--</div>-->
+		
+		
+		<div v-if="pageBanner && currentPage.slug == 'bonniedoon-covid-19-update'" class="page_header" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1585342622000/COVID-19.png)' }">
 		</div>
         <div v-else-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
@@ -11,7 +22,9 @@
 				</div>
 			</div>
 		</div>
-		<div v-else class="site_container inside_page_content">
+		
+		
+		<div class="site_container inside_page_content">
             <div class="margin_side_20" >
                 <div class="page_body description_text text_left" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
                 <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
@@ -76,7 +89,6 @@
                             this.$router.replace('/');
                         }
                         this.currentPage = response[0].data;
-                        console.log(this.currentPage)
                         var temp_repo = this.findRepoByName('Pages Banner');
                         if(temp_repo) {
                             this.pageBanner = temp_repo.images[0];
