@@ -7,6 +7,10 @@
 					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
 					<h1 v-else>{{currentPage.title_2}}</h1>
 				</div>
+				<!--<div class="header_content">-->
+				<!--	<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>-->
+				<!--	<h1 v-else>{{currentPage.title_2}}</h1>-->
+				<!--</div>-->
 			</div>
 		</div>
 		<div class="site_container inside_page_content">
@@ -74,6 +78,7 @@
                             this.$router.replace('/');
                         }
                         this.currentPage = response[0].data;
+                        console.log(this.currentPage)
                         var temp_repo = this.findRepoByName('Pages Banner');
                         if(temp_repo) {
                             this.pageBanner = temp_repo.images[0];
