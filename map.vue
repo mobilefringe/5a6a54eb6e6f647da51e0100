@@ -1,7 +1,6 @@
 <template>
 	<div v-if="dataloaded">
 	    <div class="page_header" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.map")}}</h1>
@@ -64,12 +63,11 @@
                     this.dataloaded = true;
                     this.filteredStores = this.allStores;
                     
-                    // this.storeBanner = this.findRepoByName('Stores Banner').images[0];
                     var temp_repo = this.findRepoByName('Stores Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-                    // console.log(temp_repo, this.pageBanner); 
+
                     this.$on('updateMap', this.updatePNGMap);
                 });
             },
@@ -101,10 +99,8 @@
                     'findCategoryById',
                     'findCategoryByName',
                     'findRepoByName'
-
                 ]),
                 allStores() {
-                    // console.log(this.processedStores);
                     return this.processedStores;
                 },
                 allCatergories() {
@@ -119,15 +115,12 @@
                     return _.map(this.processedStores, 'name');
                 },
                 getPNGurl() {
-                    return "https://www.mallmaverick.com" + this.property.map_url;
+                    return "https://assets.mallmaverick.com" + this.property.map_url;
                 },
                 svgMapRef() {
                     return _.filter(this.$children, function(o) {
                         return (o.$el.className == "svg-map")
                     })[0];
-                },
-                getStoreById(){
-                    
                 },
                 filterStores() {
                     letter = this.selectedAlpha;
@@ -151,28 +144,26 @@
                     if (category_id == "All") {
                         this.filteredStores = this.allStores;
                     } else {
-
                         var find = this.findCategoryById;
                         var filtered = _.filter(this.allStores, function(o) {
                             return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
                         });
-                    
                         this.filteredStores = filtered;
                     }
-                    var el = document.getElementById("selectByCat");
-                    if(el) {
-                        el.classList.remove("open");
-                        // console.log(el.classList);
-                    }
                     
-                },
-                
+                    var el = document.getElementById("selectByCat");
+                    if (el) {
+                        el.classList.remove("open");
+                    }
+                }
             },
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "categories"), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
@@ -182,7 +173,6 @@
                 },
                 updatePNGMap(map) {
                     this.map = map;
-                    // console.log("in updatepng")
                 },
                 addLandmark(store) {
                     this.svgMapRef.addMarker(store);
@@ -193,9 +183,8 @@
                 onOptionSelect(option) {
                     this.search_result = "";
                     this.$router.push("/stores/"+option.slug);
-                },
+                }
             },
-            
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
             },
