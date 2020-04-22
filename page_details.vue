@@ -1,14 +1,14 @@
 <template>
     <div v-if="currentPage">
-  <!--      <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">-->
-			<!--http://via.placeholder.com/1920x300-->
-		<!--	<div class="site_container">-->
-		<!--		<div class="header_content">-->
-		<!--			<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>-->
-		<!--			<h1 v-else>{{currentPage.title_2}}</h1>-->
-		<!--		</div>-->
-		<!--	</div>-->
-		<!--</div>-->
+        <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+			http://via.placeholder.com/1920x300
+			<div class="site_container">
+				<div class="header_content">
+					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
+					<h1 v-else>{{currentPage.title_2}}</h1>
+				</div>
+			</div>
+		</div>
 		
 		
 		<div v-if="pageBanner && currentPage.slug == 'bonniedoon-covid-19-update'" class="page_header" v-bind:style="{ backgroundImage: 'url(//codecloud.cdn.speedyrails.net/sites/5a8c43eb6e6f641a29020000/image/png/1585843121000/BannerCOVID-19.png)' }">
