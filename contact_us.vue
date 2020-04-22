@@ -3,7 +3,7 @@
         <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
-					<h1>Contact Us</h1>
+					<h1><span>Contact Us</span></h1>
 				</div>
 			</div>
 		</div>  
@@ -112,7 +112,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    var temp_repo = this.findRepoByName('Contact Us Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
