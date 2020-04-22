@@ -1586,19 +1586,19 @@ html .feature_item_container {
         transform: translateY(-50%);
         text-shadow: 2px 1px black;
     }
-    h1:after {
-        content: " ";
-        width: 100px;
-        height: 5px;
-        position: absolute;
-        left: 50%;
-        bottom: 0px;
-        -webkit-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        transform: translate(-50%, 0%);
-        // transform: translateX(0%);
-        background-color: #fff;
-    }
+    // h1:after {
+    //     content: " ";
+    //     width: 100px;
+    //     height: 5px;
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 0px;
+    //     -webkit-transform: translateX(0%);
+    //     -ms-transform: translateX(0%);
+    //     transform: translate(-50%, 0%);
+    //     // transform: translateX(0%);
+    //     background-color: #fff;
+    // }
 }
 
 .thick_line{
