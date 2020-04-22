@@ -65,7 +65,7 @@
             created(){
                 this.loadData().then(response => {
                     this.updatecurrentEvent(this.id);
-                    var temp_repo = this.findRepoByName('Events Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.eventBanner = temp_repo.images[0];
                     }
