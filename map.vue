@@ -3,7 +3,7 @@
 	    <div class="page_header" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
-					<h1>{{$t("stores_page.map")}}</h1>
+					<h1><span>{{$t("stores_page.map")}}</span></h1>
 				</div>
 			</div>
 		</div>
@@ -63,7 +63,7 @@
                     this.dataloaded = true;
                     this.filteredStores = this.allStores;
                     
-                    var temp_repo = this.findRepoByName('Stores Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
