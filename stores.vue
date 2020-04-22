@@ -175,7 +175,6 @@
                     var el = document.getElementById("selectByCat");
                     if(el) {
                         el.classList.remove("open");
-                        console.log(el.classList);
                     }
                     
                 },
