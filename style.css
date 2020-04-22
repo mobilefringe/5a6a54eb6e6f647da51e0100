@@ -1592,7 +1592,7 @@ html .feature_item_container {
         text-shadow: 2px 1px black;
         span {
             background-color: #000;
-            padding: 20px 30px;
+            padding: 20px;
             min-width: 400px;
             display: inline-block;
         }
