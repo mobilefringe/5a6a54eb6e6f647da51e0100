@@ -1562,7 +1562,7 @@ html .feature_item_container {
     // padding-top: 256px;
     height: 300px;
     // background-image: url(//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1496078793000/shopping_banner.png);
-    // background-color: $link;
+    background-color: $link;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
