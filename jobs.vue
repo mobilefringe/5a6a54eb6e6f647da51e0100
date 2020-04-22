@@ -3,7 +3,7 @@
 		<div class="page_header" v-if="promoBanner" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content cap">
-					<h1>{{$t("jobs_page.jobs")}}</h1>
+					<h1><span>{{$t("jobs_page.jobs")}}</span></h1>
 				</div>
 			</div>
 		</div>
