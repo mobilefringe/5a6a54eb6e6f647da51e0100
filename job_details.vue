@@ -91,7 +91,7 @@
             created(){
                 this.loadData().then(response => {
                     this.updateCurrentJob(this.id);
-                    var temp_repo = this.findRepoByName('Jobs Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.jobBanner = temp_repo.images[0];
                     }
