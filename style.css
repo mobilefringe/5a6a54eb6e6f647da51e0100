@@ -3655,7 +3655,7 @@ gallery:after{
     .page_header, .station_header {
         margin-bottom: 30px;
         padding-top: 0;
-        height: 300px;
+        // height: 300px;
     }
     .newsletter div {
         width: 100%;
