@@ -3427,7 +3427,7 @@ gallery:after{
     .page_header h1 {
         font-size: 2.5rem;
         span {
-            min-width: auto;
+            min-width:;
         }
     }
 }
@@ -3663,7 +3663,7 @@ gallery:after{
     }
     .page_header, .station_header {
         margin-bottom: 30px;
-        // padding-top: 0;
+        padding-top: 0;
         // height: 300px;
     }
     .newsletter div {
