@@ -3,7 +3,7 @@
 	    <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')', marginBottom:'0px'}">
 			<div class="site_container">
 				<div class="header_content">
-					<h1>Find Us</h1>
+					<h1><span>Find Us</span></h1>
 				</div>
 			</div>
 		</div>  
