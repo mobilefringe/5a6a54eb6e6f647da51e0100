@@ -1571,10 +1571,10 @@ html .feature_item_container {
     @include background();
     color: #FFF;
     text-align: center;
-    .header_content {
-        height: 300px;
-        line-height: 300px;
-    }
+    // .header_content {
+    //     height: 300px;
+    //     line-height: 300px;
+    // }
     hr {
         width: 190px;
         border-top: 4.5px solid #fff;
