@@ -18,7 +18,7 @@
 			<div class="site_container">
 				<div class="header_content">
 					<h1 v-if="locale=='en-ca'"><span>{{currentPage.title}}</span></h1>
-					<h1 v-else>{{currentPage.title_2}}</h1>
+					<h1 v-else><span>{{currentPage.title_2}}</span></h1>
 				</div>
 			</div>
 		</div>
