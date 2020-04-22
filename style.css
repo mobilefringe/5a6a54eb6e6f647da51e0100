@@ -1584,9 +1584,10 @@ html .feature_item_container {
         text-transform: uppercase;
         // line-height:300px;
         margin: 0;
-        position: relative;
+        position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-shadow: 2px 1px black;
         span {
             background-color: #000;
