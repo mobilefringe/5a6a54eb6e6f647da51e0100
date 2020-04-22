@@ -17,7 +17,7 @@
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
-					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
+					<h1 v-if="locale=='en-ca'"><span></span>{{currentPage.title}}</h1>
 					<h1 v-else>{{currentPage.title_2}}</h1>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
                             this.$router.replace('/');
                         }
                         this.currentPage = response[0].data;
-                        var temp_repo = this.findRepoByName('Pages Banner');
+                        var temp_repo = this.findRepoByName('Inside Page Banner');
                         if(temp_repo) {
                             this.pageBanner = temp_repo.images[0];
                         }
