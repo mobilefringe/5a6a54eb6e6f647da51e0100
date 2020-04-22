@@ -87,7 +87,7 @@
                     this.dataloaded = true;
                     this.filteredStores = this.allStores;
                     
-                    var temp_repo = this.findRepoByName('Stores Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.storeBanner = temp_repo.images[0];
                     }
