@@ -3,7 +3,7 @@
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
-					<h1>{{$t("hours_page.hours")}}</h1>
+					<h1><span>{{$t("hours_page.hours")}}</span></h1>
 					<h2 style="display:none;">Scroll to  view hours</h2>
 				</div>
 			</div>
