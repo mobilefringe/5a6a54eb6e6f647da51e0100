@@ -83,7 +83,7 @@ I agree to receive Commercial Electronic Messages from Morguard, the management 
             },
             created () {
                 this.loadData().then(response => {
-                    var temp_repo = this.findRepoByName('Newsletter Banner');
+                    var temp_repo = this.findRepoByName('Inside Page Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
