@@ -4,7 +4,7 @@
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content caps">
-					<h1>{{$t("events_page.events")}}</h1>
+					<h1><span>{{$t("events_page.events")}}</span></h1>
 					
 				</div>
 			</div>
