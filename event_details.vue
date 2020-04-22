@@ -3,7 +3,7 @@
 		<div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
-					<h1>{{$t("events_page.events")}}</h1>
+					<h1><span>{{$t("events_page.events")}}</span></h1>
 				</div>
 			</div>
 		</div>
