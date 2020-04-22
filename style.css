@@ -1590,7 +1590,7 @@ html .feature_item_container {
         left: 50%;
         transform: translate(-50%, -50%);
         text-shadow: 2px 1px black;
-        font-size: 4rem;
+        font-size: 3.8rem;
         span {
             background-color: #000;
             padding: 20px;
