@@ -25,7 +25,7 @@
                             			<input autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-fiilhi-fiilhi" required="" type="email">
                         			</div>
                     			</div>
-                    			<div>
+                    			<div class="form-group">
                     				<div>
                     					<div><label class="checkbox" for="cm-privacy-consent"> <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox">I agree to receive Commercial Electronic Messages from Morguard, the management company of {{ property.name }} and its affiliates that will include: special retail sales offers, promotions, new retailer announcements, upcoming events, trend and style news and other inside information. You can unsubscribe at any time. {{ property.name }}’s contact information is as follows: {{ property.address1 }}, {{ property.city }}, {{ property.province_state }}, {{ property.postal_code }}, Attention: Privacy Officer. Website: <a href="https://bonniedoonshoppingcentre.com">bonniedoonshoppingcentre.com.</a> </label></div>
                     					<input id="cm-privacy-consent-hidden" name="cm-privacy-consent-hidden" type="hidden" value="true">
