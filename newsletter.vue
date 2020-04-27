@@ -32,7 +32,9 @@
                     				</div>
                     			</div>
                     		</div>
-                    		<button class="contest_btn" type="submit">Subscribe</button>
+                    		<div class="form-group">
+                    		    <button class="contest_btn" type="submit">Subscribe</button>
+                    		</div>
                     	</form>
                     </div>
                     
