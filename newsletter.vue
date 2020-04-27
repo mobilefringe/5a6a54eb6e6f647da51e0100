@@ -12,7 +12,7 @@
                 <div class="col-md-12 contact_contents">
                     <div>
                     	<h1 color="#000"></h1>
-                    	<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A93A125A8390B6A68B1A380E7D07777387FBB6B35406BE6E3B921E42455501130E7A18D31289C34FE379920E1EBBCC8B6">
+                    	<!--<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A93A125A8390B6A68B1A380E7D07777387FBB6B35406BE6E3B921E42455501130E7A18D31289C34FE379920E1EBBCC8B6">
                     		<div>
                     			<div><label>Name </label><input aria-label="Name" id="fieldName" maxlength="200" name="cm-name"></div>
                     			<div><label>Email </label><input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-fiilhi-fiilhi" required="" type="email"></div>
@@ -24,7 +24,7 @@
                     			</div>
                     		</div>
                     		<button type="submit">Subscribe</button>
-                    	</form>
+                    	</form>-->
                     </div>
                     <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
                     <!--<form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/fiilhi/" method="post">
