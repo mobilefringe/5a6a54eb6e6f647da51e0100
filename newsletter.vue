@@ -13,8 +13,8 @@
                     <div>
                     	<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A93A125A8390B6A68B1A380E7D07777387FBB6B35406BE6E3B921E42455501130E7A18D31289C34FE379920E1EBBCC8B6">
                     		<div>
-                    			<div><label>Name </label><input aria-label="Name" id="fieldName" maxlength="200" name="cm-name"></div>
-                    			<div><label>Email </label><input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-fiilhi-fiilhi" required="" type="email"></div>
+                    			<div><label>Name </label><input aria-label="Name" id="fieldName" maxlength="200" name="cm-name" class="form-control"></div>
+                    			<div><label>Email </label><input autocomplete="Email" aria-label="Email" class="form-control js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-fiilhi-fiilhi" required="" type="email"></div>
                     			<div>
                     				<div>
                     					<div><input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox"><label for="cm-privacy-consent">I agree to receive Commercial Electronic Messages from Morguard, the management company of {{ property.name }} and its affiliates that will include: special retail sales offers, promotions, new retailer announcements, upcoming events, trend and style news and other inside information. You can unsubscribe at any time. {{ property.name }}’s contact information is as follows: {{ property.address1 }}, {{ property.city }}, {{ property.province_state }}, {{ property.postal_code }}, Attention: Privacy Officer. Website: <a href="https://bonniedoonshoppingcentre.com">bonniedoonshoppingcentre.com.</a> </label></div>
