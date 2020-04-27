@@ -32,7 +32,7 @@
                     				</div>
                     			</div>
                     		</div>
-                    		<button type="submit">Subscribe</button>
+                    		<button class="contest_btn" type="submit">Subscribe</button>
                     	</form>
                     </div>
                     
