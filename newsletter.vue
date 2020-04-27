@@ -25,7 +25,7 @@
                     		<button type="submit">Subscribe</button>
                     	</form>-->
                     </div>
-                    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+                    
                     <!--<form class="form-horizontal" action="https://mobilefringe.createsend.com/t/d/s/fiilhi/" method="post">
                    
                         <div class="form-group ">
