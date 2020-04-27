@@ -72,6 +72,7 @@ I agree to receive Commercial Electronic Messages from Morguard, the management 
             <div class="padding_top_40"></div>    
         </div>
     </div>
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
 </template>
 <style>
     .form-group label {
