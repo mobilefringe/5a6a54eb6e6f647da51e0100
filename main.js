@@ -40,6 +40,7 @@ require.config({
         'vue-masonry-plugin' : 'https://cdn.jsdelivr.net/npm/vue-masonry@0.10.16/dist/vue-masonry-plugin.min',
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'loader': 'https://mmvue.codecloudapp.com/loader.vue?noext',
+        'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic'
         
     }
 });
